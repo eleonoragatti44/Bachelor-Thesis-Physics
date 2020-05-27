@@ -178,14 +178,13 @@ def check_graph_col(data, f_int, test_func, test_func2):
         plt.ylabel("y [m]")
         ax2 = fig.add_subplot(1, 2, 2)
         ax2.scatter(data_test.index, data_test["e"], color="red", label="Ellitticità vera")
-        #ax2.plot(test_func, label="Fit su half data", color="red")
-        #ax2.plot(test_func2, label="Fit su complete data", color="blue")
+        ax2.plot(test_func, label="Fit su half data", color="red")
+        ax2.plot(test_func2, label="Fit su complete data", color="blue")
+        ax2.set_xlim([data_test.index.min() - 1, data_test.index.max() + 1])
         ax2.plot(data_test.index, ellit, label="Interp2d", color="green")
         plt.legend(loc='upper left')
         plt.xlabel("Index")
         plt.ylabel("Ellitticità")
         fig.savefig(f'./Plot/Col_{i}')
         plt.close(fig)
-
-
 
