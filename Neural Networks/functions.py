@@ -12,7 +12,6 @@ def func(X, a, b, c, d, e, f):
 ####################################################################################################################
 
 def add_bool(data):
-    # esiste di sicuro uno sgamo
     i = 0
     while i < len(data):
         if i%2 == 0:
@@ -35,17 +34,22 @@ def add_bool2(data):
 ####################################################################################################################
 
 #normalization between 0 and 1
-def normalization1(y):
-    m = 1/(y.max() - y.min())
-    q = - y.min() / (y.max() - y.min())
+def normalization1(y, data_max, data_min):
+    m = 1/(data_max - data_min)
+    q = - data_min/(data_max - data_min)
     return y * m + q
 
 #normalization between -1 and 1
-def normalization2(y):
-    m = 2/(y.max() - y.min())
-    q = (y.min() + y.max()) / (y.min() - y.max())
+def normalization2(y, data_max, data_min):
+    m = 2/(data_max - data_min)
+    q = (data_min + data_max)/(data_min - data_max)
     return y * m + q
 
+def inverse_normalization2(y, data_max, data_min):
+    m = 2/(data_max - data_min)
+    q = (data_min + data_max)/(data_min - data_max)
+    return (y - q) / m
+    
 ####################################################################################################################
 
 def linspace(vec, n):
@@ -87,16 +91,6 @@ def graph(data_ver, data_int, par, name):
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
     ax.set_zlabel('Δ')
-    ###
-    '''
-    mask1 = (par < 1)
-    ax_mask = fig.add_subplot(1, 3, 2, projection='3d')
-    ax_mask.scatter(data_ver["x"][mask1], data_ver["y"][mask1], par[mask1])
-    ax_mask.set_title('Differenza dati interpolati e esatti (<1)')
-    ax_mask.set_xlabel('X')
-    ax_mask.set_ylabel('Y')
-    ax_mask.set_zlabel('Δ')
-    '''
     ###
     ax_log = fig.add_subplot(1, 2, 2, projection='3d')
     ax_log.scatter(data_ver["x"], data_ver["y"], np.log10(par))
