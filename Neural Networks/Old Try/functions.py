@@ -45,6 +45,11 @@ def normalization2(y, data_max, data_min):
     q = (data_min + data_max)/(data_min - data_max)
     return y * m + q
 
+def inverse_normalization1(y, data_max, data_min):
+    m = 1/(data_max - data_min)
+    q = - data_min/(data_max - data_min)
+    return (y - q) / m
+
 def inverse_normalization2(y, data_max, data_min):
     m = 2/(data_max - data_min)
     q = (data_min + data_max)/(data_min - data_max)
