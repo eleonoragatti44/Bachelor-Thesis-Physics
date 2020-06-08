@@ -4,7 +4,6 @@ from scipy.optimize import curve_fit
 from mpl_toolkits.mplot3d import Axes3D
 from scipy.interpolate import interp2d, griddata
 import pandas as pd
-import re
 import os
 import seaborn as sns
     
@@ -248,17 +247,22 @@ def plot_from_path(PATH):
         Title_str = expand_title(file)
 
         sns.set(font_scale = 1.7, 
-                style = "darkgrid",
-                palette = "pastel",
+                style = "whitegrid",
+                palette = "colorblind",
                 rc={"lines.linewidth": 2})
-        
-        fig, axs = plt.subplots(1, 1, figsize = (13, 8))
+
+        fig, axs = plt.subplots(1, 2, figsize = (20, 6))
         fig.suptitle(Title_str, ha = "center", va = "baseline")
         for name in col_names:
             plot = sns.lineplot(y = name, 
                                 x = "index", 
-                                markers = ".",
-                                label = name, 
-                                data = token.reset_index())
-        plot.set(xlabel = "", ylabel = "Errors")
+                                markers = True, 
+                                label = name,
+                                data = token.reset_index(),
+                                ax = axs[0])
+            hist = sns.distplot(token["Network error"], kde=False, ax=axs[1])
+            hist = sns.distplot(token["Interpolation error"], kde=False, ax=axs[1])
+            hist.legend(labels=["Network error", "Interpolation error"])
+            hist.set(xlabel="Error", ylabel="Count")
+        plot.set(xlabel = "", ylabel = "Error")
         plt.show()
