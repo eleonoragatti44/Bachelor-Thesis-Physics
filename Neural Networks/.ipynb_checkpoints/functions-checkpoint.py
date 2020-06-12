@@ -6,6 +6,7 @@ from scipy.interpolate import interp2d, griddata
 import pandas as pd
 import os
 import seaborn as sns
+import glob
     
 ####################################################################################################################
 
@@ -266,3 +267,130 @@ def plot_from_path(PATH):
             hist.set(xlabel="Error", ylabel="Count")
         plot.set(xlabel = "", ylabel = "Error")
         plt.show()
+
+####################################################################################################################   
+
+def violin_from_path(PATH):
+    all_files = glob.glob(PATH + "/*")
+    l_e = []
+    l_fwhmx = []
+    l_fwhmy = []
+    
+    for filename in all_files:
+        if "_e" in filename: 
+            file = (os.path.basename(filename))
+            name = [file+" [Net]", file+" [Int]"]
+            df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
+            l_e.append(df)
+
+        if "_fwhmx" in filename:
+            file = (os.path.basename(filename))
+            name = [file+" [Net]", file+" [Int]"]
+            df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
+            l_fwhmx.append(df)
+
+        if "_fwhmy" in filename:
+            file = (os.path.basename(filename))
+            name = [file+" [Net]", file+" [Int]"]
+            df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
+            l_fwhmy.append(df)
+
+    df_e = pd.concat(l_e, axis=1, sort=False)
+    df_fwhmx = pd.concat(l_fwhmx, axis=1, sort=False)
+    df_fwhmy = pd.concat(l_fwhmy, axis=1, sort=False)
+    
+    fig, axs = plt.subplots(3, 1, figsize = (30, 24))
+    
+    g1 = sns.violinplot(data=df_e, palette="muted", split=True, ax=axs[0])
+    g1.set_title("Ellipticity Error for Network and Interpolation")
+    g2 = sns.violinplot(data=df_fwhmx, palette="muted", ax=axs[1])
+    g2.set_title("FWHM_X Error for Network and Interpolation")
+    g3 = sns.violinplot(data=df_fwhmy, palette="muted", ax=axs[2])
+    g3.set_title("FWHM_Y Error for Network and Interpolation")
+    g1.set(xlabel="Architecture", ylabel="Error")
+    g2.set(xlabel="Architecture", ylabel="Error")
+    g3.set(xlabel="Architecture", ylabel="Error")
+    fig.savefig("violin_plot_tot.png")
+    plt.show()
+    
+####################################################################################################################   
+
+def violin_from_df(df, par):
+    
+    fig, axs = plt.subplots(1, 1, figsize = (18, 8))
+    g = sns.violinplot(x="architecture", y="value", hue="error", data=df, split=True)
+    g.set_title(f"Error for Network and Interpolation [{par}]")  
+    g.set(xlabel="Architecture", ylabel="Error")
+    fig.savefig(f"./Plots/ViolinPlots/violin_plot_{par}.png")
+    plt.show()
+    
+####################################################################################################################     
+    
+def df_from_path(PATH):
+    all_files = glob.glob(PATH + "/*")
+    l_e = []
+    l_fwhmx = []
+    l_fwhmy = []
+    l_comax = []
+
+    for filename in all_files:
+        if "_e" in filename: 
+            file = (os.path.basename(filename))
+            name = [file+" [Net]", file+" [Int]"]
+            df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
+            l_e.append(df)
+
+        if "_fwhmx" in filename:
+            file = (os.path.basename(filename))
+            name = [file+" [Net]", file+" [Int]"]
+            df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
+            l_fwhmx.append(df)
+
+        if "_fwhmy" in filename:
+            file = (os.path.basename(filename))
+            name = [file+" [Net]", file+" [Int]"]
+            df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
+            l_fwhmy.append(df)
+        
+        if "_comax" in filename:
+            file = (os.path.basename(filename))
+            name = [file+" [Net]", file+" [Int]"]
+            df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
+            l_comax.append(df)
+
+    df_e = pd.concat(l_e, axis=1, sort=False)
+    df_fwhmx = pd.concat(l_fwhmx, axis=1, sort=False)
+    df_fwhmy = pd.concat(l_fwhmy, axis=1, sort=False)
+    df_comax = pd.concat(l_comax, axis=1, sort=False)
+
+    df_e = pd.melt(df_e, var_name="description", value_name="value")
+    df_fwhmx = pd.melt(df_fwhmx, var_name="description", value_name="value")
+    df_fwhmy = pd.melt(df_fwhmy, var_name="description", value_name="value")
+    df_comax = pd.melt(df_comax, var_name="description", value_name="value")
+
+    def geterr(descr):
+        return descr.split(sep=" ")[-1]
+
+    def getarch(descr):
+        arch = descr.split(sep="_")[:2]
+        return "_".join(arch)
+
+    df_e["error"] = df_e["description"].apply(geterr)
+    df_e["architecture"] = df_e["description"].apply(getarch)
+    df_fwhmx["error"] = df_fwhmx["description"].apply(geterr)
+    df_fwhmx["architecture"] = df_fwhmx["description"].apply(getarch)
+    df_fwhmy["error"] = df_fwhmy["description"].apply(geterr)
+    df_fwhmy["architecture"] = df_fwhmy["description"].apply(getarch)
+    df_comax["error"] = df_comax["description"].apply(geterr)
+    df_comax["architecture"] = df_comax["description"].apply(getarch)
+    return df_e, df_fwhmx, df_fwhmy, df_comax
+
+####################################################################################################################   
+
+
+    
+    
+    
+    
+    
+    
