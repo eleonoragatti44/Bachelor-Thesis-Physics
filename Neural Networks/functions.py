@@ -217,16 +217,22 @@ def check_graph_col(data, f_int, test_func, test_func2, par):
 
 def expand_title(file):
     tit_elements = str.split(file, sep = "_")    
+    print(tit_elements)
     tit_elements[0] = "Activation Function: " +  tit_elements[0] 
     tit_elements[1] = "Layers: " + tit_elements[1].strip("L")
     if tit_elements[2] == "e":
-        tit_elements[2] = "Parameter: Ellipticity"     #si scrive così?
-    if tit_elements[2] == "fwhmy":
-        tit_elements[2] = "Parameter: Full width half maximum (y)"
-    if tit_elements[2] == "fwhmx":
-        tit_elements[2] = "Parameter: Full width half maximum (x)"
-    
-    title_str = "\n".join(tit_elements)
+        tit_elements[2] = "Parameter: Ellipticity"
+    if tit_elements[2] == "fwhm": 
+        if tit_elements[3] == "x":
+            tit_elements[2] = "Parameter: Full width half maximum (x)"
+        if tit_elements[3] == "y":
+            tit_elements[2] = "Parameter: Full width half maximum (y)"
+    if tit_elements[2] == "co":
+        tit_elements[2] = "Parameter: Co Max"
+    if tit_elements[2] == "cx":
+        tit_elements[2] = "Parameter: Cx Max"
+        
+    title_str = "\n".join(tit_elements[:3])
     return title_str
 
 ####################################################################################################################   
@@ -238,87 +244,45 @@ def plot_from_path(PATH):
     n_plots = len(col_names)
 
     for file in files:
-        path_file = os.path.join(PATH, file)
-        token = pd.read_csv(path_file, 
-                            index_col = None, 
-                            delimiter = " ", 
-                            header = None, 
-                            names = col_names)
+        if file[0] != ".":
+            path_file = os.path.join(PATH, file)
+            token = pd.read_csv(path_file, 
+                                index_col = None, 
+                                delimiter = " ", 
+                                header = None, 
+                                names = col_names)
 
-        Title_str = expand_title(file)
+            Title_str = expand_title(file)
 
-        sns.set(font_scale = 1.7, 
-                style = "whitegrid",
-                palette = "colorblind",
-                rc={"lines.linewidth": 2})
+            sns.set(font_scale = 1.7, 
+                    style = "whitegrid",
+                    palette = "colorblind",
+                    rc={"lines.linewidth": 2})
 
-        fig, axs = plt.subplots(1, 2, figsize = (20, 6))
-        fig.suptitle(Title_str, ha = "center", va = "baseline")
-        for name in col_names:
-            plot = sns.lineplot(y = name, 
-                                x = "index", 
-                                markers = True, 
-                                label = name,
-                                data = token.reset_index(),
-                                ax = axs[0])
-            hist = sns.distplot(token["Network error"], kde=False, ax=axs[1])
-            hist = sns.distplot(token["Interpolation error"], kde=False, ax=axs[1])
-            hist.legend(labels=["Network error", "Interpolation error"])
-            hist.set(xlabel="Error", ylabel="Count")
-        plot.set(xlabel = "", ylabel = "Error")
-        plt.show()
-
-####################################################################################################################   
-
-def violin_from_path(PATH):
-    all_files = glob.glob(PATH + "/*")
-    l_e = []
-    l_fwhmx = []
-    l_fwhmy = []
-    
-    for filename in all_files:
-        if "_e" in filename: 
-            file = (os.path.basename(filename))
-            name = [file+" [Net]", file+" [Int]"]
-            df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
-            l_e.append(df)
-
-        if "_fwhmx" in filename:
-            file = (os.path.basename(filename))
-            name = [file+" [Net]", file+" [Int]"]
-            df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
-            l_fwhmx.append(df)
-
-        if "_fwhmy" in filename:
-            file = (os.path.basename(filename))
-            name = [file+" [Net]", file+" [Int]"]
-            df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
-            l_fwhmy.append(df)
-
-    df_e = pd.concat(l_e, axis=1, sort=False)
-    df_fwhmx = pd.concat(l_fwhmx, axis=1, sort=False)
-    df_fwhmy = pd.concat(l_fwhmy, axis=1, sort=False)
-    
-    fig, axs = plt.subplots(3, 1, figsize = (30, 24))
-    
-    g1 = sns.violinplot(data=df_e, palette="muted", split=True, ax=axs[0])
-    g1.set_title("Ellipticity Error for Network and Interpolation")
-    g2 = sns.violinplot(data=df_fwhmx, palette="muted", ax=axs[1])
-    g2.set_title("FWHM_X Error for Network and Interpolation")
-    g3 = sns.violinplot(data=df_fwhmy, palette="muted", ax=axs[2])
-    g3.set_title("FWHM_Y Error for Network and Interpolation")
-    g1.set(xlabel="Architecture", ylabel="Error")
-    g2.set(xlabel="Architecture", ylabel="Error")
-    g3.set(xlabel="Architecture", ylabel="Error")
-    fig.savefig("violin_plot_tot.png")
-    plt.show()
+            fig, axs = plt.subplots(1, 2, figsize = (20, 8))
+            fig.suptitle(Title_str, ha = "center", va = "baseline")
+            for name in col_names:
+                plot = sns.lineplot(y = name, 
+                                    x = "index", 
+                                    markers = True, 
+                                    label = name,
+                                    data = token.reset_index(),
+                                    ax = axs[0])
+                hist = sns.distplot(token["Network error"], kde=False, ax=axs[1])
+                hist = sns.distplot(token["Interpolation error"], kde=False, ax=axs[1])
+                hist.legend(labels=["Network error", "Interpolation error"])
+                hist.set(xlabel="Error", ylabel="Count")
+            plot.set(xlabel = "Index", ylabel = "Error")
+            fig.savefig(f"./Plots/Hist/{Title_str}.png", bbox_inches='tight')
+            plt.show()
     
 ####################################################################################################################   
 
 def violin_from_df(df, par):
-    
+    names=df["architecture"].unique()
+    names.sort()
     fig, axs = plt.subplots(1, 1, figsize = (18, 8))
-    g = sns.violinplot(x="architecture", y="value", hue="error", data=df, split=True)
+    g = sns.violinplot(x="architecture", y="value", hue="error", data=df, split=True, cut=0, order=names)
     g.set_title(f"Error for Network and Interpolation [{par}]")  
     g.set(xlabel="Architecture", ylabel="Error")
     fig.savefig(f"./Plots/ViolinPlots/violin_plot_{par}.png")
@@ -332,6 +296,8 @@ def df_from_path(PATH):
     l_fwhmx = []
     l_fwhmy = []
     l_comax = []
+    l_cxmax = []
+    l_check = []
 
     for filename in all_files:
         if "_e" in filename: 
@@ -340,33 +306,49 @@ def df_from_path(PATH):
             df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
             l_e.append(df)
 
-        if "_fwhmx" in filename:
+        if "_fwhm_x" in filename:
             file = (os.path.basename(filename))
             name = [file+" [Net]", file+" [Int]"]
             df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
             l_fwhmx.append(df)
 
-        if "_fwhmy" in filename:
+        if "_fwhm_y" in filename:
             file = (os.path.basename(filename))
             name = [file+" [Net]", file+" [Int]"]
             df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
             l_fwhmy.append(df)
         
-        if "_comax" in filename:
+        if "_co_max" in filename:
             file = (os.path.basename(filename))
             name = [file+" [Net]", file+" [Int]"]
             df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
             l_comax.append(df)
+        
+        if "_cx_max" in filename:
+            file = (os.path.basename(filename))
+            name = [file+" [Net]", file+" [Int]"]
+            df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
+            l_cxmax.append(df)
+            
+        if "_Check" in filename:
+            file = (os.path.basename(filename))
+            name = [file+" [Net]", file+" [Int]"]
+            df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
+            l_check.append(df)
 
     df_e = pd.concat(l_e, axis=1, sort=False)
     df_fwhmx = pd.concat(l_fwhmx, axis=1, sort=False)
     df_fwhmy = pd.concat(l_fwhmy, axis=1, sort=False)
     df_comax = pd.concat(l_comax, axis=1, sort=False)
+    df_cxmax = pd.concat(l_cxmax, axis=1, sort=False)
+    df_check = pd.concat(l_check, axis=1, sort=False)
 
     df_e = pd.melt(df_e, var_name="description", value_name="value")
     df_fwhmx = pd.melt(df_fwhmx, var_name="description", value_name="value")
     df_fwhmy = pd.melt(df_fwhmy, var_name="description", value_name="value")
     df_comax = pd.melt(df_comax, var_name="description", value_name="value")
+    df_cxmax = pd.melt(df_cxmax, var_name="description", value_name="value")
+    df_check = pd.melt(df_check, var_name="description", value_name="value")
 
     def geterr(descr):
         return descr.split(sep=" ")[-1]
@@ -383,14 +365,50 @@ def df_from_path(PATH):
     df_fwhmy["architecture"] = df_fwhmy["description"].apply(getarch)
     df_comax["error"] = df_comax["description"].apply(geterr)
     df_comax["architecture"] = df_comax["description"].apply(getarch)
-    return df_e, df_fwhmx, df_fwhmy, df_comax
+    df_cxmax["error"] = df_cxmax["description"].apply(geterr)
+    df_cxmax["architecture"] = df_cxmax["description"].apply(getarch)
+    df_check["error"] = df_check["description"].apply(geterr)
+    df_check["architecture"] = df_check["description"].apply(getarch)
+    
+    return df_e, df_fwhmx, df_fwhmy, df_comax, df_cxmax, df_check
 
 ####################################################################################################################   
 
+def mod_df(df):
+    df0 = df[df["error"]=="[Net]"] 
+    df1 = df[df["error"]=="[Int]"]
+    df1 = df1.drop(["architecture"], axis=1)
+    df1["architecture"] = "Tanh_1L"
+    df2 = df1
+    df2 = df2.drop(["architecture"], axis=1)
+    df2["architecture"] = "Tanh_2L"
+    df3 = df1
+    df3 = df3.drop(["architecture"], axis=1)
+    df3["architecture"] = "Tanh_3L"
+    df4 = df1
+    df4 = df4.drop(["architecture"], axis=1)
+    df4["architecture"] = "Sigmoid_1L"
+    df5 = df1
+    df5 = df5.drop(["architecture"], axis=1)
+    df5["architecture"] = "Sigmoid_2L"
+    df6 = df1
+    df6 = df6.drop(["architecture"], axis=1)
+    df6["architecture"] = "Sigmoid_3L"
+    tot = pd.concat([df0, df1, df2, df3, df4, df5, df6])
+    tot.reset_index()
+    return tot
+    
+####################################################################################################################   
 
-    
-    
-    
+def getstats(df):
+    archs = ["Tanh_1L", "Tanh_2L", "Tanh_3L", "Sigmoid_1L", "Sigmoid_2L", "Sigmoid_3L"]
+    for arch in archs:
+        print(arch)
+        filt = df.loc[df_e["architecture"] == arch]
+        filt_net = filt.loc[ df_e["error"] == "[Net]"]
+        print("Net\tMin, Med, Max: ", np.percentile(filt_net["value"], [5,50,95]))
+        filt_int = filt.loc[ df_e["error"] == "[Int]"]
+        print("Int\tMin, Med, Max: ", np.percentile(filt_int["value"], [5,50,95]), "\n")    
     
     
     

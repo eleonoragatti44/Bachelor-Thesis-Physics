@@ -207,3 +207,9 @@ for i in range(1, len(sys.argv)):
 
     np.savetxt(f'./ErrorPlot/Tanh_1L_{par}', err)
 
+
+
+
+
+
+

@@ -121,9 +121,10 @@ def graph(data_ver, data_int, par, name):
     g = ax2.tricontourf(x, y, np.log10(par))
     pt_int = ax2.scatter(data_int["x"], data_int["y"], color="red")
     pt_ver = ax2.scatter(data_ver["x"], data_ver["y"], color="blue")
-    plt.legend((pt_int, pt_ver), ('Interpolation', 'Check'), scatterpoints=1, loc='upper left', fontsize=10)
+    plt.legend((pt_int, pt_ver), ('Interpolation', 'Check'), scatterpoints=1, loc='lower right', fontsize=10)
     fig2.colorbar(g)
     ax2.set_title(f'Errore assoluto [{name}] (log)')
+    fig2.savefig(f'./Plots/Errore assoluto [{name}] (log)', dpi=800)
 
 ####################################################################################################################
     
