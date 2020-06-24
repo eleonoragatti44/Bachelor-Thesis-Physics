@@ -101,8 +101,9 @@ for ind in range(1, len(sys.argv)):
     net.train()
     colors = ['b', 'g', 'r', 'c', 'm']
 
-    plt.figure(figsize=(18,10))
-
+    fig = plt.figure(figsize=(18,18))
+    ax1 = fig.add_subplot(211)
+    ax2 = fig.add_subplot(212)
     for i in range(5):
         # inizializzo i pesi
         net.apply(init_weights)
@@ -138,14 +139,14 @@ for ind in range(1, len(sys.argv)):
             opt.step()
         
         #plt.figure(figsize=(10,6))
-        plt.plot(validation_loss, label=f'Validation {i+1}', ls='-', color=colors[i])
-        plt.plot(training_loss, label=f'Training {i+1}', ls='dashed', color=colors[i])
-        plt.xlabel('Epoch')
-        plt.ylabel('Loss')
-        plt.title(f'Parameter: {par}')
+        ax1.plot(validation_loss, label=f'Validation {i+1}', ls='-', color=colors[i])
+        ax1.plot(training_loss, label=f'Training {i+1}', ls='dashed', color=colors[i])
+        ax1.set_xlabel('Epoch')
+        ax1.set_ylabel('Loss')
+        ax1.set_title(f'Validation (Parameter: {par})')
         #plt.ylim(0, 0.05)
-        plt.legend(fontsize=12, loc='upper right')
-        plt.savefig(f"./Plots/TestArch/Test_1L_Sigmoid_{par}.png")
+        ax1.legend(fontsize=12, loc='upper right')
+        #ax1.savefig(f"./Plots/TestArch/Test_1L_Sigmoid_{par}.png")
 
 
     # ## Testo la rete utilizzando KFold
@@ -158,8 +159,8 @@ for ind in range(1, len(sys.argv)):
     kf = KFold(n_splits=5)    
     i = 0
 
-    fig = plt.figure(figsize=(18,10))
-    ax = fig.add_subplot(111)
+    #fig = plt.figure(figsize=(18,10))
+    #ax = fig.add_subplot(111)
 
     # carico il dataset e lo mescolo
     dataset = np.stack((data["x"].values, data["y"].values, data[par]), axis=1)
@@ -200,12 +201,13 @@ for ind in range(1, len(sys.argv)):
             train_loss.backward()
             opt.step()
 
-        ax.plot(validation_loss, label=f'Validation {i+1}', ls='-', color=colors[i])
-        ax.plot(training_loss, label=f'Training {i+1}', ls='dashed', color=colors[i])
-        ax.set_xlabel('Epoch')
-        ax.set_ylabel('Loss')
-        ax.legend(fontsize=12, loc='upper right')
-        fig.savefig(f"./Plots/TestArch/TestKF_1L_Sigmoid_{par}.png")
+        ax2.plot(validation_loss, label=f'Validation {i+1}', ls='-', color=colors[i])
+        ax2.plot(training_loss, label=f'Training {i+1}', ls='dashed', color=colors[i])
+        ax2.set_xlabel('Epoch')
+        ax2.set_ylabel('Loss')
+        ax2.set_title(f'K-Fold Validation (Parameter: {par})')
+        ax2.legend(fontsize=12, loc='upper right')
+        fig.savefig(f"./Plots/TestArch/Test_1L_Sigmoid_{par}.png", dpi=400)
         i += 1
 
 

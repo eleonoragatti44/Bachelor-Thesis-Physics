@@ -123,6 +123,8 @@ def graph(data_ver, data_int, par, name):
     pt_ver = ax2.scatter(data_ver["x"], data_ver["y"], color="blue")
     plt.legend((pt_int, pt_ver), ('Interpolation', 'Check'), scatterpoints=1, loc='lower right', fontsize=10)
     fig2.colorbar(g)
+    ax2.set_xlabel('x')
+    ax2.set_ylabel('y')
     ax2.set_title(f'Errore assoluto [{name}] (log)')
     fig2.savefig(f'./Plots/Errore assoluto [{name}] (log)', dpi=800)
 
@@ -165,7 +167,7 @@ def check_graph_row(data, f_int, test_func, test_func2, par):
         lim_sup = data["y"] >= data["y"].max() - step - i*step
         data_test = data[lim_inf & lim_sup]
         ellit = val_int(data_test, f_int)
-        fig = plt.figure(figsize=(12,5))
+        fig = plt.figure(figsize=(24,10))
         ax1 = fig.add_subplot(1, 2, 1)
         ax1.scatter(data["x"], data["y"], color="orange")
         ax1.scatter(data_test["x"], data_test["y"], color="blue")
@@ -173,13 +175,13 @@ def check_graph_row(data, f_int, test_func, test_func2, par):
         plt.ylabel("y [m]")
         ax2 = fig.add_subplot(1, 2, 2)
         ax2.scatter(data_test.index, data_test[par], color="red", label=f"{par} vera")
-        ax2.plot(test_func, label="Fit su half data", color="red")
-        ax2.plot(test_func2, label="Fit su complete data", color="blue")
-        ax2.plot(data_test.index, ellit, label="Interp2d", color="green")
-        plt.legend(loc='upper left')
+        ax2.plot(test_func, label="curve_fit", color="blue")
+        #ax2.plot(test_func2, label="curve_fit", color="blue")
+        ax2.plot(data_test.index, ellit, label="interp2d", color="green")
+        plt.legend(loc='lower left')
         plt.xlabel("Index")
         plt.ylabel("Ellitticità")
-        fig.savefig(f'./Plot_{par}/Row_{i}')
+        fig.savefig(f'./Plot_{par}/Row_{i}', dpi=400)
         plt.close(fig)
         
 ####################################################################################################################   
@@ -192,7 +194,7 @@ def check_graph_col(data, f_int, test_func, test_func2, par):
         lim_sup = data["x"] >= data["x"].max() - (step+0.004) - i*step
         data_test = data[lim_inf & lim_sup]
         ellit = val_int(data_test, f_int)
-        fig = plt.figure(figsize=(12,5))
+        fig = plt.figure(figsize=(24,10))
         ax1 = fig.add_subplot(1, 2, 1)
         ax1.scatter(data["x"], data["y"], color="orange")
         ax1.scatter(data_test["x"], data_test["y"], color="blue")
@@ -200,14 +202,14 @@ def check_graph_col(data, f_int, test_func, test_func2, par):
         plt.ylabel("y [m]")
         ax2 = fig.add_subplot(1, 2, 2)
         ax2.scatter(data_test.index, data_test[par], color="red", label=f"{par} vera")
-        ax2.plot(test_func, label="Fit su half data", color="red")
-        ax2.plot(test_func2, label="Fit su complete data", color="blue")
+        ax2.plot(test_func, label="curve_fit", color="blue")
+        #ax2.plot(test_func2, label="Fit su complete data", color="blue")
         ax2.set_xlim([data_test.index.min() - 1, data_test.index.max() + 1])
-        ax2.plot(data_test.index, ellit, label="Interp2d", color="green")
+        ax2.plot(data_test.index, ellit, label="interp2d", color="green")
         plt.legend(loc='upper left')
         plt.xlabel("Index")
         plt.ylabel("Ellitticità")
-        fig.savefig(f'./Plot_{par}/Col_{i}')
+        fig.savefig(f'./Plot_{par}/Col_{i}', dpi=400)
         plt.close(fig)
 
 

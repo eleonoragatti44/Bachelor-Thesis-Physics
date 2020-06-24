@@ -1,0 +1,12 @@
+\begin{thebibliography}{1}
+
+\bibitem{stevens}
+E.~Stevens and L.~Antiga.
+\newblock {\em Deep Learning with PyTorch}.
+\newblock Manning, 2019.
+
+\bibitem{cmb}
+M.~Tomasi, C.~Franceschet, and S.~Realini.
+\newblock The quest for cmb b-modes.
+
+\end{thebibliography}
