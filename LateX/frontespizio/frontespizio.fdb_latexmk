@@ -1,10 +1,12 @@
 # Fdb version 3
-["pdflatex"] 1592491148 "frontespizio.tex" "frontespizio.pdf" "frontespizio" 1592491149
+["pdflatex"] 1593114180 "frontespizio.tex" "frontespizio.pdf" "frontespizio" 1593114181
   "../figures/logo.jpg" 1582244468 152030 4d422880613ec11a4138d0ec17b4efca ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
+  "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
+  "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
@@ -119,9 +121,9 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1569925911 4259636 93969923163e7ced23f417f203ce9dbd ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "frontespizio.aux" 1592491149 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
-  "frontespizio.tex" 1592491148 1613 7dde142ca484a69ca5b6fd15364e84b8 ""
+  "frontespizio.aux" 1593114181 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "frontespizio.tex" 1593114179 1599 2675f55263c222ad279cb430cefe190b ""
   (generated)
-  "frontespizio.log"
-  "frontespizio.pdf"
   "frontespizio.aux"
+  "frontespizio.pdf"
+  "frontespizio.log"

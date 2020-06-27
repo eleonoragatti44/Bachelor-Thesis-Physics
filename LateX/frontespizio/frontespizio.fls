@@ -1,4 +1,4 @@
-PWD /Users/eleonoragatti/Desktop/LateX/frontespizio
+PWD /Users/eleonoragatti/Desktop/Git Tesi/LateX/frontespizio
 INPUT /usr/local/texlive/2019/texmf.cnf
 INPUT /usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt
@@ -192,11 +192,13 @@ INPUT ../figures/logo.jpg
 OUTPUT frontespizio.pdf
 INPUT ../figures/logo.jpg
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/ucs/data/uni-0.def
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/ucs/data/uni-0.def
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT frontespizio.aux
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb

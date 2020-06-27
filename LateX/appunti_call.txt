@@ -27,10 +27,14 @@ Per qualsiasi sorgente astrofisica ed in particolare per quanto riguarda la CMB 
 
 
 
+Tesi 8:
 
+Nubi di gas, emissione/radiazione di sincrotrone, emissione SZ per rivelare ammassi di galassie lontane non visibili, emissioni del sone HII, emissione di resti supernove (crab nebula), pulsar, radio galassie 
 
+è importante quando si fanno misurazioni astronomiche ricostruire la direzione d'arrivo di questa radiazione e per questo è molto importante studiare le ottiche.. e nel dire come mai è importante studiare questa radiazione in astronomia fai la lista degli oggetti che possono venire analizzati con le microonde.
+Il campo è vastissimo, ci sono tantissimi ambiti in cui la radioastronomia perchè ci sono tante sorgenti nello spazio che emettono radiazione nelle microonde. Ho bisogno di un sistema ottico che permetta quantomeno se sta ricevendo rad microonde da che direzione del cielo sta arrivando. c'è grande interesse in astronomia per misura rad nelle microonde e nel radio -> elenco delle sorgenti
 
-
+Questo si traduce nella necessità di avere un sistema ottico che sia in gradi di ricopnoscere le microonde e sapere da dove provengono.
 
 
 

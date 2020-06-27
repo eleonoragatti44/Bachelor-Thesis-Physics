@@ -1,5 +1,69 @@
 \begin{thebibliography}{1}
 
+\bibitem{chollet}
+F.~Chollet.
+\newblock {\em Deep Learning with Python}.
+\newblock Manning, 2018.
+
+\bibitem{planck}
+{Planck Collaboration}, {Aghanim, N.}, {Armitage-Caplan, C.}, {Arnaud, M.},
+  {Ashdown, M.}, {Atrio-Barandela, F.}, {Aumont, J.}, {Baccigalupi, C.},
+  {Banday, A. J.}, {Barreiro, R. B.}, {Battaner, E.}, {Benabed, K.},
+  {Beno\^{\i}t, A.}, {Benoit-L\'evy, A.}, {Bernard, J.-P.}, {Bersanelli, M.},
+  {Bielewicz, P.}, {Bobin, J.}, {Bock, J. J.}, {Bonaldi, A.}, {Bonavera, L.},
+  {Bond, J. R.}, {Borrill, J.}, {Bouchet, F. R.}, {Bridges, M.}, {Bucher, M.},
+  {Burigana, C.}, {Butler, R. C.}, {Cappellini, B.}, {Cardoso, J.-F.},
+  {Catalano, A.}, {Chamballu, A.}, {Chen, X.}, {Chiang, L.-Y}, {Christensen, P.
+  R.}, {Church, S.}, {Colombi, S.}, {Colombo, L. P. L.}, {Crill, B. P.},
+  {Curto, A.}, {Cuttaia, F.}, {Danese, L.}, {Davies, R. D.}, {Davis, R. J.},
+  {de Bernardis, P.}, {de Rosa, A.}, {de Zotti, G.}, {Delabrouille, J.},
+  {Dickinson, C.}, {Diego, J. M.}, {Dole, H.}, {Donzelli, S.}, {Dor\'e, O.},
+  {Douspis, M.}, {Dupac, X.}, {Efstathiou, G.}, {En\ss{}lin, T. A.}, {Eriksen,
+  H. K.}, {Finelli, F.}, {Forni, O.}, {Frailis, M.}, {Franceschi, E.}, {Gaier,
+  T. C.}, {Galeotta, S.}, {Ganga, K.}, {Giard, M.}, {Giardino, G.},
+  {Giraud-H\'eraud, Y.}, {Gjerl\o{}w, E.}, {Gonz\'alez-Nuevo, J.}, {G\'orski,
+  K. M.}, {Gratton, S.}, {Gregorio, A.}, {Gruppuso, A.}, {Hansen, F. K.},
+  {Hanson, D.}, {Harrison, D.}, {Henrot-Versill\'e, S.},
+  {Hern\'andez-Monteagudo, C.}, {Herranz, D.}, {Hildebrandt, S. R.}, {Hivon,
+  E.}, {Hobson, M.}, {Holmes, W. A.}, {Hornstrup, A.}, {Hovest, W.},
+  {Huffenberger, K. M.}, {Jaffe, A. H.}, {Jaffe, T. R.}, {Jewell, J.}, {Jones,
+  W. C.}, {Juvela, M.}, {Kangaslahti, P.}, {Keih\"anen, E.}, {Keskitalo, R.},
+  {Kisner, T. S.}, {Knoche, J.}, {Knox, L.}, {Kunz, M.}, {Kurki-Suonio, H.},
+  {Lagache, G.}, {L\"ahteenm\"aki, A.}, {Lamarre, J.-M.}, {Lasenby, A.},
+  {Laureijs, R. J.}, {Lawrence, C. R.}, {Leach, S.}, {Leahy, J. P.}, {Leonardi,
+  R.}, {Lesgourgues, J.}, {Liguori, M.}, {Lilje, P. B.}, {Linden-V\o{}rnle,
+  M.}, {L\'opez-Caniego, M.}, {Lubin, P. M.}, {Mac\'{\i}as-P\'erez, J. F.},
+  {Maino, D.}, {Mandolesi, N.}, {Maris, M.}, {Marshall, D. J.}, {Martin, P.
+  G.}, {Mart\'{\i}nez-Gonz\'alez, E.}, {Masi, S.}, {Massardi, M.}, {Matarrese,
+  S.}, {Matthai, F.}, {Mazzotta, P.}, {Meinhold, P. R.}, {Melchiorri, A.},
+  {Mendes, L.}, {Mennella, A.}, {Migliaccio, M.}, {Mitra, S.}, {Moneti, A.},
+  {Montier, L.}, {Morgante, G.}, {Mortlock, D.}, {Moss, A.}, {Munshi, D.},
+  {Naselsky, P.}, {Natoli, P.}, {Netterfield, C. B.}, {N\o{}rgaard-Nielsen, H.
+  U.}, {Novikov, D.}, {Novikov, I.}, {O\'{}Dwyer, I. J.}, {Osborne, S.}, {Paci,
+  F.}, {Pagano, L.}, {Paladini, R.}, {Paoletti, D.}, {Partridge, B.}, {Pasian,
+  F.}, {Patanchon, G.}, {Pearson, D.}, {Peel, M.}, {Perdereau, O.}, {Perotto,
+  L.}, {Perrotta, F.}, {Pierpaoli, E.}, {Pietrobon, D.}, {Plaszczynski, S.},
+  {Pointecouteau, E.}, {Polenta, G.}, {Ponthieu, N.}, {Popa, L.}, {Poutanen,
+  T.}, {Pratt, G. W.}, {Pr\'ezeau, G.}, {Prunet, S.}, {Puget, J.-L.}, {Rachen,
+  J. P.}, {Rebolo, R.}, {Reinecke, M.}, {Remazeilles, M.}, {Ricciardi, S.},
+  {Riller, T.}, {Rocha, G.}, {Rosset, C.}, {Rossetti, M.}, {Roudier, G.},
+  {Rubi\~no-Mart\'{\i}n, J. A.}, {Rusholme, B.}, {Sandri, M.}, {Santos, D.},
+  {Scott, D.}, {Seiffert, M. D.}, {Shellard, E. P. S.}, {Spencer, L. D.},
+  {Starck, J.-L.}, {Stolyarov, V.}, {Stompor, R.}, {Sureau, F.}, {Sutton, D.},
+  {Suur-Uski, A.-S.}, {Sygnet, J.-F.}, {Tauber, J. A.}, {Tavagnacco, D.},
+  {Terenzi, L.}, {Toffolatti, L.}, {Tomasi, M.}, {Tristram, M.}, {Tucci, M.},
+  {Tuovinen, J.}, {T\"urler, M.}, {Umana, G.}, {Valenziano, L.}, {Valiviita,
+  J.}, {Van Tent, B.}, {Varis, J.}, {Vielva, P.}, {Villa, F.}, {Vittorio, N.},
+  {Wade, L. A.}, {Wandelt, B. D.}, {Watson, R.}, {Wilkinson, A.}, {Yvon, D.},
+  {Zacchei, A.}, and {Zonca, A.}
+\newblock Planck 2013 results. v. lfi calibration.
+\newblock {\em A\&A}, 571:A5, 2014.
+
+\bibitem{silver}
+S.~Silver and I.~of~Electrical~Engineers.
+\newblock {\em Microwave Antenna Theory and Design}.
+\newblock IEE electromagnetic waves series. P. Peregrinus, 1984.
+
 \bibitem{stevens}
 E.~Stevens and L.~Antiga.
 \newblock {\em Deep Learning with PyTorch}.
@@ -8,5 +72,10 @@ E.~Stevens and L.~Antiga.
 \bibitem{cmb}
 M.~Tomasi, C.~Franceschet, and S.~Realini.
 \newblock The quest for cmb b-modes.
+
+\bibitem{wilson}
+T.~Wilson and S.~H{\"u}ttemeister.
+\newblock {\em Tools of Radio Astronomy: Problems and Solutions}.
+\newblock Astronomy and Astrophysics Library. Springer Berlin Heidelberg, 2012.
 
 \end{thebibliography}

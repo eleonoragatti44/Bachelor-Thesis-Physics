@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.1)  24 JUN 2020 18:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.1)  27 JUN 2020 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -292,6 +292,15 @@ Package: nccmath 2006/01/20 v1.3 Additional Math Commands (NCC)
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup4
 )
+(/usr/local/texlive/2019/texmf-dist/tex/latex/units/units.sty
+Package: units 1998/08/04 v0.9b Typesetting units
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip59
+\L@UnitsRaiseTextstyle=\skip60
+\L@UnitsRaiseScriptstyle=\skip61
+))
 (/usr/local/texlive/2019/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
 
@@ -428,25 +437,25 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip59
+\Hy@SectionHShift=\skip62
 )
 (./tesi.aux)
 \openout1 = `tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -478,8 +487,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \it@ocap on input line 52.
-LaTeX Info: Redefining \it@ccap on input line 52.
+LaTeX Info: Redefining \it@ocap on input line 54.
+LaTeX Info: Redefining \it@ccap on input line 54.
 
 
 File italian.ldf warning: 
@@ -487,7 +496,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 52.
+italian.ldf    on input line 54.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -537,7 +546,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 52.
+Package hyperref Info: Link coloring OFF on input line 54.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -547,9 +556,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count144
 )
-LaTeX Info: Redefining \ref on input line 52.
-LaTeX Info: Redefining \pageref on input line 52.
-LaTeX Info: Redefining \nameref on input line 52.
+LaTeX Info: Redefining \ref on input line 54.
+LaTeX Info: Redefining \pageref on input line 54.
+LaTeX Info: Redefining \nameref on input line 54.
 
 (./tesi.out) (./tesi.out)
 \@outlinefile=\write3
@@ -559,38 +568,38 @@ LaTeX Info: Redefining \nameref on input line 52.
 File: ../frontespizio/frontespizio.pdf Graphic file (type pdf)
 <use ../frontespizio/frontespizio.pdf>
 Package pdftex.def Info: ../frontespizio/frontespizio.pdf  used on input line 5
-6.
+8.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: ../frontespizio/frontespizio.pdf Graphic file (type pdf)
 <use ../frontespizio/frontespizio.pdf>
 Package pdftex.def Info: ../frontespizio/frontespizio.pdf  used on input line 5
-6.
+8.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 <../frontespizio/frontespizio.pdf, id=79, page=1, 597.50829pt x 845.0471pt>
 File: ../frontespizio/frontespizio.pdf Graphic file (type pdf)
 <use ../frontespizio/frontespizio.pdf, page 1>
 Package pdftex.def Info: ../frontespizio/frontespizio.pdf , page1 used on input
- line 56.
+ line 58.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: ../frontespizio/frontespizio.pdf Graphic file (type pdf)
 <use ../frontespizio/frontespizio.pdf, page 1>
 Package pdftex.def Info: ../frontespizio/frontespizio.pdf , page1 used on input
- line 56.
+ line 58.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ../frontespizio/frontespizio.pdf Graphic file (type pdf)
 <use ../frontespizio/frontespizio.pdf, page 1>
 Package pdftex.def Info: ../frontespizio/frontespizio.pdf , page1 used on input
- line 56.
+ line 58.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ../frontespizio/frontespizio.pdf Graphic file (type pdf)
 <use ../frontespizio/frontespizio.pdf, page 1>
 Package pdftex.def Info: ../frontespizio/frontespizio.pdf , page1 used on input
- line 56.
+ line 58.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ../frontespizio/frontespizio.pdf Graphic file (type pdf)
 <use ../frontespizio/frontespizio.pdf, page 1>
 Package pdftex.def Info: ../frontespizio/frontespizio.pdf , page1 used on input
- line 56.
+ line 58.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [1
 
@@ -613,125 +622,184 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 ]
 Capitolo 1.
-<../figures/diag_rad.png, id=135, 863.225pt x 712.6625pt>
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 82.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
+ [5]
+Underfull \hbox (badness 10000) in paragraph at lines 92--97
+
+ []
+
+<../figures/diag_rad.png, id=154, 863.225pt x 712.6625pt>
 File: ../figures/diag_rad.png Graphic file (type png)
 <use ../figures/diag_rad.png>
-Package pdftex.def Info: ../figures/diag_rad.png  used on input line 82.
-(pdftex.def)             Requested size: 341.43436pt x 281.87376pt.
-<../figures/dataset.png, id=139, 1174.3875pt x 668.4975pt>
+Package pdftex.def Info: ../figures/diag_rad.png  used on input line 108.
+(pdftex.def)             Requested size: 213.39566pt x 176.17519pt.
+<../figures/risposta_ottica.png, id=156, 835.12pt x 746.79pt>
+File: ../figures/risposta_ottica.png Graphic file (type png)
+<use ../figures/risposta_ottica.png>
+Package pdftex.def Info: ../figures/risposta_ottica.png  used on input line 114
+.
+(pdftex.def)             Requested size: 192.0548pt x 171.73529pt.
+[6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <../figures/diag_rad.png> <../figures/risposta_ottica.png>]
+<../figures/dataset.png, id=189, 1174.3875pt x 668.4975pt>
 File: ../figures/dataset.png Graphic file (type png)
 <use ../figures/dataset.png>
-Package pdftex.def Info: ../figures/dataset.png  used on input line 92.
-(pdftex.def)             Requested size: 426.79134pt x 242.94382pt.
-[5 <../figures/diag_rad.png>] [6 <../figures/dataset.png>]
+Package pdftex.def Info: ../figures/dataset.png  used on input line 136.
+(pdftex.def)             Requested size: 341.43436pt x 194.34892pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--143
+
+ []
+
+<../figures/off-axis_co.png, id=194, 487.8225pt x 402.5439pt>
+File: ../figures/off-axis_co.png Graphic file (type png)
+<use ../figures/off-axis_co.png>
+Package pdftex.def Info: ../figures/off-axis_co.png  used on input line 151.
+(pdftex.def)             Requested size: 209.1301pt x 172.56839pt.
+<../figures/off-axis_cx.png, id=195, 501.5538pt x 402.5439pt>
+File: ../figures/off-axis_cx.png Graphic file (type png)
+<use ../figures/off-axis_cx.png>
+Package pdftex.def Info: ../figures/off-axis_cx.png  used on input line 157.
+(pdftex.def)             Requested size: 209.1301pt x 167.84496pt.
+[8 <../figures/dataset.png>] [9 <../figures/off-axis_co.png> <../figures/off-ax
+is_cx.png>] [10
+
+]
 Capitolo 2.
-<../figures/schema_rete.jpg, id=154, 1236.62pt x 593.21625pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--184
+
+ []
+
+<../figures/schema_rete.jpg, id=219, 1236.62pt x 593.21625pt>
 File: ../figures/schema_rete.jpg Graphic file (type jpg)
 <use ../figures/schema_rete.jpg>
-Package pdftex.def Info: ../figures/schema_rete.jpg  used on input line 127.
+Package pdftex.def Info: ../figures/schema_rete.jpg  used on input line 196.
 (pdftex.def)             Requested size: 370.98886pt x 177.96625pt.
-[7
-
-] [8 <../figures/schema_rete.jpg>]
+[11] [12 <../figures/schema_rete.jpg>]
 Capitolo 3.
 
-Overfull \hbox (11.53912pt too wide) in paragraph at lines 154--156
+Overfull \hbox (11.53912pt too wide) in paragraph at lines 223--225
 \OT1/cmr/m/n/12 di in-ter-po-lai-zio-ne ho uti-liz-za-to due me-to-di: \OT1/cmt
 t/m/n/12 interp2d \OT1/cmr/m/n/12 del mo-du-lo \OT1/cmtt/m/n/12 scipy.interpola
 te\OT1/cmr/m/n/12 ,
  []
 
-<../figures/errore_assoluto_ell.png, id=172, 578.16pt x 433.62pt>
+<../figures/errore_assoluto_ell.png, id=234, 578.16pt x 433.62pt>
 File: ../figures/errore_assoluto_ell.png Graphic file (type png)
 <use ../figures/errore_assoluto_ell.png>
 Package pdftex.def Info: ../figures/errore_assoluto_ell.png  used on input line
- 162.
+ 231.
 (pdftex.def)             Requested size: 462.52863pt x 346.89647pt.
 
-Overfull \hbox (35.73729pt too wide) in paragraph at lines 162--163
+Overfull \hbox (35.73729pt too wide) in paragraph at lines 231--232
  [][] 
  []
 
-[9
+[13
 
 ]
-<../figures/error_curve_fit.png, id=187, 433.62pt x 289.08pt>
+<../figures/error_curve_fit.png, id=246, 433.62pt x 289.08pt>
 File: ../figures/error_curve_fit.png Graphic file (type png)
 <use ../figures/error_curve_fit.png>
-Package pdftex.def Info: ../figures/error_curve_fit.png  used on input line 176
+Package pdftex.def Info: ../figures/error_curve_fit.png  used on input line 245
 .
 (pdftex.def)             Requested size: 346.89647pt x 231.2643pt.
-<../figures/error_comparison_all.png, id=189, 433.62pt x 289.08pt>
+ [14 <../figures/errore_assoluto_ell.png>]
+<../figures/error_comparison_all.png, id=256, 433.62pt x 289.08pt>
 File: ../figures/error_comparison_all.png Graphic file (type png)
 <use ../figures/error_comparison_all.png>
 Package pdftex.def Info: ../figures/error_comparison_all.png  used on input lin
-e 187.
+e 256.
 (pdftex.def)             Requested size: 346.89647pt x 231.2643pt.
- [10 <../figures/errore_assoluto_ell.png>]
-<../figures/row_bordo.png, id=199, 660.36713pt x 600.5637pt>
+ [15 <../figures/error_curve_fit.png> <../figures/error_comparison_all.png>]
+<../figures/row_bordo.png, id=266, 660.36713pt x 600.5637pt>
 File: ../figures/row_bordo.png Graphic file (type png)
 <use ../figures/row_bordo.png>
-Package pdftex.def Info: ../figures/row_bordo.png  used on input line 199.
+Package pdftex.def Info: ../figures/row_bordo.png  used on input line 268.
 (pdftex.def)             Requested size: 273.14851pt x 248.4137pt.
-<../figures/row_interno.png, id=200, 671.20763pt x 656.03093pt>
+<../figures/row_interno.png, id=267, 671.20763pt x 656.03093pt>
 File: ../figures/row_interno.png Graphic file (type png)
 <use ../figures/row_interno.png>
-Package pdftex.def Info: ../figures/row_interno.png  used on input line 206.
+Package pdftex.def Info: ../figures/row_interno.png  used on input line 275.
 (pdftex.def)             Requested size: 273.14851pt x 266.97238pt.
- [11 <../figures/error_curve_fit.png> <../figures/error_comparison_all.png>]
-<../figures/error_comparison.png, id=215, 433.62pt x 289.08pt>
+<../figures/error_comparison.png, id=274, 433.62pt x 289.08pt>
 File: ../figures/error_comparison.png Graphic file (type png)
 <use ../figures/error_comparison.png>
-Package pdftex.def Info: ../figures/error_comparison.png  used on input line 21
-8.
+Package pdftex.def Info: ../figures/error_comparison.png  used on input line 28
+7.
 (pdftex.def)             Requested size: 346.89647pt x 231.2643pt.
- [12 <../figures/row_bordo.png> <../figures/row_interno.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 236.
+ [16]
+Underfull \vbox (badness 3884) has occurred while \output is active []
 
+ [17 <../figures/row_bordo.png> <../figures/row_interno.png>] [18 <../figures/e
+rror_comparison.png>]
+<../figures/tanh.png, id=306, 615.29875pt x 614.295pt>
+File: ../figures/tanh.png Graphic file (type png)
+<use ../figures/tanh.png>
+Package pdftex.def Info: ../figures/tanh.png  used on input line 356.
+(pdftex.def)             Requested size: 192.0548pt x 191.73238pt.
+<../figures/sigmoid.png, id=307, 615.29875pt x 614.295pt>
+File: ../figures/sigmoid.png Graphic file (type png)
+<use ../figures/sigmoid.png>
+Package pdftex.def Info: ../figures/sigmoid.png  used on input line 362.
+(pdftex.def)             Requested size: 192.0548pt x 191.73238pt.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 236.
- [13 <../figures/error_comparison.png>] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 375--377
+
+ []
+
+[19 <../figures/tanh.png> <../figures/sigmoid.png>] [20]
 Capitolo 4.
-(./tesi.bbl [15
+(./tesi.bbl [21
 
-] [16
+] [22
 
-])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 297.
- [17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 297.
+] [23])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 432.
+ [24]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 432.
  (./tesi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 297.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 297.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 432.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 432.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: E8D77FE0A7A3EA07DB102FBB43E588B9;1258.
+(rerunfilecheck)             Checksum: C8BD630ACEEAB526C4EEA8D965A71885;1251.
  ) 
 Here is how much of TeX's memory you used:
- 11605 strings out of 492616
- 172930 string characters out of 6129481
- 303050 words of memory out of 5000000
- 15295 multiletter control sequences out of 15000+600000
- 11601 words of font info for 45 fonts, out of 8000000 for 9000
+ 11719 strings out of 492616
+ 174832 string characters out of 6129481
+ 310384 words of memory out of 5000000
+ 15373 multiletter control sequences out of 15000+600000
+ 12115 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,18n,43p,868b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,18n,43p,1164b,535s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
-/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
-cal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
-/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/t
-exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/te
-xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on tesi.pdf (17 pages, 5182750 bytes).
+></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
+usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
+l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
+/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
+19/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/201
+9/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on tesi.pdf (24 pages, 5943360 bytes).
 PDF statistics:
- 294 PDF objects out of 1000 (max. 8388607)
- 235 compressed objects within 3 object streams
- 50 named destinations out of 1000 (max. 500000)
- 210 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 415 PDF objects out of 1000 (max. 8388607)
+ 326 compressed objects within 4 object streams
+ 74 named destinations out of 1000 (max. 500000)
+ 235 words of extra memory for PDF output out of 10000 (max. 10000000)
 

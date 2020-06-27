@@ -34,10 +34,12 @@
 \fancyhf{}
 \fancyhead[L]{\nouppercase{\leftmark}}
 \fancyhead[R]{\thepage}
+\linespread{1.1}
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{nccmath}
 \usepackage{mathrsfs}
+\usepackage{units} 
 \usepackage{subcaption}
 \usepackage{afterpage}
 \usepackage[pdfa]{hyperref}
@@ -68,31 +70,98 @@
 %%%%%%%%%%%%%%%%%%%%  CAPITOLO 1  %%%%%%%%%%%%%%%%%%%%
 
 \chapter{Sistemi ottici nelle microonde}\label{intro_sistemi_ottici}
+Tutta l'informazione che abbiamo a disposizione su oggetti astronomici molto distanti è contenuta nella radiazione elettromagnetica emessa. Per secoli l'unico tipo di analisi possibile è stata quella nello spettro del visibile. Oggigiorno esistono svariate branche dell'astrofisica che analizzano segnali provenienti dall'Universo a diverse frequenze elettromagnetiche; una di queste branche riguarda lo studio del cosmo attraverso le microonde. 
 
     %%%%%%%%%%%%%%%%%%%  CAPITOLO 1.1  %%%%%%%%%%%%%%%%%%%
 
 \section{Utilizzo delle microonde in astrofisica}\label{microonde_astrofisica}
+Il range delle lunghezze d'onda delle microonde è $\lambda \sim 1 \unit{mm} \div 10 \unit{cm}$\footnote{Il confine tra onde radio e microonde non è netto, spesso si parla di radio estendendo il range di lunghezze d'onda anche a quello delle microonde.}. \\
+\noindent \`E estremamente importante fare osservazioni a grandi lunghezze d'onda, nel millimetrico e oltre, poichè esistono numerosissime sorgenti cosmologiche che emettono in questo range e possono essere analizzate tramite sistemi ottici nelle microonde.
+I segnali più comunemente studiati in radio astronomia e attraverso le microonde sono:
+\begin{itemize}
+	\item Radiazione emessa da gas ionizzato;
+	\item Radiazione di sincrotrone, dovuta al moto di particelle cariche libere di muoversi nell'Universo e deviate da campi magnetici;
+	\item Effetto Sunyaev-Zeldovich, che permette di rivelare ammassi di galassie altrimenti non visibili;
+	\item Emissioni del Sole;
+	\item Radiazioni da regioni $H_{II}$, si tratta di regioni nello spazio in cui sono presenti stelle molto calde (di tipo O o di tipo B) che ionizzano il gas intorno ad esse il quale emette nelle microonde e nel radio;
+	\item Supernovae e resti di Supernovae\footnote{La Crab Nebula, per esempio, è estremamente visibile nelle moicroonde.};
+	\item Pulsar;
+	\item Radio galassie;
+	\item CMB.
+\end{itemize}
+La \textbf{CMB}, Cosmic Microwave Background, è la radiazione a microonde di fondo cosmico che permea l’intero Universo.
+Secondo il \textit{Modello Cosmologico Standard (SCM)} l'Universo ha avuto origine circa $14$ miliardi di anni fa da una singolarità iniziale: il \textit{Big Bang}. \\
+\noindent Nei primissimi istanti dopo il \textit{Big Bang} vi fu una rapidissima fase di espansione ($10^{-33}~\unit{s}$), detta \textit{inflazione}, seguita da un'espansione più lenta e regolare, che continua tutt'ora. Inizialmente materia e radiazione erano in equilibrio in un plasma estremamente caldo; la progressiva espansione ha causato un abbassamento della temperatura del plasma. L'equilibrio tra materia e radiazione venne a mancare quando la temperatura raggiunse $T \simeq 3000~\unit{K}$. Questo causò il \textit{disaccoppiamento} tra materia e radiazione: la maggior parte degli elettroni venne catturata dai nuclei atomici permettendo la formazione dei primi atomi neutri. Convenzionalmente si considera come tempo al quale si è verificato il \textit{disaccoppiamento} tra materia e radiazione l'istante $t_{dec}$ in cui il libero cammino medio dei fotoni divenne maggiore della scala dell'Universo osservabile. Questo accadde a circa $380~000~\unit{anni}$ dal \textit{Big Bang} e da allora i fotoni primordiali sono liberi di vagare nello spazio e sono i responsabili della radiazione a microonde di fondo cosmico. \\
+\newline
+Data la vastità di campi in cui può essere effettuato uno studio nelle microonde, è di fondamentale importanza avere a disposizione un sistema ottico che permetta questo tipo di analisi. In particolare è necessario riconoscere la direzione dalla quale un determinato segnale microonde proviene.
 
     %%%%%%%%%%%%%%%%%%%  CAPITOLO 1.2  %%%%%%%%%%%%%%%%%%%
-
 \section{Diagramma di radiazione}\label{rad_pattern}
+Un sistema ottico è un dispositivo il cui scopo è quello di registrare la luce proveniente dal cielo e mandarla ad un rivelatore.
+La risposta di un sistema ottico ideale può essere rappresentata come una delta di Dirac: non nulla solo lungo la linea di vista.
+Tuttavia i fenomeni di interferenza e diffrazione rendono la situazione molto più complessa; in particolare nella radio astronomia e nell'astronomia a microonde il problema è particolarmente importante poichè le dimensioni degli elementi ottici degli strumenti sono comparabili alle lunghezze d'onda d'interesse.
 
 \begin{figure}[!ht]
-	\centering
-	\includegraphics[width=0.8\linewidth]{../figures/diag_rad.png}
-	\caption{Diagramma di radiazione tridimensionale di un'antenna direzionale.\cite{cmb}}
-	\label{diag_rad}
+\centering
+	\begin{subfigure}{0.5\textwidth}
+	    \centering
+	    \includegraphics[width=\linewidth]{../figures/diag_rad}
+	    \caption{}
+	    \label{beam}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+	    \includegraphics[width=\linewidth]{../figures/risposta_ottica.png}
+		\caption{}
+		\label{beam_cut}
+	\end{subfigure}
+\caption{Tipico andamento della \textit{beam function} $\gamma(\theta,\phi)$. La Fig.~\ref{beam} rappresenta il diagramma di radiazione tridimensionale di un'antenna direzionale.\cite{cmb}. La Fig.~\ref{beam_cut} rappresenta una sezione dello stesso grafico su un piano parallelo all'asse del main lobe.\cite{planck}}
+\label{diag_rad}
 \end{figure}
+
+La risposta angolare di un sistema ottico è quantificata da una funzione $\gamma(\theta,\phi)$ detta \textit{beam function} che definisce il \textbf{diagramma di radiazione}. Idealmente $\gamma(\theta,\phi)$ dovrebbe corrispondere a una delta di Dirac\footnote{Questa idealizzazione viene spesso chiamata \textit{pencil beam idealization}}, quello che viene in realtà osservato è una risposta simile a quella riportata in Fig.~\ref{diag_rad}.
+\`E possibile osservare la presenza di un \textit{main beam} e di lobi secondari. Tipicamente la maggior parte della radiazione è contenuta nel main beam. \\
+A partire dal diagramma di radiazione si definiscono alcuni parametri che permettono una sua descrizione; tali parametri sono i protagonisti di questo lavoro di tesi.
+La \textbf{Full Width Half Maximum} (FWHM) del main beam è la larghezza angolare a metà della sua altezza ed è uno dei parametri più importanti e più diffusi per la caratterizzazione della risoluzione di uno strumento. Nel corso dei prossimi capitoli verranno considerati due diversi valori per la FWHM, rispetto all'asse $x$ e rispetto all'asse $y$. Attraverso queste due grandezze è possibile definire un ulteriore parametro: l'\textbf{ellitticità}. Questa è definita come il rapporto tra le due FWHM ponendo al numeratore la più grande tra FWHM$_x$ e FWHM$_y$.\\
+Hanno inoltre grande importanza i parametri che riguardano la polarizzazione. Supponiamo di studiare un'antenna in trasmissione\footnote{Strumenti ottici per lo studio della CMB lavorano in ricezione ma è possibile studiare alternativamente un'antenna in trasmissione per il \textit{principio di reciprocità}.} e considerare una radiazione polarizzata. Fissiamo una direzione di polarizzazione; è allora possibile definire, rispetto a tale direzione, una componente \textit{co-polare} ed una componente \textit{cross-polare} della radiazione. La componente co-polare è data dalla frazione di radiazione con polarizzazione parallela alla direzione fissata mentre la componente cross-polare è data dalla frazione di radiazione con polarizzaizione perpendicolare a quella fissata. In particolare i parametri utilizzati nei prossimi capitoli riguardano la componente \textbf{co-polare massima} e la componente \textbf{cross-polare massima}.
+
+
     %%%%%%%%%%%%%%%%%%  CAPITOLO 1.3  %%%%%%%%%%%%%%%%%%%%
 
 \section{Simulazione di sistemi ottici}\label{simulazioni}
+Simulare un sistema ottico significa studiare quanta potenza viene ricevuta in funzione dell'angolo. Tipicamente per simulare la risposta angolare di un sistema ottico si usa il sofware \textit{GRASP} (General Reflector Antenna Software Package). Attraverso GRASP è stato possibile ottenere la tabella in Fig.~\ref{dataset} che riporta le caratteristiche del beam data una posizione $(x, y, z)$ sulla superficie focale.
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=\linewidth]{../figures/dataset.png}
-	\caption{Dataset relativo allo strumento STRIP ottenuto tramite la simulazione in Grasp}
+	\includegraphics[width=0.8\linewidth]{../figures/dataset.png}
+	\caption{Dataset relativo allo strumento STRIP ottenuto tramite la simulazione in GRASP. Tale dataset è stato utilizzato per l'analisi descritta nei capitoli successivi.}
 	\label{dataset}
 \end{figure}
+
+GRASP è uno strumento molto potente che permette di simulare sistemi ottici complessi.
+Tuttavia i tempi di calcolo di GRASP sono elevati\footnote{Per produrre i dati in Fig.~\ref{dataset} sono stati impiegati due giorni.}; per ogni simulazione, e quindi per ogni antenna, vengono costruiti dei grafici come quelli riportati in Fig.~\ref{beam_grasp} e poi da quelli vengono ricavati i valori riportati nel dataset ~\ref{dataset}. \\
+
+Nel caso di STRIP è ancora possibile simulare l'intera ottica tramite GRASP poichè il numero di antenne è piuttosto limitato. Tuttavia per sistemi ottici più complessi in cui il numero di antenne diventa di circa 2 ordini di grandezza superiore, risulta del tutto impossibile effettuare una simulazione completa dell'intera ottica. \\
+\noindent \`E quindi nata la necessità di trovare una via alternativa che permetta di stimare i parametri che descrivono il beam in una qualsiasi posizione.
+
+\begin{figure}[!ht]
+\centering
+	\begin{subfigure}{0.49\textwidth}
+	    \centering
+	    \includegraphics[width=\linewidth]{../figures/off-axis_co.png}
+	    \caption{}
+	    \label{off_axis_co}
+	\end{subfigure}
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+	    \includegraphics[width=\linewidth]{../figures/off-axis_cx.png}
+		\caption{}
+		\label{off_axis_cx}
+	\end{subfigure}
+\caption{Diagramma della componente co-polare~\ref{off_axis_co} e della componente cross-polare~\ref{off_axis_cx} di un'antenna off-axis. \`E possibile notare come il profilo del beam sia leggermente ellittico; per il sistema ottico di STRIP infatti l'ellitticità del fascio aumenta spostandosi dal centro del piano focale.}
+\label{beam_grasp}
+\end{figure}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -111,9 +180,9 @@
 
 \section{Machine learning e tipi di rete}
 Negli ultimi decenni il campo del \textit {machine learning} si è fortemente evoluto. È stata costruita un'ampia classe di algoritmi in grado di approssimare molto efficacemente processi non lineari. Tali architetture fanno parte di un particolare campo di ricerca, il \textit {Deep Learning}, che vede protagoniste le reti neurali artificiali. \\
-Queste tecniche si basano su l'apprendimento tramite esempi, i quali sono rappresentati da coppie input-output come un'immagine e la sua descrizione (input: foto di un gatto, output: "gatto") o una posizione a cui è associato un particolare valore di campo elettrico (input: (x, y, z), output: E(x, y, z)). È quindi di fondamentale importanza avere a disposizione un ampio database attraverso il quale effettuare un \textit {training}. Le reti neurali consentono quindi di approssimare una corrispondenza, vera o presunta, tra un input e un output. 
+Queste tecniche si basano su l'apprendimento tramite esempi, i quali sono rappresentati da coppie input-output come un'immagine e la sua descrizione (input: foto di un gatto, output: "gatto") o una posizione a cui è associato un particolare valore di campo elettrico (input: (x, y, z), output: E(x, y, z)). È quindi di fondamentale importanza avere a disposizione un ampio database attraverso il quale effettuare un \textit {training}. Le reti neurali consentono quindi di approssimare una corrispondenza, vera o presunta, tra un input e un output. \\ 
 
-	Esistono due classi di problemi affrontati con la tecnica delle reti neurali: la \textit {classificazione} e la \textit {regressione}.
+Esistono due classi di problemi affrontati con la tecnica delle reti neurali: la \textit {classificazione} e la \textit {regressione}.
 La \textit {classificazione} individua l'appartenenza ad una classe e può essere supervisionata o non supervisionata. Parliamo di classificazione supervisionata quando sono note a priori le diverse classi di appartenenza; se invece si vogliono determinare delle classi di similitudine senza conoscere a priori i pattern rappresentativi, si ha un problema di classificazione non supervisionata. \\
 Le reti neurali per la \textit {regressione} entrano in gioco quando, a partire da coppie input-output, si vuole determinare la funzione che approssimi al meglio la relazione.
 
@@ -225,7 +294,7 @@ Il plot in fig.~\ref{err_int_mask} mostra ancora dei punti nei quali l'errore di
 
      %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.2  %%%%%%%%%%%%%%%%%%%
 \section{Reti neurali}\label{reti_neurali}
-In questa sezione mostro come sono state create le architetture delle reti neurali utilizzati per effettuare la regressione, come sono stati gestiti i dati a disposizione per definire \texttt{training set} e \texttt{validazion set} e com'è avvenuto il processo di training. Infine verrà presentato il confronto dei risultati ottenuti tramite l'utilizzo dell'interpolazione e della rete neurale (~\ref{risultati}).
+In questa sezione mostro come sono state create le architetture delle reti neurali utilizzate per effettuare la regressione, come sono stati gestiti i dati a disposizione per definire \texttt{training set} e \texttt{validazion set} e com'è avvenuto il processo di training. Infine verrà presentato il confronto dei risultati ottenuti tramite l'utilizzo dell'interpolazione e delle reti (~\ref{risultati}).
 
         %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.2.1  %%%%%%%%%%%%%%%%%%%
 
@@ -242,19 +311,82 @@ Tali elementi sono:
 	\item La \textit{loss function}.
 \end{itemize}
 
-La scelta dei loro valori non è mai univoca, non esiste una regola fissa per avere la ricetta perfetta che porta ai risultati migliori.
-Nel mio lavoro di tesi ho utilizzato 6 diverse architetture; alcuni degli elementi appena citati sono stati mantenuti invariati per ogni architettura, mentre altri sono stati variati. \\
+\noindent La scelta dei loro valori non è mai univoca, non esiste una regola fissa per avere la ricetta perfetta che porta ai risultati migliori.
+Nel mio lavoro di tesi ho utilizzato 6 diverse architetture; alcuni degli elementi appena citati sono stati mantenuti invariati per ogni architettura\footnote{L'input, per esempio, è sempre una coppia (x, y) che definisce una posizione mentre l'output è un singolo valore di un particolare parametro in quel punto.}, mentre altri sono stati modificati. \\
 \noindent Per poter decrivere al meglio la scelta delle architetture è necessario fare alcune osservazioni. \\
 \noindent Uno dei problemi più diffusi nell'ambito delle reti neurali è quello dell'\textbf{overfitting}. Si va incontro ad overfitting quando, per esempio, si utilizza un numero estremamente elevato di neuroni se confrontato con gli elementi che si hanno a disposizione per il training.
-Ogni neurone è infatti caratterizzato da due parametri liberi (\textit{weight} e \textit{bias}), la presenza di un elevato numero di parametri liberi fa si che la rete impari perfettamente la corrispondenza tra input e output degli elementi nel training set, ma in tal modo si perde il carattere necessario per ottenere risultati validi. La dimensione del \textit{trainig set} andrà dunque a fissare un limite superiore del numero di neuroni totali della rete. \\
-\noindent Un'ulteriore osservazione riguarda 
+Ogni neurone è infatti caratterizzato da due parametri liberi (\textit{weight} e \textit{bias}), la presenza di un elevato numero di parametri liberi fa si che la rete impari perfettamente la corrispondenza tra input e output degli elementi nel training set, ma in tal modo si perde il carattere predittivo necessario per ottenere risultati validi. La dimensione del \textit{trainig set} andrà dunque a fissare un limite superiore del numero di neuroni totali della rete. \\
+\noindent Un'ulteriore osservazione di fondamentale importanza riguarda la normalizzazione dei dati. I dati relativi al parametro d'interesse, ovvero i dati di output, sono stati infatti normalizzati per agevolare la convergenza della rete. Tale normalizzazione è descritta in dettaglio nella sezione~\ref{pre_training}.
+Non è stato invece necessario normalizzare l'input poichè appartenente, già in partenza, a un range ottimale\footnote{Sia i valori di x che di y oscillano tra -0.34 e +0.34}. \\
+\noindent Con tali premesse è ora possibile giustificare le scelte fatte nella definizione dell'architettura delle reti. I parametri rimasti sempre invariati sono:
+\begin{itemize}
+	\item Dimensione dell'\textbf{input layer}: 2
+	\item Dimensione dell'\textbf{output layer}: 1
+	\item \textbf{Optimizer}: \texttt{optim.Adam}\footnote{\`E uno dei più comuni \textit{optimizer} forniti da \textit{PyTorch}.}
+	\item \textbf{Loss function}: \texttt{MSELoss}\footnote{Errore quadratico medio.}
+\end{itemize}
+Le 6 architetture costruite sono state ottenute tramite una diversa combinazione di funzioni di attivazione e numero di hidden layers. Le funzioni di attivazione che ho utilizzato sono la \textbf{Tanh} e \textbf{Sigmoid}, rappresentate in fig.~\ref{act_fun}. Per ogni funzione di attivazione ho considerato 3 reti con un numero crescente di hidden layers. Al variare del numero di hidden layers ho modificato il numero di neuroni relativo ad ogni layer. Le architetture finali sono riportate in tabella~\ref{architetture}.
 
-!!! nel mio caso non ho normalizzato i dati di input perchè la x e la y appartenevano già a dei "buoni" intervalli -> sono intorno all'unità
+\begin{center}
+	\begin{tabular}{||c | c | c||}
+	\hline
+	Funzione d'attivazione & \# hidden layers & \# neuroni/hidden layer \\
+	\hline\hline
+	Tanh & 1 & 7 \\
+	\hline
+	Tanh & 2 & 4 \\
+	\hline
+	Tanh & 3 & 3 \\
+	\hline
+	Sigmoid & 1 & 7 \\
+	\hline
+	Sigmoid & 2 & 4 \\
+	\hline
+	Sigmoid & 3 & 3 \\
+	\hline
+	\end{tabular}
+	\label{architetture}
+\end{center}
+
+
+\begin{figure}[!ht]
+\centering
+	\begin{subfigure}{0.45\textwidth}
+	    \centering
+	    \includegraphics[width=\linewidth]{../figures/tanh.png}
+	    \caption{\texttt{Tanh}}
+	    \label{tanh}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+	    \includegraphics[width=\linewidth]{../figures/sigmoid.png}
+		\caption{\texttt{Sigmoid}}
+		\label{sigmoid}
+	\end{subfigure}
+\caption{Funzioni di attivazione utilizzate. La funzione sigmoidea rappresentata in figura~\ref{sigmoid} è definita come: $P(t)=\frac{1}{1+e^{-t}}$.}
+\label{act_fun}
+\end{figure}
+
+
 
         %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.2.2  %%%%%%%%%%%%%%%%%%%
 
 \subsection{Pre Training}\label{pre_training}
-Bla bla bla 
+In fase di pre-training sono state effetuate due operazioni principali: la normalizzazione dei dati e lo split del \texttt{dataset} in un \texttt{training\_set} ed un \texttt{validation\_set}. \\
+\noindent Gli output sono stati normalizzati in modo da appartenere all'intervallo $[0, 1]$, nel caso di \texttt{Sigmoid} come funzione di qttivazione, oppure a $[-1, 1]$ nel caso di \texttt{Tanh}. Le formule utilizzate per la normalizzazione nei due casi sono: \\
+\begin{equation}\label{norm1}
+y'=\frac{y+y_m}{y_m-y_M}
+\end{equation}
+\begin{equation}\label{norm2}
+y'=\frac{2y-y_m-y_M}{y_M-y_m}
+\end{equation}
+dove $y_m$ corrisponde al minimo valore del parametro mentre $y_M$ corrisponde al massimo. \\
+\noindent L'equazione~\ref{norm1} permette una normalizzazione dell'output in $[0, 1]$ mentre la~\ref{norm2} in $[-1, 1]$.
+
+
+
+inoltre ho definito il numero di epoche totali
+trasformazione lineare per ottenere l'output nell'intervallo desiderato.. facilito il lavoro della rete
 
         %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.2.3  %%%%%%%%%%%%%%%%%%%
 
@@ -263,7 +395,7 @@ Bla bla bla
 
         %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.2.4  %%%%%%%%%%%%%%%%%%%
 
-\subsection{Confronto di risultati}\label{risultati}
+\section{Confronto di risultati}\label{risultati}
 Bla bla bla 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -292,7 +424,7 @@ Bla bla bla
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\nocite{*}
 \bibliography{../bibliografia/my_bib}{}
 \bibliographystyle{abbrv}
 

@@ -5,45 +5,45 @@ The style file: abbrv.bst
 Database file #1: ../bibliografia/my_bib.bib
 Warning--empty journal in cmb
 Warning--empty year in cmb
-You've used 2 entries,
+You've used 6 entries,
             2118 wiz_defined-function locations,
-            505 strings with 3883 characters,
-and the built_in function-call counts, 539 in all, are:
-= -- 44
-> -- 31
+            528 strings with 8602 characters,
+and the built_in function-call counts, 8308 in all, are:
+= -- 577
+> -- 1167
 < -- 0
-+ -- 13
-- -- 10
-* -- 34
-:= -- 101
-add.period$ -- 5
-call.type$ -- 2
-change.case$ -- 10
++ -- 467
+- -- 460
+* -- 958
+:= -- 1590
+add.period$ -- 19
+call.type$ -- 6
+change.case$ -- 244
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 22
-empty$ -- 40
-format.name$ -- 10
-if$ -- 104
+cite$ -- 8
+duplicate$ -- 69
+empty$ -- 127
+format.name$ -- 460
+if$ -- 1409
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 3
-newline$ -- 12
-num.names$ -- 4
-pop$ -- 19
+int.to.str$ -- 6
+missing$ -- 10
+newline$ -- 32
+num.names$ -- 12
+pop$ -- 262
 preamble$ -- 1
-purify$ -- 9
+purify$ -- 242
 quote$ -- 0
-skip$ -- 13
+skip$ -- 40
 stack$ -- 0
-substring$ -- 11
-swap$ -- 1
+substring$ -- 37
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 6
+type$ -- 16
 warning$ -- 2
-while$ -- 4
-width$ -- 3
-write$ -- 19
+while$ -- 13
+width$ -- 7
+write$ -- 62
 (There were 2 warnings)
