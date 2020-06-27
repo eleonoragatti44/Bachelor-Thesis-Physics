@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: cap1.aux
+The style file: abbrv.bst
+Database file #1: ../bibliografia/my_bib.bib
+Warning--empty journal in cmb
+Warning--empty year in cmb
+You've used 6 entries,
+            2118 wiz_defined-function locations,
+            528 strings with 8602 characters,
+and the built_in function-call counts, 8308 in all, are:
+= -- 577
+> -- 1167
+< -- 0
++ -- 467
+- -- 460
+* -- 958
+:= -- 1590
+add.period$ -- 19
+call.type$ -- 6
+change.case$ -- 244
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 69
+empty$ -- 127
+format.name$ -- 460
+if$ -- 1409
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 10
+newline$ -- 32
+num.names$ -- 12
+pop$ -- 262
+preamble$ -- 1
+purify$ -- 242
+quote$ -- 0
+skip$ -- 40
+stack$ -- 0
+substring$ -- 37
+swap$ -- 5
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 16
+warning$ -- 2
+while$ -- 13
+width$ -- 7
+write$ -- 62
+(There were 2 warnings)
