@@ -1,5 +1,27 @@
 \begin{thebibliography}{1}
 
+\bibitem{libro_CMB}
+K.~N. {Abazajian}, P.~{Adshead}, Z.~{Ahmed}, S.~W. {Allen}, D.~{Alonso}, K.~S.
+  {Arnold}, C.~{Baccigalupi}, J.~G. {Bartlett}, N.~{Battaglia}, B.~A. {Benson},
+  C.~A. {Bischoff}, J.~{Borrill}, V.~{Buza}, E.~{Calabrese}, R.~{Caldwell},
+  J.~E. {Carlstrom}, C.~L. {Chang}, T.~M. {Crawford}, F.-Y. {Cyr-Racine},
+  F.~{De Bernardis}, T.~{de Haan}, S.~{di Serego Alighieri}, J.~{Dunkley},
+  C.~{Dvorkin}, J.~{Errard}, G.~{Fabbian}, S.~{Feeney}, S.~{Ferraro}, J.~P.
+  {Filippini}, R.~{Flauger}, G.~M. {Fuller}, V.~{Gluscevic}, D.~{Green},
+  D.~{Grin}, E.~{Grohs}, J.~W. {Henning}, J.~C. {Hill}, R.~{Hlozek},
+  G.~{Holder}, W.~{Holzapfel}, W.~{Hu}, K.~M. {Huffenberger}, R.~{Keskitalo},
+  L.~{Knox}, A.~{Kosowsky}, J.~{Kovac}, E.~D. {Kovetz}, C.-L. {Kuo},
+  A.~{Kusaka}, M.~{Le Jeune}, A.~T. {Lee}, M.~{Lilley}, M.~{Loverde}, M.~S.
+  {Madhavacheril}, A.~{Mantz}, D.~J.~E. {Marsh}, J.~{McMahon}, P.~D.
+  {Meerburg}, J.~{Meyers}, A.~D. {Miller}, J.~B. {Munoz}, H.~N. {Nguyen}, M.~D.
+  {Niemack}, M.~{Peloso}, J.~{Peloton}, L.~{Pogosian}, C.~{Pryke}, M.~{Raveri},
+  C.~L. {Reichardt}, G.~{Rocha}, A.~{Rotti}, E.~{Schaan}, M.~M. {Schmittfull},
+  D.~{Scott}, N.~{Sehgal}, S.~{Shandera}, B.~D. {Sherwin}, T.~L. {Smith},
+  L.~{Sorbo}, G.~D. {Starkman}, K.~T. {Story}, A.~{van Engelen}, J.~D.
+  {Vieira}, S.~{Watson}, N.~{Whitehorn}, and W.~L. {Kimmy Wu}.
+\newblock {CMB-S4 Science Book, First Edition}.
+\newblock page arXiv:1610.02743, Oct 2016.
+
 \bibitem{chollet}
 F.~Chollet.
 \newblock {\em Deep Learning with Python}.

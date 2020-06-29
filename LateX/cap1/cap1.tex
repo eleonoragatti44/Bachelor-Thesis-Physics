@@ -37,11 +37,13 @@
 \linespread{1.1}
 \usepackage{amsmath}
 \usepackage{mathtools}
+\usepackage{gensymb}
 \usepackage{nccmath}
 \usepackage{mathrsfs}
 \usepackage{units} 
 \usepackage{subcaption}
 \usepackage{afterpage}
+\usepackage{verbatim}
 \usepackage[pdfa]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Tesi di laurea triennale di Eleonora Gatti}
@@ -70,37 +72,64 @@
 %%%%%%%%%%%%%%%%%%%%  CAPITOLO 1  %%%%%%%%%%%%%%%%%%%%
 
 \chapter{Sistemi ottici nelle microonde}\label{intro_sistemi_ottici}
-Tutta l'informazione che abbiamo a disposizione su oggetti astronomici molto distanti è contenuta nella radiazione elettromagnetica emessa. Per secoli l'unico tipo di analisi possibile è stata quella nello spettro del visibile. Oggigiorno esistono svariate branche dell'astrofisica che analizzano segnali provenienti dall'Universo a diverse frequenze elettromagnetiche; una di queste branche riguarda lo studio del cosmo attraverso le microonde. 
+Quasi tutta l'informazione che abbiamo a disposizione su oggetti astronomici molto distanti è contenuta nella radiazione elettromagnetica emessa. Per secoli l'unico tipo di analisi possibile è stata quella nello spettro del visibile. Oggigiorno esistono svariate branche dell'astrofisica che analizzano segnali provenienti dall'Universo a diverse frequenze elettromagnetiche; una di queste branche riguarda lo studio del cosmo attraverso le microonde. 
 
     %%%%%%%%%%%%%%%%%%%  CAPITOLO 1.1  %%%%%%%%%%%%%%%%%%%
 
 \section{Utilizzo delle microonde in astrofisica}\label{microonde_astrofisica}
-Il range delle lunghezze d'onda delle microonde è $\lambda \sim 1 \unit{mm} \div 10 \unit{cm}$\footnote{Il confine tra onde radio e microonde non è netto, spesso si parla di radio estendendo il range di lunghezze d'onda anche a quello delle microonde.}. \\
-\noindent \`E estremamente importante fare osservazioni a grandi lunghezze d'onda, nel millimetrico e oltre, poichè esistono numerosissime sorgenti cosmologiche che emettono in questo range e possono essere analizzate tramite sistemi ottici nelle microonde.
+Il range delle lunghezze d'onda delle microonde è $\lambda \sim 1 \unit{mm} \div 10 \unit{cm}$\footnote{Il confine tra onde radio e microonde non è netto, spesso si parla di radio estendendo il range di lunghezze d'onda anche a quello delle microonde.}.
+
+
+\`E estremamente importante fare osservazioni a grandi lunghezze d'onda, nel millimetrico e oltre, poichè esistono numerosissime sorgenti cosmologiche che emettono in questo range e possono essere analizzate tramite sistemi ottici nelle microonde.
 I segnali più comunemente studiati in radio astronomia e attraverso le microonde sono:
 \begin{itemize}
-	\item Radiazione emessa da gas ionizzato;
-	\item Radiazione di sincrotrone, dovuta al moto di particelle cariche libere di muoversi nell'Universo e deviate da campi magnetici;
-	\item Effetto Sunyaev-Zeldovich, che permette di rivelare ammassi di galassie altrimenti non visibili;
-	\item Emissioni del Sole;
-	\item Radiazioni da regioni $H_{II}$, si tratta di regioni nello spazio in cui sono presenti stelle molto calde (di tipo O o di tipo B) che ionizzano il gas intorno ad esse il quale emette nelle microonde e nel radio;
-	\item Supernovae e resti di Supernovae\footnote{La Crab Nebula, per esempio, è estremamente visibile nelle moicroonde.};
-	\item Pulsar;
-	\item Radio galassie;
+	\item radiazione emessa da gas ionizzato;
+	\item radiazione di sincrotrone, dovuta al moto di particelle cariche libere di muoversi nell'Universo e deviate da campi magnetici;
+	\item effetto Sunyaev-Zeldovich, che permette di rivelare ammassi di galassie altrimenti non visibili;
+	\item emissioni del Sole;
+	\item radiazioni da regioni $H II$; si tratta di regioni nello spazio in cui sono presenti stelle molto calde (di tipo O o di tipo B) che ionizzano il gas intorno ad esse il quale emette nelle microonde e nel radio;
+	\item supernovae e resti di supernovae\footnote{La Crab Nebula, per esempio, è estremamente visibile nelle moicroonde.};
+	\item pulsar;
+	\item radio galassie;
 	\item CMB.
 \end{itemize}
+In questo lavoro di tesi lo studio è stato effettuato su sistemi ottici designati all'analisi della CMB.
+
+
 La \textbf{CMB}, Cosmic Microwave Background, è la radiazione a microonde di fondo cosmico che permea l’intero Universo.
-Secondo il \textit{Modello Cosmologico Standard (SCM)} l'Universo ha avuto origine circa $14$ miliardi di anni fa da una singolarità iniziale: il \textit{Big Bang}. \\
-\noindent Nei primissimi istanti dopo il \textit{Big Bang} vi fu una rapidissima fase di espansione ($10^{-33}~\unit{s}$), detta \textit{inflazione}, seguita da un'espansione più lenta e regolare, che continua tutt'ora. Inizialmente materia e radiazione erano in equilibrio in un plasma estremamente caldo; la progressiva espansione ha causato un abbassamento della temperatura del plasma. L'equilibrio tra materia e radiazione venne a mancare quando la temperatura raggiunse $T \simeq 3000~\unit{K}$. Questo causò il \textit{disaccoppiamento} tra materia e radiazione: la maggior parte degli elettroni venne catturata dai nuclei atomici permettendo la formazione dei primi atomi neutri. Convenzionalmente si considera come tempo al quale si è verificato il \textit{disaccoppiamento} tra materia e radiazione l'istante $t_{dec}$ in cui il libero cammino medio dei fotoni divenne maggiore della scala dell'Universo osservabile. Questo accadde a circa $380~000~\unit{anni}$ dal \textit{Big Bang} e da allora i fotoni primordiali sono liberi di vagare nello spazio e sono i responsabili della radiazione a microonde di fondo cosmico. \\
-\newline
-Data la vastità di campi in cui può essere effettuato uno studio nelle microonde, è di fondamentale importanza avere a disposizione un sistema ottico che permetta questo tipo di analisi. In particolare è necessario riconoscere la direzione dalla quale un determinato segnale microonde proviene.
+Secondo il \textit{Modello Cosmologico Standard (SCM)} l'Universo ha avuto origine circa $14$ miliardi di anni fa da una singolarità iniziale: il \textit{Big Bang}.
+Nei primissimi istanti dopo il \textit{Big Bang} vi fu una rapidissima fase di espansione ($10^{-33}~\unit{s}$), detta \textit{inflazione}, seguita da un'espansione più lenta e regolare, che continua tutt'ora. Inizialmente materia e radiazione erano in equilibrio in un plasma estremamente caldo; la progressiva espansione ha causato un abbassamento della temperatura del plasma. L'equilibrio tra materia e radiazione venne a mancare quando la temperatura raggiunse $T \simeq 3000~\unit{K}$. Questo causò il \textit{disaccoppiamento} tra materia e radiazione: la maggior parte degli elettroni venne catturata dai nuclei atomici permettendo la formazione dei primi atomi neutri. Convenzionalmente si considera come tempo al quale si è verificato il \textit{disaccoppiamento} tra materia e radiazione l'istante $t_{dec}$ in cui il libero cammino medio dei fotoni divenne maggiore della scala dell'Universo osservabile. Questo accadde a circa $380~000~\unit{anni}$ dal \textit{Big Bang} e da allora i fotoni primordiali sono liberi di vagare nello spazio e sono i responsabili della radiazione a microonde di fondo cosmico.
+Nell'ipotesi semplificata di un Universo non in espansione, i fotoni primordiali che possiamo osservare oggi dalla Terra sono quelli che all'istante $t_{dec}$ si trovavano ad una distanza $c(t_{now}-t_{dec})$; il che significa che per ogni istante un osservatore sulla Terra può osservare solo i fotoni emessi da un guscio sferico che prende il nome di \textit{Last Scattering Surface} (LSS). Generalizzando il caso ad un Universo in espansione il concetto rimane lo stesso ma diventa matematicamente più complesso. I fotoni della CMB che vengono oggi misurati rappresentano una radiazione quasi-isotropa il cui spettro è quello di corpo nero a una temperatura $T\approx2.73\unit{K}$. Per studiare le proprietà della CMB sulla sfera definita dalla LSS è utile utilizzare una decomposizione in \textit{armoniche sferiche} $Y_l^m(\theta,\phi)$. La decomposizione in armoniche sferiche di una funzione $f(\theta,\phi)$ su una sfera è data da:
+\[f(\theta,\phi)=\sum_{\ell=0}^\infty\sum_{m=-\ell}^\ell a_{\ell m}Y_\ell^m(\theta,\phi)\]
+dove $a_{\ell m}$ sono coefficienti complessi che contengono informazioni sia sull'ampiezza che sulla fase delle armoniche sulla sfera. Tuttavia, data l'arbitrarietà del sistema di riferimento che si utilizza quando si compie un'analisi statistica della CMB, la fase può essere trascurata; diventa quindi più interessante utilizzare la quantità: \[C_{\ell}=\langle a_{\ell m} a_{\ell m}^* \rangle\]
+detta \textbf{spettro di potenza}. Nel caso di misura da parte di un solo strumento la media $\langle \cdot \rangle$ è effettuata su tutti i possibili valori di \textit{m}.
+
+
+La radiazione della CMB è polarizzata. Esistono due tipi di polarizzazione chiamati \textit{modi E} e \textit{modi B}. Una misura dei modi B permetterebbe una verifica del paradigma dell'inflazione.\footnote{In cosmologia \textit{r} è un parametro che prende il nome di rapporto tensore-scalare ed è definito come il rapporto tra la potenza dei modi B e dei modi E primordiali.}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/power_spect.png}
+	\caption{Predizioni teoriche dello spettro di potenza della temperatura (in nero), dei modi E (in rosso) e dei modi B (in blu). Lo spettro di potenza dei modi B è rappresentato per due valori diversi di \textit{r} (r=0.001 e r=0.05)\cite{libro_CMB}.}
+	\label{power_spect}
+\end{figure}
+
+Se vogliamo effettuare una corretta misura della polarizzazione della CMB è necessario sottrarre al segnale misurato tutte le anisotropie dovute a oggetti presenti tra l'osservatore e la LSS. Si utilizza comunemente il termine \textit{foreground} per riferirsi a tutte le emissioni nell'intervallo di frequenze compreso tra 10 e 1000 GHz presenti tra noi e il guscio sferico definito dalla LSS.
+Il problema della separazione delle componenti (\textit{component separation}) implica la necessità di effettuare misure a multibanda lungo tutto il range di frequenze comprese tra 10 e 1000 GHz con un'altissima risoluzione così da caratterizzare il foreground ed ottenere una mappa pulita della CMB.
+
 
     %%%%%%%%%%%%%%%%%%%  CAPITOLO 1.2  %%%%%%%%%%%%%%%%%%%
 \section{Diagramma di radiazione}\label{rad_pattern}
 Un sistema ottico è un dispositivo il cui scopo è quello di registrare la luce proveniente dal cielo e mandarla ad un rivelatore.
-La risposta di un sistema ottico ideale può essere rappresentata come una delta di Dirac: non nulla solo lungo la linea di vista.
+Data la vastità di campi in cui può essere effettuato uno studio nelle microonde, è di fondamentale importanza avere a disposizione un sistema ottico che permetta questo tipo di analisi.
+
+
+Per l'analisi della CMB è nostro interesse studiare la direzione di provenienza della radiazione. Consideriamo quindi, d'ora in poi, un fascio d'antenna modellato per misurare il segnale che proviene da una direzione specifica.
+La risposta di un sistema ottico ideale può essere allora rappresentata come una delta di Dirac: non nulla solo lungo la linea di vista.
 Tuttavia i fenomeni di interferenza e diffrazione rendono la situazione molto più complessa; in particolare nella radio astronomia e nell'astronomia a microonde il problema è particolarmente importante poichè le dimensioni degli elementi ottici degli strumenti sono comparabili alle lunghezze d'onda d'interesse.
 
+
+La risposta angolare di un sistema ottico è quantificata da una funzione $\gamma(\theta,\phi)$ detta \textit{beam function} che definisce il \textbf{diagramma di radiazione}. Idealmente $\gamma(\theta,\phi)$ dovrebbe corrispondere a una delta di Dirac\footnote{Questa idealizzazione viene spesso chiamata \textit{pencil beam idealization}}, quello che viene in realtà osservato è una risposta simile a quella riportata in Fig.~\ref{diag_rad}.
+\`E possibile osservare la presenza di un \textit{main beam} e di lobi secondari. Tipicamente la maggior parte della radiazione è contenuta nel main beam.
 \begin{figure}[!ht]
 \centering
 	\begin{subfigure}{0.5\textwidth}
@@ -118,18 +147,48 @@ Tuttavia i fenomeni di interferenza e diffrazione rendono la situazione molto pi
 \caption{Tipico andamento della \textit{beam function} $\gamma(\theta,\phi)$. La Fig.~\ref{beam} rappresenta il diagramma di radiazione tridimensionale di un'antenna direzionale.\cite{cmb}. La Fig.~\ref{beam_cut} rappresenta una sezione dello stesso grafico su un piano parallelo all'asse del main lobe.\cite{planck}}
 \label{diag_rad}
 \end{figure}
-
-La risposta angolare di un sistema ottico è quantificata da una funzione $\gamma(\theta,\phi)$ detta \textit{beam function} che definisce il \textbf{diagramma di radiazione}. Idealmente $\gamma(\theta,\phi)$ dovrebbe corrispondere a una delta di Dirac\footnote{Questa idealizzazione viene spesso chiamata \textit{pencil beam idealization}}, quello che viene in realtà osservato è una risposta simile a quella riportata in Fig.~\ref{diag_rad}.
-\`E possibile osservare la presenza di un \textit{main beam} e di lobi secondari. Tipicamente la maggior parte della radiazione è contenuta nel main beam. \\
+%%%%%
 A partire dal diagramma di radiazione si definiscono alcuni parametri che permettono una sua descrizione; tali parametri sono i protagonisti di questo lavoro di tesi.
-La \textbf{Full Width Half Maximum} (FWHM) del main beam è la larghezza angolare a metà della sua altezza ed è uno dei parametri più importanti e più diffusi per la caratterizzazione della risoluzione di uno strumento. Nel corso dei prossimi capitoli verranno considerati due diversi valori per la FWHM, rispetto all'asse $x$ e rispetto all'asse $y$. Attraverso queste due grandezze è possibile definire un ulteriore parametro: l'\textbf{ellitticità}. Questa è definita come il rapporto tra le due FWHM ponendo al numeratore la più grande tra FWHM$_x$ e FWHM$_y$.\\
-Hanno inoltre grande importanza i parametri che riguardano la polarizzazione. Supponiamo di studiare un'antenna in trasmissione\footnote{Strumenti ottici per lo studio della CMB lavorano in ricezione ma è possibile studiare alternativamente un'antenna in trasmissione per il \textit{principio di reciprocità}.} e considerare una radiazione polarizzata. Fissiamo una direzione di polarizzazione; è allora possibile definire, rispetto a tale direzione, una componente \textit{co-polare} ed una componente \textit{cross-polare} della radiazione. La componente co-polare è data dalla frazione di radiazione con polarizzazione parallela alla direzione fissata mentre la componente cross-polare è data dalla frazione di radiazione con polarizzaizione perpendicolare a quella fissata. In particolare i parametri utilizzati nei prossimi capitoli riguardano la componente \textbf{co-polare massima} e la componente \textbf{cross-polare massima}.
+La \textbf{Full Width Half Maximum} (FWHM) del main beam è la larghezza angolare a metà della sua altezza ed è uno dei parametri più importanti e più diffusi per la caratterizzazione della risoluzione di uno strumento\footnote{Tale parametro viene anche indicato come $\theta_{FWHM}$}. Nel corso dei prossimi capitoli verranno considerati due diversi valori per la FWHM, rispetto all'asse $x$ e rispetto all'asse $y$. Attraverso queste due grandezze è possibile definire un ulteriore parametro: l'\textbf{ellitticità}. Questa è definita come il rapporto tra le due FWHM ponendo al numeratore la più grande tra FWHM$_x$ e FWHM$_y$.
+Hanno inoltre grande importanza i parametri che riguardano la polarizzazione. Supponiamo di studiare un'antenna in trasmissione\footnote{Strumenti ottici per lo studio della CMB lavorano in ricezione ma è possibile studiare alternativamente un'antenna in trasmissione per il \textit{principio di reciprocità}.} e considerare un segnale polarizzato linearmente lungo una determinata direzione.
+\`E possibile definire una componente \textit{co-polare} ed una componente \textit{cross-polare} della radiazione. La componente co-polare è la radiazione irradiata lungo la direzione originale di polarizzazione mentre la componente cross-polare è la radiazione irradiata lungo la direzione perpendicolare a quella originale.
+In particolare i parametri utilizzati nei prossimi capitoli riguardano la componente \textbf{co-polare massima} e la componente \textbf{cross-polare massima}.
+
+
+Per fare misurazioni di CMB è necessario richiedere alcune condizioni relative agli strumenti ottici. In riferimento alla Fig.~\ref{power_spect} si nota che una certa scala angolare mi permette di selezionare i multipoli che è possibile osservare; è quindi necessario avere una FWHM che permetta di risolvere i dettagli della CMB entro certe scale angolari. La relazione approssimata che lega il valore di $\ell$ alla FWHM è: $\ell\sim{180^{\circ}}/{\theta_{FWHM}}$.
+Inoltre spostandosi verso la parte inferiore del grafico sono rappresentati i segnali più deboli; poichè si ha grande interesse nel misurare i modi B è necessaria una grande sensibilità strumentale. Per raggiungere elevate sensibilità è fondamentale avere a disposizione vasti piani focali che mi permettano di utilizzare un elevato numero di rivelatori.
+Infine, per avere una misura pulita della CMB, è essenziale rimuovere tutti i foreground e avere quindi a disposizione misure a tante frequenze diverse, il che si traduce ancora una volta nella richiesta di un elevato numero di rivelatori.
+
+\begin{comment}
+Qui ci starebbe bene del testo che spieghi nel contesto degli esperimenti di CMB cosa serve esattamente per fare misurazioni: (1) una FWHM sufficiente per risolvere i dettagli della CMB entro certe scale angolari, (2) vasti piani focali per avere tanti rivelatori ed ottenere buone sensibilità, (3) tante frequenze per rimuovere i foreground.
+
+Per spiegare questi aspetti devi però espandere un po' la parte sopra sulla CMB: mostrare uno spettro di potenza ti permetterebbe di spiegare in poche parole l'importanza del punto 1 (perché la FWHM seleziona i multipoli che puoi osservare) e del punto 2 (perché una maggiore sensibilità permette di misurare segnali più deboli), mentre lo spettro di potenza dei foreground ti permetterebbe di spiegare meglio il punto 3.
+
+Secondo me mezza pagina di testo più un paio di grafici dovrebbero essere sufficienti.
+\end{comment}
 
 
     %%%%%%%%%%%%%%%%%%  CAPITOLO 1.3  %%%%%%%%%%%%%%%%%%%%
 
 \section{Simulazione di sistemi ottici}\label{simulazioni}
-Simulare un sistema ottico significa studiare quanta potenza viene ricevuta in funzione dell'angolo. Tipicamente per simulare la risposta angolare di un sistema ottico si usa il sofware \textit{GRASP} (General Reflector Antenna Software Package). Attraverso GRASP è stato possibile ottenere la tabella in Fig.~\ref{dataset} che riporta le caratteristiche del beam data una posizione $(x, y, z)$ sulla superficie focale.
+Simulare un sistema ottico significa studiare quanta potenza viene ricevuta in funzione dell'angolo rispetto alla linea di vista. 
+Esistono diversi software in grado di simulare un fascio d'antenna e quindi la sua risposta angolare.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.6\linewidth]{../figures/strip.png}
+	\caption{Modello in GRASP del telescopio di STRIP.}
+	\label{strip}
+\end{figure}
+
+Nel corso di questo lavoro di tesi ho utilizzato dei dati relativi ad un particolare strumento per l'analisi della CMB: \textit{STRIP}.
+Lo strumento STRIP (STRatospheric Italian Polarimeter) fa parte dell'esperimento internazionele \textit{LSPE} (Large-Scale Polarization Explorer) ideato per effettuare misure di CMB ad elevate scale angolari.
+In particolare STRIP è stato progettato per la misura di radiazione a basse frequenze; esso presenta 49 antenne a 43 GHz e 6 antenne a 90 GHz. In Fig.~\ref{strip} è rappresentato il modello di STRIP attraverso il software \textit{GRASP} (General Reflector Antenna Software Package).
+Attraverso GRASP è stato possibile ottenere la tabella in Fig.~\ref{dataset} che riporta le caratteristiche del beam data una posizione $(x, y, z)$ sulla superficie focale.
+
+
+GRASP è uno strumento molto potente che permette di simulare sistemi ottici complessi.
+Tuttavia i tempi di calcolo di GRASP sono elevati\footnote{Per produrre i dati in Fig.~\ref{dataset} sono stati impiegati due giorni.}; per ogni simulazione, e quindi per ogni antenna, vengono costruiti dei grafici come quelli riportati in Fig.~\ref{beam_grasp} e poi da quelli vengono ricavati i valori riportati nel dataset ~\ref{dataset}.
 
 \begin{figure}[!ht]
 	\centering
@@ -138,10 +197,7 @@ Simulare un sistema ottico significa studiare quanta potenza viene ricevuta in f
 	\label{dataset}
 \end{figure}
 
-GRASP è uno strumento molto potente che permette di simulare sistemi ottici complessi.
-Tuttavia i tempi di calcolo di GRASP sono elevati\footnote{Per produrre i dati in Fig.~\ref{dataset} sono stati impiegati due giorni.}; per ogni simulazione, e quindi per ogni antenna, vengono costruiti dei grafici come quelli riportati in Fig.~\ref{beam_grasp} e poi da quelli vengono ricavati i valori riportati nel dataset ~\ref{dataset}. \\
-
-Nel caso di STRIP è ancora possibile simulare l'intera ottica tramite GRASP poichè il numero di antenne è piuttosto limitato. Tuttavia per sistemi ottici più complessi in cui il numero di antenne diventa di circa 2 ordini di grandezza superiore, risulta del tutto impossibile effettuare una simulazione completa dell'intera ottica. \\
+Nel caso di STRIP è ancora possibile simulare l'intera ottica tramite GRASP poichè il numero di antenne è piuttosto limitato. Tuttavia per sistemi ottici più complessi in cui il numero di antenne diventa di circa 2 ordini di grandezza superiore, risulta del tutto impossibile effettuare una simulazione completa dell'intera ottica.
 \noindent \`E quindi nata la necessità di trovare una via alternativa che permetta di stimare i parametri che descrivono il beam in una qualsiasi posizione.
 
 \begin{figure}[!ht]
