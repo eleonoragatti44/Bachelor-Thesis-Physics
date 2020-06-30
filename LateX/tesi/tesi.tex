@@ -19,7 +19,7 @@
     stringstyle=\color{codepurple},
     basicstyle=\ttfamily\footnotesize,
     breakatwhitespace=false,
-    breaklines=false,
+    breaklines=true,
     captionpos=b,
     keepspaces=true,
     numbers=left,
@@ -29,14 +29,46 @@
     showtabs=false,
     tabsize=2
 }
+
+
+\definecolor{DarkGreen}{rgb}{0.0,0.4,0.0} % Comment color
+\definecolor{highlight}{RGB}{236, 242, 248} % Code highlight color
+\lstdefinestyle{Style1}{ % Define a style for your code snippet, multiple definitions can be made if, for example, you wish to insert multiple code snippets using different programming languages into one document
+language=python, % Detects keywords, comments, strings, functions, etc for the language specified
+backgroundcolor=\color{highlight}, % Set the background color for the snippet - useful for highlighting
+basicstyle=\footnotesize\ttfamily, % The default font size and style of the code
+breakatwhitespace=false, % If true, only allows line breaks at white space
+breaklines=true, % Automatic line breaking (prevents code from protruding outside the box)
+captionpos=b, % Sets the caption position: b for bottom; t for top
+commentstyle=\usefont{T1}{pcr}{m}{sl}\color{DarkGreen}, % Style of comments within the code - dark green courier font
+deletekeywords={}, % If you want to delete any keywords from the current language separate them by commas
+%escapeinside={\%}, % This allows you to escape to LaTeX using the character in the bracket
+firstnumber=1, % Line numbers begin at line 1
+frame=single, % Frame around the code box, value can be: none, leftline, topline, bottomline, lines, single, shadowbox
+ % Rounds the corners of the frame for the top left, top right, bottom left and bottom right positions
+keywordstyle=\color{Blue}\bf, % Functions are bold and blue
+morekeywords={}, % Add any functions no included by default here separated by commas
+numbers=left, % Location of line numbers, can take the values of: none, left, right
+numbersep=10pt, % Distance of line numbers from the code box
+numberstyle=\tiny\color{Gray}, % Style used for line numbers
+rulecolor=\color{black}, % Frame border color
+showstringspaces=false, % Don't put marks in string spaces
+showtabs=false, % Display tabs in the code as lines
+stepnumber=5, % The step distance between line numbers, i.e. how often will lines be numbered
+stringstyle=\color{Purple}, % Strings are purple
+tabsize=4, % Number of spaces per tab in the code
+}
+% Create a command to cleanly insert a snippet with the style above anywhere in the document
+\newcommand{\insertcode}[2]{\begin{itemize}\item[]\lstinputlisting[caption=#2,label=#1,style=Style1]{#1}\end{itemize}} % The first argument is the script location/filename and the second is a caption for the listing
 \lstset{style=mystyle}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\nouppercase{\leftmark}}
 \fancyhead[R]{\thepage}
-\linespread{1.1}
+\linespread{1.2}
 \usepackage{amsmath}
 \usepackage{mathtools}
+\usepackage{textcomp}
 \usepackage{gensymb}
 \usepackage{nccmath}
 \usepackage{mathrsfs}
@@ -198,7 +230,7 @@ Tuttavia i tempi di calcolo di GRASP sono elevati\footnote{Per produrre i dati i
 \end{figure}
 
 Nel caso di STRIP è ancora possibile simulare l'intera ottica tramite GRASP poichè il numero di antenne è piuttosto limitato. Tuttavia per sistemi ottici più complessi in cui il numero di antenne diventa di circa 2 ordini di grandezza superiore, risulta del tutto impossibile effettuare una simulazione completa dell'intera ottica.
-\noindent \`E quindi nata la necessità di trovare una via alternativa che permetta di stimare i parametri che descrivono il beam in una qualsiasi posizione.
+\`E quindi nata la necessità di trovare una via alternativa che permetta di stimare i parametri che descrivono il beam in una qualsiasi posizione.
 
 \begin{figure}[!ht]
 \centering
@@ -235,39 +267,38 @@ Nel caso di STRIP è ancora possibile simulare l'intera ottica tramite GRASP poi
 	%%%%%%%%%%%%%%%%%%%  CAPITOLO 2.1  %%%%%%%%%%%%%%%%%%%
 
 \section{Machine learning e tipi di rete}
-Negli ultimi decenni il campo del \textit{machine learning} si è fortemente evoluto. È stata costruita un'ampia classe di algoritmi in grado di approssimare molto efficacemente processi non lineari. Tali architetture fanno parte di un particolare campo di ricerca, il \textit{Deep Learning}, che vede protagoniste le reti neurali artificiali.
+Il \textit{machine learning} è un campo di ricerca a metà tra statistica, intelligenza artificiale ed informatica. La sua applicazione riguarda ormai vastissimi campi della scienza e non solo. Sono usate tecniche di machine learning per esempio per il riconoscimento facciale o per i suggerimenti di prodotti da comprare sulle piattaforme di shopping online, ma anche in ambito medico per la diagnosi di particolari malattie.
+
+
+Negli ultimi decenni il campo del machine learning si è fortemente evoluto. È stata costruita un'ampia classe di algoritmi in grado di approssimare molto efficacemente processi non lineari. Tali architetture fanno parte di un particolare campo di ricerca, il \textit{Deep Learning}, che vede protagoniste le reti neurali artificiali.
 Queste tecniche si basano su l'apprendimento tramite esempi, i quali sono rappresentati da coppie input-output come un'immagine e la sua descrizione (input: foto di un gatto, output: "gatto") o una posizione a cui è associato un particolare valore di campo elettrico (input: (x, y, z), output: E(x, y, z)). È quindi di fondamentale importanza avere a disposizione un ampio database attraverso il quale effettuare un \textit{training}. Le reti neurali consentono quindi di approssimare una corrispondenza, vera o presunta, tra un input e un output. 
 
 
 Esistono due classi di problemi affrontati con la tecnica delle reti neurali: la \textit{classificazione} e la \textit{regressione}.
 La classificazione individua l'appartenenza ad una classe e può essere supervisionata o non supervisionata. Parliamo di classificazione supervisionata quando sono note a priori le diverse classi di appartenenza; se invece si vogliono determinare delle classi di similitudine senza conoscere a priori i pattern rappresentativi, si ha un problema di classificazione non supervisionata.
-Le reti neurali per la regressione entrano in gioco quando, a partire da coppie input-output, si vuole determinare la funzione che approssimi al meglio la relazione. Quest'ultimo tipo di reti neurali è stato utilizzato per effettuare la stima delle proprietà di un diagramma di radiazione ~\ref{reti_neurali}.
+Un esempio di classificazione supervisionata è il riconoscimento di un numero a partire da un'immagine manoscritta. Un esempio invece di classificazione non supervisionata si ha quando, a partire da immagini di cifre manoscritte, si vuole determinare quali tra esse rappresentino lo stesso numero.
+
+
+Le reti neurali per la regressione entrano in gioco quando, date delle coppie input-output, si vuole determinare la funzione che approssimi al meglio la relazione. Quest'ultimo tipo di reti neurali è stato utilizzato per effettuare la stima delle proprietà di un diagramma di radiazione (Sez.~\ref{reti_neurali}). In particolare la ricerca alla base di questo lavoro di tesi è stata quella di una rete neurale che permettesse, a partire da una posizione sulla superficie focale, di stimare il valore di un determinato parametro del diagramma di radiazione. Come sarà possibile notare nei paragrafi successivi, la posizione sulla superficie focale è data da una coppia $(x, y)$, senza considerare la coordinata $z$; questo è stato fatto poichè i punti si trovano su una superficie ben definita, il che significa che dati $x$ e $y$ la $z$ è univocamente determinata.
+
+
+Il programma utilizzato in questa tesi per sviluppare i codici che permettono di effettuare questo task è \texttt{Python}. Questo fornisce librerie apposite per il caricamento, l'analisi e la visualizzazione dei dati; le librerie utilizzate nei codici implementati sono: \texttt{pandas}, \texttt{numpy}, \texttt{matplotlib}, \texttt{seaborn}, \texttt{pytorch}.
 
 	%%%%%%%%%%%%%%%%%%%  CAPITOLO 2.2  %%%%%%%%%%%%%%%%%%%
 
 \section{Struttura di una rete neurale}
-L'idea utopica su cui si fondano le reti neurali artificiali è quella di simulare il comportamenteo del cervello umano. Questo è un sistema estremamente complesso basato sull'interconnessioni di unità fondamentali: i \textbf{neuroni}.
+L'idea utopica su cui si fondano le reti neurali artificiali è quella di simulare il comportamenteo del cervello umano\footnote{\`E però necessario specificare che le reti neurali artificiali non hanno niente a che vedere con le reti neurali biologiche.}. Questo è un sistema estremamente complesso basato sull'interconnessioni di unità fondamentali: i \textbf{neuroni}.
 Una rete neurale può essere rappresentata come in figura~\ref{schema_rete}.
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.6\linewidth]{../figures/schema_rete.png}
-	\caption{Schema di una rete neurale con tre hidden layers. Immagine presa da \textit{Deep Learning with PyTorch}, E. Stevens, L. Antiga\cite{stevens}.}
+	\caption{Schema di una rete neurale con tre hidden layers. Il quadrato giallo sulla sinistra rappresenta l'input layer mentre quello sulla destra rappresenta l'output layer. Immagine presa da \textit{Deep Learning with PyTorch}, E. Stevens, L. Antiga\cite{stevens}.}
 	\label{schema_rete}
 \end{figure}
 Un insieme di neuroni che agiscono allo stesso livello è detto \textbf{layer} e l'interconnessione di diversi layers forma una rete.
-Un neurone è rappresentato da una funzione non lineare, detta \textbf{funzione di attivazione}, applicata ad una trasformazione lineare. Ogni neurone è caratterizzato da due parametri liberi: \textit{w (weight)} e \textit{b (bias)}. L'espressione matematica per un singolo neutrone è quindi
+Un neurone è rappresentato da una funzione non lineare, detta \textbf{funzione di attivazione}, applicata ad una trasformazione lineare. Ogni neurone è caratterizzato da due parametri liberi: \textit{w (weight)} e \textit{b (bias)}. L'espressione matematica che descrive un singolo neutrone è quindi:
 \[o=f(wx+b)\]
  dove $x$ è il dato di input, $o$ rappresenta l'output e $f$ una determinata funzione di attivazione non lineare.
-
-
-Il cuore del processo di apprendimento, mostrato schematicamente in Fig.~\ref{apprendimento}, sta nella stima dei giusti parametri (weights e biases) della rete. Questo avviene seguendo determinati step:
-\begin{itemize}
-	\item vengono forniti alla rete input e output desiderati;
-	\item il modello calcola gli output a partire dagli input forniti; questo step prende il nome di \textit{forward pass}; 
-	\item viene misurato l'errore comparando l'output calcolato e quello fornito in partenza. La funzione che quantifica tale discrepanza è detta \textit{loss function};
-	\item vengono modificati i parametri di rete in modo da minimizzare la loss function; questo step prende il nome di \textit{backward pass}\footnote{Tale valutazione viene fatta da un \textit{optimizer} attraverso la valutazione del gradiente dell'errore rispetto ai parametri di rete.};
-	\item viene ripetuta l'intera procedura fino alla convergenza della rete, ovvero fino a che la loss function non raggiunge un andamento stabile.
-\end{itemize}
 
 \begin{figure}[!ht]
 	\centering
@@ -275,6 +306,32 @@ Il cuore del processo di apprendimento, mostrato schematicamente in Fig.~\ref{ap
 	\caption{Schema del processo di apprendimento di una rete neurale. Immagine presa da \textit{Deep Learning with PyTorch}, E. Stevens, L. Antiga\cite{stevens}.}
 	\label{apprendimento}
 \end{figure}
+
+Il cuore del processo di apprendimento, mostrato schematicamente in Fig.~\ref{apprendimento}, sta nella stima dei giusti parametri (weights e biases) della rete. Questo avviene seguendo determinati step:
+\begin{itemize}
+	\item vengono forniti alla rete inputs e outputs desiderati;
+	\item il modello calcola gli outputs a partire dagli inputs forniti; questo step prende il nome di \textit{forward pass}; 
+	\item viene misurato l'errore comparando l'output calcolato e quello fornito in partenza. La funzione che quantifica tale discrepanza è detta \textit{loss function};
+	\item vengono modificati i parametri di rete in modo da minimizzare la loss function; questo step prende il nome di \textit{backward pass}\footnote{Tale valutazione viene fatta da un \textit{optimizer} attraverso la valutazione del gradiente dell'errore rispetto ai parametri di rete.};
+	\item viene ripetuta l'intera procedura fino alla convergenza della rete, ovvero fino a che la loss function non raggiunge un andamento stabile.
+\end{itemize}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.4\linewidth]{../figures/ciclo_training.png}
+	\caption{Rappresentazione schematica del ciclo di training. Immagine presa da \textit{Deep Learning with PyTorch}, E. Stevens, L. Antiga\cite{stevens}.}
+	\label{ciclo_training}
+\end{figure}
+
+Com'è possibile notare dalla Fig.~\ref{ciclo_training}, un ciclo completo su tutti i dati messi a disposizione per l'apprendimento viene chiamato \textit{epoca}; la fase di apprendimento avviene attraverso numerose epoche.
+
+
+Le reti che ho costruito, descritte in dettaglio nella Sez.~\ref{architettura}, sono chiamate \textit{reti neurali feed-forward}; il termine sta ad indicare che le connessioni tra i neuroni non formano dei cicli\footnote{Le reti che presentano cicli al loro interno vengono chiamate \textit{ricorsive}.}. In particolare si tratta di reti \textit{fully connected}, ovvero dove ciascun neurone è connesso a tutti i neuroni del layer precedente.
+Per la costruzione, il training e la validazione della rete ho utilizzato la libreria \texttt{PyTorch} di \texttt{Python}. 
+\texttt{PyTorch} lavora con elementi chiamati \texttt{Tensor}; questi sono array multi dimensionali molto simili agli array di \texttt{numpy}. \texttt{PyTorch} mette a disposizione strumenti che permettono di automatizzare, per esempio, il processo di apprendimento. Lo step più complesso in fase di training è quello di \textit{backward} durante il quale viene valutato il gradiente dell'errore rispetto ai parametri di rete. Per dare un'idea della potenza di \texttt{PyTorch} mostro qui una parte del codice implementato per la fase di training:
+\insertcode{../scripts/opt.py}{}\label{opt}
+dove \texttt{train\_loss} \`e la funzione di perdita che calcola l'errore tra output calcolato e output desiderato, mentre \texttt{opt} \`e un oggetto ben definito chiamato \textit{optimizer}.
+Attraverso queste due righe di codice viene valutato il gradiente e vengono aggiornati i parametri di rete.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -290,14 +347,16 @@ Il cuore del processo di apprendimento, mostrato schematicamente in Fig.~\ref{ap
 
 \chapter{Previsione delle proprietà di un diagramma di radiazione}\label{prev_param}
 In questo capitolo varrà analizzato come sono stati previsti i parametri del diagramma di radiazione tramite i metodi di interpolazione e tramite l'utilizzo di reti neurali. 
+L'analisi è stata effettuata su ogni parametro di interesse; tuttavia i risultati ottenuti sono spesso molto simili al variare del parametro e quelli riportati nei prossimi capitoli sono grafici che hanno carattere generale, nonostante si riferiscono quasi esclusivamente all'ellitticità. Ricordo che i parametri analizzati sono: ellitticità, FWHM (rispetto a x), FWHM (rispetto a y), componente co-polare massima e componente cross-polare massima.
 
-
+\begin{comment}
 Nota: nei seguenti paragrafi verranno mostrati alcuni grafici rappresentativi dei risultati ottenuti. L'analisi è stata effettuata su ogni parametro di interesse ma i risultati qui riportati riguardano esclusivamente l'ellitticità. I risultati sono infatti molto simili al variare del parametro e quelli riportati sono grafici che hanno carattere generale. I parametri analizzati sono: ellitticità, FWHM (rispetto a x), FWHM (rispetto a y), componente co-polare massima e componente cross-polare massima.
+\end{comment}
 
     %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.1  %%%%%%%%%%%%%%%%%%%
 
 \section{Interpolazione}\label{interpolazione}
-Per stimare le proprietà di un diagramma di radiazione attraverso strumenti classici di interpolaizione ho utilizzato due metodi: \texttt{interp2d} del modulo \texttt{scipy.interpolate}, basato su un'interpolazione lineare, e \texttt{curve fit} del modulo \texttt{scipy.optimize}, che ha permesso di fittare i dati attraverso un paraboloide.
+Per stimare le proprietà di un diagramma di radiazione attraverso strumenti classici di interpolaizione ho utilizzato due metodi: \texttt{interp2d} del modulo \texttt{scipy.interpolate}, basato su un'interpolazione lineare, e \texttt{curve\_fit} del modulo \texttt{scipy.optimize}, che ha permesso di fittare i dati attraverso un paraboloide.
 Per poter effettuare l'interpolazione dei parametri e in seguito verificare la sua bontà, il dataset in fig.~\ref{dataset} è stato suddiviso in due subsets, considerando righe alterne, che ho chiamato \texttt{data\_int} e \texttt{data\_check}. Così facendo è stato possibile utilizzare metà dei dati per l'interpolazione e l'altra metà per la valutazione dell'errore tra il parametro stimato e quello esatto.
 
          %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.1.1  %%%%%%%%%%%%%%%%%%%
@@ -309,18 +368,18 @@ Per poter effettuare l'interpolazione dei parametri e in seguito verificare la s
 	\caption{Contour plot in scala logaritmica dell'errore assoluto tra ellitticità interpolata tramite il metodo \texttt{interp2d} e ellitticità corretta. In rosso sono evidenziati i punti attraverso i quali è stata effettuata l'interpolazione mentre in blu sono rappresentati i punti nei quali è stato valutato l'errore.}
 	\label{err_interp2d}
 \end{figure}
-Il metodo \texttt{interp2d} effettua l'interpolazione a partire da una griglia bidimensionale\footnote{La griglia non deve essere necessariamente regolare.}, nel mio caso questa è rappresentata dalle coppie (x, y) appartenti al subset \texttt{data\_int}. Una volta specificato il parametro di interesse, l'algoritmo effettua un'interpolazione lineare e ritorna una funzione in grado di prevedere il valore del parametro in nuovi punti. \\
+Il metodo \texttt{interp2d} effettua l'interpolazione a partire da una griglia bidimensionale\footnote{La griglia non deve essere necessariamente regolare.}, nel mio caso questa è rappresentata dalle coppie (x, y) appartenti al subset \texttt{data\_int}. Una volta specificato il parametro di interesse, l'algoritmo effettua un'interpolazione lineare e ritorna una funzione in grado di prevedere il valore del parametro in nuovi punti.
 La successiva analisi ha riguardato la valutazione dell'errore tra il parametro stimato nei punti appartenenti a \texttt{data\_check} e il suo valore vero. In fig.~\ref{err_interp2d} è mostrato l'errore assoluto relativo all'ellitticità.
 Si nota che i punti della prima riga a partire dall'alto sono quelli affetti da errore massimo e, come verrà specificato nella sez.~\ref{risultati_interpolazione}, tali anomalie di bordo hanno determinato la scelta del metodo \texttt{curve fit} come termine di paragone con le reti neurali.
 
          %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.1.2  %%%%%%%%%%%%%%%%%%%
 
 \subsection{Curve Fit}\label{curve_fit}
-Il metodo \texttt{curve\_fit} permette di fittare i dati con una funzione non lineare tramite il metodo dei minimi quadrati. Il metodo restituisce i valori ottimali dei parametri \texttt{popt} che minimizzano la discrepanza \texttt{f(xdata, *popt) - ydata}\footnote{In particolare \texttt{xdata} è una coppia (x, y) e \texttt{ydata} è il valore del parametro di interesse.}. Anche in questo caso ho utilizzato i due subset, \texttt{data\_int} e \texttt{data\_check}, per effettuare rispettivamente la regressione e la valutazione dell'errore. Nel mio caso il fit è stato eseguito su un paraboloide in quanto questo richiama la forma della superficie focale. \\
+Il metodo \texttt{curve\_fit} permette di fittare i dati con una funzione non lineare tramite il metodo dei minimi quadrati. Il metodo restituisce i valori ottimali dei parametri \texttt{popt} che minimizzano la discrepanza $f(xdata, *popt) - ydata$\footnote{In particolare \texttt{xdata} è una coppia (x, y) e \texttt{ydata} è il valore del parametro di interesse.}. Anche in questo caso ho utilizzato i due subset, \texttt{data\_int} e \texttt{data\_check}, per effettuare rispettivamente la regressione e la valutazione dell'errore. Nel mio caso il fit è stato eseguito su un paraboloide in quanto questo richiama la forma della superficie focale.
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.8]{../figures/error_curve_fit.png}
-	\caption{Plot dell'errore assoluto tra ellitticità interpolata tramite il metodo \texttt{curve\_fit} e ellitticità corretta.}
+	\caption{Plot che mostra l'errore assoluto tra ellitticità interpolata tramite il metodo \texttt{curve\_fit} e ellitticità corretta.}
 	\label{err_curve_fit}
 \end{figure}
 
@@ -340,24 +399,24 @@ In fig.~\ref{plot_row} è mostrato il diverso comportamento di \texttt{interp2d}
 
 \begin{figure}[!ht]
 \centering
-	\begin{subfigure}{0.8\textwidth}
+	\begin{subfigure}{\textwidth}
 	    \centering
-	    \includegraphics[width=0.8\linewidth]{../figures/row_bordo.png}
+	    \includegraphics[width=\linewidth]{../figures/row_bordo.png}
 	    \caption{Punti di bordo}
 	    \label{plot_row_bordo}
 	\end{subfigure}
 \newline
-	\begin{subfigure}{0.8\textwidth}
+	\begin{subfigure}{\textwidth}
 		\centering
-	    \includegraphics[width=0.8\linewidth]{../figures/row_interno.png}
+	    \includegraphics[width=\linewidth]{../figures/row_interno.png}
 		\caption{Punti interni}
 		\label{plot_row_interno}
 	\end{subfigure}
-\caption{Plot del valore dell'ellitticità per due diverse righe di punti. Nel grafico~\ref{plot_row_bordo} è mostrato l'andamento dell'ellitticità per una riga di punti di bordo mentre nel grafico~\ref{plot_row_interno} viene analizzata l'ellitticità di una riga interna della griglia di punti.}
-\label{plot_row}
+	\caption{Plot del valore dell'ellitticità per due diverse righe di punti. Sono indicati il valore vero, in rosso, il dato previsto con \texttt{interp2d}, in verde e con \texttt{curve\_fit}, in blu. Nel grafico~\ref{plot_row_bordo} è mostrato l'andamento dell'ellitticità per una riga di punti di bordo mentre nel grafico~\ref{plot_row_interno} viene analizzata l'ellitticità di una riga interna della griglia di punti. Nel grafico sulla sinistra sono evidenziati in blu i punti, sulla riga analizzata, su cui è effettuata la verifica dell'interpolazione. Al variare del parametro variano i punti problematici per \texttt{interp2d} ma l'andameto generale rimane lo stesso, il presente plot è dunque da considerarsi rappresentativo di tutti i casi analizzati.}
+	\label{plot_row}
 \end{figure}
 
-Per poter andare a confrontare gli errori dei due metodi di interpolazione ho creato un subset del dataset iniziale rimuovendo i punti più esterni: \texttt{data\_mask}. Il passaggio successivo è stato plottare novamente l'errore come in fig.~\ref{err_int} e il risultato ottenuto è mostrato in fig.~\ref{err_int_mask}.
+Per poter andare gli errori dei due metodi di interpolazione ho creato un subset del dataset iniziale rimuovendo i punti più esterni: \texttt{data\_mask}. Il passaggio successivo è stato plottare novamente l'errore come in fig.~\ref{err_int} e il risultato ottenuto è mostrato in fig.~\ref{err_int_mask}.
 
 \begin{figure}[!ht]
 	\centering
@@ -371,7 +430,7 @@ Il plot in fig.~\ref{err_int_mask} mostra ancora dei punti nei quali l'errore di
 
      %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.2  %%%%%%%%%%%%%%%%%%%
 \section{Reti neurali}\label{reti_neurali}
-In questa sezione mostro come sono state create le architetture delle reti neurali utilizzate per effettuare la regressione, come sono stati gestiti i dati a disposizione per definire \texttt{training set} e \texttt{validazion set} e com'è avvenuto il processo di training. Infine verrà presentato il confronto dei risultati ottenuti tramite l'utilizzo dell'interpolazione e delle reti (~\ref{risultati}).
+In questa sezione mostro come sono state create le architetture delle reti neurali utilizzate per effettuare la regressione, com'è stata verificata la loro validità, come sono stati gestiti i dati a disposizione per definire \texttt{training set} e \texttt{validazion set} e com'è avvenuto il processo di training. Infine verrà presentato il confronto dei risultati ottenuti tramite l'utilizzo dell'interpolazione e delle reti (~\ref{risultati}).
 
         %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.2.1  %%%%%%%%%%%%%%%%%%%
 
@@ -387,15 +446,16 @@ Tali elementi sono:
 	\item L'\textit{optimizer}.
 	\item La \textit{loss function}.
 \end{itemize}
+La scelta dei loro valori non è mai univoca, non esiste una regola fissa per avere la ricetta perfetta che porta ai risultati migliori.
+Nel mio lavoro di tesi ho utilizzato 6 diverse architetture; alcuni degli elementi appena citati sono stati mantenuti invariati per ogni architettura\footnote{L'input, per esempio, è sempre una coppia (x, y) che definisce una posizione mentre l'output è un singolo valore di un particolare parametro in quel punto.}, mentre altri sono stati modificati.
 
-\noindent La scelta dei loro valori non è mai univoca, non esiste una regola fissa per avere la ricetta perfetta che porta ai risultati migliori.
-Nel mio lavoro di tesi ho utilizzato 6 diverse architetture; alcuni degli elementi appena citati sono stati mantenuti invariati per ogni architettura\footnote{L'input, per esempio, è sempre una coppia (x, y) che definisce una posizione mentre l'output è un singolo valore di un particolare parametro in quel punto.}, mentre altri sono stati modificati. \\
-\noindent Per poter decrivere al meglio la scelta delle architetture è necessario fare alcune osservazioni. \\
-\noindent Uno dei problemi più diffusi nell'ambito delle reti neurali è quello dell'\textbf{overfitting}. Si va incontro ad overfitting quando, per esempio, si utilizza un numero estremamente elevato di neuroni se confrontato con gli elementi che si hanno a disposizione per il training.
-Ogni neurone è infatti caratterizzato da due parametri liberi (\textit{weight} e \textit{bias}), la presenza di un elevato numero di parametri liberi fa si che la rete impari perfettamente la corrispondenza tra input e output degli elementi nel training set, ma in tal modo si perde il carattere predittivo necessario per ottenere risultati validi. La dimensione del \textit{trainig set} andrà dunque a fissare un limite superiore del numero di neuroni totali della rete. \\
-\noindent Un'ulteriore osservazione di fondamentale importanza riguarda la normalizzazione dei dati. I dati relativi al parametro d'interesse, ovvero i dati di output, sono stati infatti normalizzati per agevolare la convergenza della rete. Tale normalizzazione è descritta in dettaglio nella sezione~\ref{pre_training}.
-Non è stato invece necessario normalizzare l'input poichè appartenente, già in partenza, a un range ottimale\footnote{Sia i valori di x che di y oscillano tra -0.34 e +0.34}. \\
-\noindent Con tali premesse è ora possibile giustificare le scelte fatte nella definizione dell'architettura delle reti. I parametri rimasti sempre invariati sono:
+
+Per poter decrivere al meglio la scelta delle architetture è necessario fare alcune osservazioni.
+Uno dei problemi più diffusi nell'ambito delle reti neurali è quello dell'\textbf{overfitting}. Si va incontro ad overfitting quando, per esempio, si utilizza un numero estremamente elevato di neuroni se confrontato con gli elementi che si hanno a disposizione per il training.
+Ogni neurone è infatti caratterizzato da due parametri liberi (\textit{weight} e \textit{bias}), la presenza di un elevato numero di parametri liberi fa si che la rete impari perfettamente la corrispondenza tra input e output degli elementi nel training set, ma in tal modo si perde il carattere predittivo necessario per ottenere risultati validi. La dimensione del \textit{trainig set} andrà dunque a fissare un limite superiore del numero di neuroni totali della rete.
+Un'ulteriore osservazione di fondamentale importanza riguarda la normalizzazione dei dati. I dati relativi al parametro d'interesse, ovvero i dati di output, sono stati infatti normalizzati per agevolare la convergenza della rete. Tale normalizzazione è descritta in dettaglio nella sezione~\ref{pre_training}.
+Non è stato invece necessario normalizzare l'input poichè appartenente, già in partenza, a un range ottimale\footnote{Sia i valori di x che di y oscillano tra -0.34 e +0.34}.
+Con tali premesse è ora possibile giustificare le scelte fatte nella definizione dell'architettura delle reti. I parametri rimasti sempre invariati sono:
 \begin{itemize}
 	\item Dimensione dell'\textbf{input layer}: 2
 	\item Dimensione dell'\textbf{output layer}: 1
@@ -445,31 +505,63 @@ Le 6 architetture costruite sono state ottenute tramite una diversa combinazione
 \end{figure}
 
 
-
         %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.2.2  %%%%%%%%%%%%%%%%%%%
 
 \subsection{Pre Training}\label{pre_training}
-In fase di pre-training sono state effetuate due operazioni principali: la normalizzazione dei dati e lo split del \texttt{dataset} in un \texttt{training\_set} ed un \texttt{validation\_set}. \\
-\noindent Gli output sono stati normalizzati in modo da appartenere all'intervallo $[0, 1]$, nel caso di \texttt{Sigmoid} come funzione di qttivazione, oppure a $[-1, 1]$ nel caso di \texttt{Tanh}. Le formule utilizzate per la normalizzazione nei due casi sono: \\
+In fase di pre-training sono state effetuate due operazioni principali: la normalizzazione dei dati e lo split del dataset in un \texttt{training\_set} ed un \texttt{validation\_set}. \`E stata inoltre effettuato un test per la verifica della convergenza della rete.
+
+
+Gli output sono stati normalizzati in modo da appartenere all'intervallo $[0, 1]$, nel caso di \texttt{Sigmoid} come funzione di qttivazione, oppure a $[-1, 1]$ nel caso di \texttt{Tanh}. Le formule utilizzate per la normalizzazione nei due casi sono:
 \begin{equation}\label{norm1}
 y'=\frac{y+y_m}{y_m-y_M}
 \end{equation}
 \begin{equation}\label{norm2}
 y'=\frac{2y-y_m-y_M}{y_M-y_m}
 \end{equation}
-dove $y_m$ corrisponde al minimo valore del parametro mentre $y_M$ corrisponde al massimo. \\
-\noindent L'equazione~\ref{norm1} permette una normalizzazione dell'output in $[0, 1]$ mentre la~\ref{norm2} in $[-1, 1]$.
+dove $y_m$ corrisponde al minimo valore del parametro mentre $y_M$ corrisponde al massimo.
+L'equazione~\ref{norm1} permette una normalizzazione dell'output in $[0, 1]$ mentre la~\ref{norm2} in $[-1, 1]$\footnote{Dopo aver effettuato il training e aver ottenuto i risultati, i dati sono stati rinormalizzati in modo da tornare al range iniziale.}.
+
+Come nel caso dell'interpolazione, a partire dal dataset in Fig.~\ref{dataset} sono stati creati due subsets per poter effettuare separatamente il training della rete e la verifica della bontà delle sue previsioni. Circa il $75\%$ (126) degli elementi totali (169) costituisce il \texttt{training\_set} mentre il restante $25\%$ (43) costituische il \texttt{validation\_set}. Questa operazione di caricamento è stata fatta tramite un metodo messo a disposizione da \texttt{PyTorch}, \texttt{DataLoader}, attraverso il seguente codice:
+\insertcode{../scripts/loader.py}{Loader}\label{loader}
+La scelta degli elementi che vanno a finire in un determinato subset è fatta casualmente grazie alla specifica \texttt{suffle = True}.
 
 
+Una volta definita l'architettura di rete ed effettuate le operazioni di pre-training necessarie è necessario verificare la convergenza della rete, per essere certi che non vada in overfitting. Questo è stato fatto per ogni parametro e per ogni architettura.
+Per effettuare il test della rete ho utilizzato un metodo di validazione chiamato \texttt{K-Fold}. Il metodo consiste in:
+\begin{itemize}
+	\item mescolare il dataset iniziale;
+	\item sezionare il dataset attraverso $N splits$. Nel mio caso $N=5$;
+	\item utilizzare $N-1$ parti per il \texttt{training\_set} e la parte rimanente per il \texttt{validation\_set};
+	\item valutare la \textit{loss function} relativa al training e al validation;
+	\item ripetere l'operazione per $N$ volte in modo da testare, a turno, tutti gli elementi del dataset.
+\end{itemize}
+Di fatto si tratta di ripetere più volte il processo di apprendimento che verrà descritto in dettaglio nella Sez.~\ref{training}.
 
-inoltre ho definito il numero di epoche totali
-trasformazione lineare per ottenere l'output nell'intervallo desiderato.. facilito il lavoro della rete
+In Fig.[METTILA] sono rappresentati alcuni dei risultati ottenuti
+
+\begin{figure}[!ht]
+\centering
+	\begin{subfigure}{0.49\textwidth}
+	    \centering
+	    \includegraphics[width=\linewidth]{../figures/Test_1L_Tanh_e.png}
+	    \caption{Test di rete per il parametro \texttt{e}. L'architettura di rete è data da 1 hidden layer e dalla $Tanh$ come funzione d'attivazione.}
+	    \label{test1}
+	\end{subfigure}
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+	    \includegraphics[width=\linewidth]{../figures/Test_1L_Sigmoid_co_max.png}
+		\caption{Test di rete per il parametro \texttt{co\_max}. L'architettura di rete è data da 1 hidden layer e dalla $Sigmoid$ come funzione d'attivazione.}
+		\label{test2}
+	\end{subfigure}
+	\caption{Test di rete per due diversi parametri e due diverse architetture. Nei grafici in basso è rappresentata la parte finale del grafico sovrastante per un confronto più dettagliato della \textit{loss function}. Nel caso ~\ref{test1} si nota che la rete converge molto bene, il valore finale di \textit{loss} è infatti inferiore a $0.008$. Nel caso ~\ref{test2} invece non viene raggiunto un buon valore di \textit{loss}, quella particolare architettura non sarà quindi ottimale per il parametro \texttt{co\_max}.}
+	\label{test_rete}
+\end{figure}
+
 
         %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.2.3  %%%%%%%%%%%%%%%%%%%
 
 \subsection{Training}\label{training}
-Bla bla bla 
-
+Bla bla bla
         %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.2.4  %%%%%%%%%%%%%%%%%%%
 
 \section{Confronto di risultati}\label{risultati}

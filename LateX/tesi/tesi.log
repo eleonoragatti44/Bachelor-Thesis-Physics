@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.1)  29 JUN 2020 11:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.1)  30 JUN 2020 16:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -284,6 +284,163 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen136
 \l_MT_below_shortintertext_sep=\dimen137
 )
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+FEFF (decimal 65279)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
 )
@@ -451,20 +608,26 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (./tesi.aux)
 \openout1 = `tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 88.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -496,8 +659,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \it@ocap on input line 56.
-LaTeX Info: Redefining \it@ccap on input line 56.
+LaTeX Info: Redefining \it@ocap on input line 88.
+LaTeX Info: Redefining \it@ccap on input line 88.
 
 
 File italian.ldf warning: 
@@ -505,7 +668,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 56.
+italian.ldf    on input line 88.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -552,22 +715,22 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 \c@lstlisting=\count143
-LaTeX Info: Redefining \celsius on input line 56.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 56.
-
-
-
-Package gensymb Warning: Not defining \perthousand.
-
-LaTeX Info: Redefining \ohm on input line 56.
-Package gensymb Info: Using \Omega for \ohm on input line 56.
-
-Package gensymb Warning: Not defining \micro.
-
+\symgns@font=\mathgroup5
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 88.
+Package gensymb Info: Math companion symbols declared on input line 88.
+LaTeX Info: Redefining \degree on input line 88.
+LaTeX Info: Redefining \celsius on input line 88.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
+erthousand on input line 88.
+LaTeX Info: Redefining \ohm on input line 88.
+Package gensymb Info: Using \textohm for \ohm on input line 88.
+Package gensymb Info: Using \textmu for \micro on input line 88.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 56.
+Package hyperref Info: Link coloring OFF on input line 88.
+
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -576,9 +739,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count144
 )
-LaTeX Info: Redefining \ref on input line 56.
-LaTeX Info: Redefining \pageref on input line 56.
-LaTeX Info: Redefining \nameref on input line 56.
+LaTeX Info: Redefining \ref on input line 88.
+LaTeX Info: Redefining \pageref on input line 88.
+LaTeX Info: Redefining \nameref on input line 88.
 
 (./tesi.out) (./tesi.out)
 \@outlinefile=\write3
@@ -587,39 +750,39 @@ LaTeX Info: Redefining \nameref on input line 56.
 <../frontespizio/frontespizio.pdf, id=76, 597.50829pt x 845.0471pt>
 File: ../frontespizio/frontespizio.pdf Graphic file (type pdf)
 <use ../frontespizio/frontespizio.pdf>
-Package pdftex.def Info: ../frontespizio/frontespizio.pdf  used on input line 6
-0.
+Package pdftex.def Info: ../frontespizio/frontespizio.pdf  used on input line 9
+2.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: ../frontespizio/frontespizio.pdf Graphic file (type pdf)
 <use ../frontespizio/frontespizio.pdf>
-Package pdftex.def Info: ../frontespizio/frontespizio.pdf  used on input line 6
-0.
+Package pdftex.def Info: ../frontespizio/frontespizio.pdf  used on input line 9
+2.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 <../frontespizio/frontespizio.pdf, id=79, page=1, 597.50829pt x 845.0471pt>
 File: ../frontespizio/frontespizio.pdf Graphic file (type pdf)
 <use ../frontespizio/frontespizio.pdf, page 1>
 Package pdftex.def Info: ../frontespizio/frontespizio.pdf , page1 used on input
- line 60.
+ line 92.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: ../frontespizio/frontespizio.pdf Graphic file (type pdf)
 <use ../frontespizio/frontespizio.pdf, page 1>
 Package pdftex.def Info: ../frontespizio/frontespizio.pdf , page1 used on input
- line 60.
+ line 92.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ../frontespizio/frontespizio.pdf Graphic file (type pdf)
 <use ../frontespizio/frontespizio.pdf, page 1>
 Package pdftex.def Info: ../frontespizio/frontespizio.pdf , page1 used on input
- line 60.
+ line 92.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ../frontespizio/frontespizio.pdf Graphic file (type pdf)
 <use ../frontespizio/frontespizio.pdf, page 1>
 Package pdftex.def Info: ../frontespizio/frontespizio.pdf , page1 used on input
- line 60.
+ line 92.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: ../frontespizio/frontespizio.pdf Graphic file (type pdf)
 <use ../frontespizio/frontespizio.pdf, page 1>
 Package pdftex.def Info: ../frontespizio/frontespizio.pdf , page1 used on input
- line 60.
+ line 92.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [1
 
@@ -642,190 +805,212 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 ]
 Capitolo 1.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 86.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 86.
- [5]
-<../figures/power_spect.png, id=154, 879.285pt x 723.70375pt>
+[5] [6]
+<../figures/power_spect.png, id=163, 879.285pt x 723.70375pt>
 File: ../figures/power_spect.png Graphic file (type png)
 <use ../figures/power_spect.png>
-Package pdftex.def Info: ../figures/power_spect.png  used on input line 111.
+Package pdftex.def Info: ../figures/power_spect.png  used on input line 143.
 (pdftex.def)             Requested size: 298.75262pt x 245.89038pt.
- [6] [7 <../figures/power_spect.png>]
-<../figures/diag_rad.png, id=179, 863.225pt x 712.6625pt>
+ [7 <../figures/power_spect.png>]
+<../figures/diag_rad.png, id=180, 863.225pt x 712.6625pt>
 File: ../figures/diag_rad.png Graphic file (type png)
 <use ../figures/diag_rad.png>
-Package pdftex.def Info: ../figures/diag_rad.png  used on input line 137.
+Package pdftex.def Info: ../figures/diag_rad.png  used on input line 169.
 (pdftex.def)             Requested size: 213.39566pt x 176.17519pt.
-<../figures/risposta_ottica.png, id=180, 835.12pt x 746.79pt>
+<../figures/risposta_ottica.png, id=181, 835.12pt x 746.79pt>
 File: ../figures/risposta_ottica.png Graphic file (type png)
 <use ../figures/risposta_ottica.png>
-Package pdftex.def Info: ../figures/risposta_ottica.png  used on input line 143
+Package pdftex.def Info: ../figures/risposta_ottica.png  used on input line 175
 .
 (pdftex.def)             Requested size: 192.0548pt x 171.73529pt.
  [8 <../figures/diag_rad.png> <../figures/risposta_ottica.png>]
-<../figures/strip.png, id=205, 360.6273pt x 208.8603pt>
+<../figures/strip.png, id=203, 360.6273pt x 208.8603pt>
 File: ../figures/strip.png Graphic file (type png)
 <use ../figures/strip.png>
-Package pdftex.def Info: ../figures/strip.png  used on input line 179.
+Package pdftex.def Info: ../figures/strip.png  used on input line 211.
 (pdftex.def)             Requested size: 256.0774pt x 148.30779pt.
- [9 <../figures/strip.png>]
+ [9]
 <../figures/dataset.png, id=218, 1174.3875pt x 668.4975pt>
 File: ../figures/dataset.png Graphic file (type png)
 <use ../figures/dataset.png>
-Package pdftex.def Info: ../figures/dataset.png  used on input line 195.
+Package pdftex.def Info: ../figures/dataset.png  used on input line 227.
 (pdftex.def)             Requested size: 341.43436pt x 194.34892pt.
-<../figures/off-axis_co.png, id=219, 487.8225pt x 402.5439pt>
+ [10 <../figures/strip.png> <../figures/dataset.png>]
+<../figures/off-axis_co.png, id=228, 487.8225pt x 402.5439pt>
 File: ../figures/off-axis_co.png Graphic file (type png)
 <use ../figures/off-axis_co.png>
-Package pdftex.def Info: ../figures/off-axis_co.png  used on input line 207.
+Package pdftex.def Info: ../figures/off-axis_co.png  used on input line 239.
 (pdftex.def)             Requested size: 209.1301pt x 172.56839pt.
-<../figures/off-axis_cx.png, id=220, 501.5538pt x 402.5439pt>
+<../figures/off-axis_cx.png, id=229, 501.5538pt x 402.5439pt>
 File: ../figures/off-axis_cx.png Graphic file (type png)
 <use ../figures/off-axis_cx.png>
-Package pdftex.def Info: ../figures/off-axis_cx.png  used on input line 213.
+Package pdftex.def Info: ../figures/off-axis_cx.png  used on input line 245.
 (pdftex.def)             Requested size: 209.1301pt x 167.84496pt.
- [10 <../figures/dataset.png>] [11 <../figures/off-axis_co.png> <../figures/off
--axis_cx.png>] [12
+ [11 <../figures/off-axis_co.png> <../figures/off-axis_cx.png>] [12
 
 ]
 Capitolo 2.
-<../figures/schema_rete.png, id=245, 1236.62pt x 593.21625pt>
+
+Underfull \vbox (badness 1701) has occurred while \output is active []
+
+ [13]
+<../figures/schema_rete.png, id=252, 1236.62pt x 593.21625pt>
 File: ../figures/schema_rete.png Graphic file (type png)
 <use ../figures/schema_rete.png>
-Package pdftex.def Info: ../figures/schema_rete.png  used on input line 253.
+Package pdftex.def Info: ../figures/schema_rete.png  used on input line 294.
 (pdftex.def)             Requested size: 256.0774pt x 122.84116pt.
-[13]
-<../figures/learning_process.png, id=256, 725.20938pt x 382.93062pt>
+
+[14 <../figures/schema_rete.png>]
+<../figures/learning_process.png, id=264, 725.20938pt x 382.93062pt>
 File: ../figures/learning_process.png Graphic file (type png)
 <use ../figures/learning_process.png>
-Package pdftex.def Info: ../figures/learning_process.png  used on input line 27
-4.
+Package pdftex.def Info: ../figures/learning_process.png  used on input line 30
+5.
 (pdftex.def)             Requested size: 298.75262pt x 157.75047pt.
- [14 <../figures/schema_rete.png>] [15 <../figures/learning_process.png>]
-[16
+<../figures/ciclo_training.png, id=269, 487.8225pt x 596.2275pt>
+File: ../figures/ciclo_training.png Graphic file (type png)
+<use ../figures/ciclo_training.png>
+Package pdftex.def Info: ../figures/ciclo_training.png  used on input line 321.
 
-]
+(pdftex.def)             Requested size: 170.71393pt x 208.64636pt.
+ [15 <../figures/learning_process.png>]
+(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/02/27 1.8b listings language file
+)
+(../scripts/opt.py) [16 <../figures/ciclo_training.png>]
 Capitolo 3.
 
-Overfull \hbox (11.53912pt too wide) in paragraph at lines 300--302
+Overfull \hbox (11.53912pt too wide) in paragraph at lines 359--361
 \OT1/cmr/m/n/12 di in-ter-po-lai-zio-ne ho uti-liz-za-to due me-to-di: \OT1/cmt
 t/m/n/12 interp2d \OT1/cmr/m/n/12 del mo-du-lo \OT1/cmtt/m/n/12 scipy.interpola
 te\OT1/cmr/m/n/12 ,
  []
 
-<../figures/errore_assoluto_ell.png, id=277, 578.16pt x 433.62pt>
+<../figures/errore_assoluto_ell.png, id=294, 578.16pt x 433.62pt>
 File: ../figures/errore_assoluto_ell.png Graphic file (type png)
 <use ../figures/errore_assoluto_ell.png>
 Package pdftex.def Info: ../figures/errore_assoluto_ell.png  used on input line
- 308.
+ 367.
 (pdftex.def)             Requested size: 462.52863pt x 346.89647pt.
 
-Overfull \hbox (35.73729pt too wide) in paragraph at lines 308--309
+Overfull \hbox (35.73729pt too wide) in paragraph at lines 367--368
  [][] 
  []
 
-[17]
-<../figures/error_curve_fit.png, id=288, 433.62pt x 289.08pt>
+[17
+
+]
+<../figures/error_curve_fit.png, id=304, 433.62pt x 289.08pt>
 File: ../figures/error_curve_fit.png Graphic file (type png)
 <use ../figures/error_curve_fit.png>
-Package pdftex.def Info: ../figures/error_curve_fit.png  used on input line 322
+Package pdftex.def Info: ../figures/error_curve_fit.png  used on input line 381
 .
 (pdftex.def)             Requested size: 346.89647pt x 231.2643pt.
  [18 <../figures/errore_assoluto_ell.png>]
-<../figures/error_comparison_all.png, id=298, 433.62pt x 289.08pt>
+<../figures/error_comparison_all.png, id=313, 433.62pt x 289.08pt>
 File: ../figures/error_comparison_all.png Graphic file (type png)
 <use ../figures/error_comparison_all.png>
 Package pdftex.def Info: ../figures/error_comparison_all.png  used on input lin
-e 333.
+e 392.
 (pdftex.def)             Requested size: 346.89647pt x 231.2643pt.
- [19 <../figures/error_curve_fit.png> <../figures/error_comparison_all.png>]
-<../figures/row_bordo.png, id=309, 660.36713pt x 600.5637pt>
+<../figures/row_bordo.png, id=315, 1734.48pt x 722.7pt>
 File: ../figures/row_bordo.png Graphic file (type png)
 <use ../figures/row_bordo.png>
-Package pdftex.def Info: ../figures/row_bordo.png  used on input line 345.
-(pdftex.def)             Requested size: 273.14851pt x 248.4137pt.
-<../figures/row_interno.png, id=310, 671.20763pt x 656.03093pt>
+Package pdftex.def Info: ../figures/row_bordo.png  used on input line 404.
+(pdftex.def)             Requested size: 426.79134pt x 177.82945pt.
+<../figures/row_interno.png, id=316, 1734.48pt x 722.7pt>
 File: ../figures/row_interno.png Graphic file (type png)
 <use ../figures/row_interno.png>
-Package pdftex.def Info: ../figures/row_interno.png  used on input line 352.
-(pdftex.def)             Requested size: 273.14851pt x 266.97238pt.
-<../figures/error_comparison.png, id=317, 433.62pt x 289.08pt>
+Package pdftex.def Info: ../figures/row_interno.png  used on input line 411.
+(pdftex.def)             Requested size: 426.79134pt x 177.82945pt.
+<../figures/error_comparison.png, id=323, 433.62pt x 289.08pt>
 File: ../figures/error_comparison.png Graphic file (type png)
 <use ../figures/error_comparison.png>
-Package pdftex.def Info: ../figures/error_comparison.png  used on input line 36
-4.
+Package pdftex.def Info: ../figures/error_comparison.png  used on input line 42
+3.
 (pdftex.def)             Requested size: 346.89647pt x 231.2643pt.
- [20]
-Underfull \vbox (badness 3884) has occurred while \output is active []
-
- [21 <../figures/row_bordo.png> <../figures/row_interno.png>] [22 <../figures/e
-rror_comparison.png>]
-<../figures/tanh.png, id=350, 615.29875pt x 614.295pt>
+ [19 <../figures/error_curve_fit.png>] [20 <../figures/error_comparison_all.png
+>] [21 <../figures/row_bordo.png> <../figures/row_interno.png>] [22 <../figures
+/error_comparison.png>]
+<../figures/tanh.png, id=364, 615.29875pt x 614.295pt>
 File: ../figures/tanh.png Graphic file (type png)
 <use ../figures/tanh.png>
-Package pdftex.def Info: ../figures/tanh.png  used on input line 433.
+Package pdftex.def Info: ../figures/tanh.png  used on input line 493.
 (pdftex.def)             Requested size: 192.0548pt x 191.73238pt.
-<../figures/sigmoid.png, id=351, 615.29875pt x 614.295pt>
+<../figures/sigmoid.png, id=365, 615.29875pt x 614.295pt>
 File: ../figures/sigmoid.png Graphic file (type png)
 <use ../figures/sigmoid.png>
-Package pdftex.def Info: ../figures/sigmoid.png  used on input line 439.
+Package pdftex.def Info: ../figures/sigmoid.png  used on input line 499.
 (pdftex.def)             Requested size: 192.0548pt x 191.73238pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 452--454
-
+ [23 <../figures/tanh.png> <../figures/sigmoid.png>] (../scripts/loader.py)
+Overfull \hbox (30.66168pt too wide) in paragraph at lines 534--535
+[]\OT1/cmr/m/n/12 utilizzare $\OML/cmm/m/it/12 N \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/
+m/n/12 1$ par-ti per il \OT1/cmtt/m/n/12 training[]set \OT1/cmr/m/n/12 e la par
+-te ri-ma-nen-te per il \OT1/cmtt/m/n/12 validation[]set\OT1/cmr/m/n/12 ; 
  []
 
-[23 <../figures/tanh.png> <../figures/sigmoid.png>] [24]
+<../figures/Test_1L_Tanh_e.png, id=383, 1300.86pt x 1300.86pt>
+File: ../figures/Test_1L_Tanh_e.png Graphic file (type png)
+<use ../figures/Test_1L_Tanh_e.png>
+Package pdftex.def Info: ../figures/Test_1L_Tanh_e.png  used on input line 546.
+
+(pdftex.def)             Requested size: 209.1301pt x 209.11447pt.
+<../figures/Test_1L_Sigmoid_co_max.png, id=384, 1300.86pt x 1300.86pt>
+File: ../figures/Test_1L_Sigmoid_co_max.png Graphic file (type png)
+<use ../figures/Test_1L_Sigmoid_co_max.png>
+Package pdftex.def Info: ../figures/Test_1L_Sigmoid_co_max.png  used on input l
+ine 552.
+(pdftex.def)             Requested size: 209.1301pt x 209.11447pt.
+[24] [25 <../figures/Test_1L_Tanh_e.png> <../figures/Test_1L_Sigmoid_co_max.png
+>] [26
+
+]
 Capitolo 4.
-(./tesi.bbl [25
+(./tesi.bbl [27] [28
 
-] [26
-
-] [27])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 509.
- [28]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 509.
+] [29])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 601.
+ [30]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 601.
  (./tesi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 509.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 509.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 601.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 601.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: C8BD630ACEEAB526C4EEA8D965A71885;1251.
  ) 
 Here is how much of TeX's memory you used:
- 11820 strings out of 492616
- 176514 string characters out of 6129481
- 314884 words of memory out of 5000000
- 15455 multiletter control sequences out of 15000+600000
- 12115 words of font info for 47 fonts, out of 8000000 for 9000
+ 12794 strings out of 492616
+ 188476 string characters out of 6129481
+ 510977 words of memory out of 5000000
+ 16384 multiletter control sequences out of 15000+600000
+ 15488 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,18n,43p,1151b,535s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
-r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
-local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
-texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/te
-xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
-2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/201
-9/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on tesi.pdf (28 pages, 6729191 bytes).
+ 42i,18n,51p,1151b,1454s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
+al/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
+exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/tex
+live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
+e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
+019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+19/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf
+-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on tesi.pdf (30 pages, 9539157 bytes).
 PDF statistics:
- 469 PDF objects out of 1000 (max. 8388607)
- 366 compressed objects within 4 object streams
- 85 named destinations out of 1000 (max. 500000)
- 250 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 517 PDF objects out of 1000 (max. 8388607)
+ 401 compressed objects within 5 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 265 words of extra memory for PDF output out of 10000 (max. 10000000)
 
