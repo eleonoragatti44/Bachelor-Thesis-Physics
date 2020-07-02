@@ -1,12 +1,12 @@
 import subprocess
 
 
-subprocess.run(['python', 'Sigmoid1L.py', "fwhm_x"])
-subprocess.run(['python', 'Sigmoid2L.py', "fwhm_x"])
-subprocess.run(['python', 'Sigmoid3L.py', "fwhm_x"])
-subprocess.run(['python', 'Tanh1L.py', "fwhm_x"])
-subprocess.run(['python', 'Tanh2L.py', "fwhm_x"])
-subprocess.run(['python', 'Tanh3L.py', "fwhm_x"])
+subprocess.run(['python', 'Sigmoid1L.py', "e", "fwhm_x", "fwhm_y", "co_max", "cx_max"])
+subprocess.run(['python', 'Sigmoid2L.py', "e", "fwhm_x", "fwhm_y", "co_max", "cx_max"])
+subprocess.run(['python', 'Sigmoid3L.py', "e", "fwhm_x", "fwhm_y", "co_max", "cx_max"])
+subprocess.run(['python', 'Tanh1L.py', "e", "fwhm_x", "fwhm_y", "co_max", "cx_max"])
+subprocess.run(['python', 'Tanh2L.py', "e", "fwhm_x", "fwhm_y", "co_max", "cx_max"])
+subprocess.run(['python', 'Tanh3L.py', "e", "fwhm_x", "fwhm_y", "co_max", "cx_max"])
 
 
 # RUN TEST FOR ARCHITECTURE VARIABILITY

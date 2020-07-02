@@ -297,7 +297,7 @@ def df_from_path(PATH):
     l_fwhmy = []
     l_comax = []
     l_cxmax = []
-    l_check = []
+    #l_check = []
 
     for filename in all_files:
         if "_e" in filename: 
@@ -329,26 +329,28 @@ def df_from_path(PATH):
             name = [file+" [Net]", file+" [Int]"]
             df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
             l_cxmax.append(df)
-            
+        
+        '''
         if "_Check" in filename:
             file = (os.path.basename(filename))
             name = [file+" [Net]", file+" [Int]"]
             df = pd.read_csv(filename, delimiter=" ", header=None, names=name)
             l_check.append(df)
-
+        '''
+        
     df_e = pd.concat(l_e, axis=1, sort=False)
     df_fwhmx = pd.concat(l_fwhmx, axis=1, sort=False)
     df_fwhmy = pd.concat(l_fwhmy, axis=1, sort=False)
     df_comax = pd.concat(l_comax, axis=1, sort=False)
     df_cxmax = pd.concat(l_cxmax, axis=1, sort=False)
-    df_check = pd.concat(l_check, axis=1, sort=False)
+    #df_check = pd.concat(l_check, axis=1, sort=False)
 
     df_e = pd.melt(df_e, var_name="description", value_name="value")
     df_fwhmx = pd.melt(df_fwhmx, var_name="description", value_name="value")
     df_fwhmy = pd.melt(df_fwhmy, var_name="description", value_name="value")
     df_comax = pd.melt(df_comax, var_name="description", value_name="value")
     df_cxmax = pd.melt(df_cxmax, var_name="description", value_name="value")
-    df_check = pd.melt(df_check, var_name="description", value_name="value")
+    #df_check = pd.melt(df_check, var_name="description", value_name="value")
 
     def geterr(descr):
         return descr.split(sep=" ")[-1]
@@ -367,10 +369,10 @@ def df_from_path(PATH):
     df_comax["architecture"] = df_comax["description"].apply(getarch)
     df_cxmax["error"] = df_cxmax["description"].apply(geterr)
     df_cxmax["architecture"] = df_cxmax["description"].apply(getarch)
-    df_check["error"] = df_check["description"].apply(geterr)
-    df_check["architecture"] = df_check["description"].apply(getarch)
+    #df_check["error"] = df_check["description"].apply(geterr)
+    #df_check["architecture"] = df_check["description"].apply(getarch)
     
-    return df_e, df_fwhmx, df_fwhmy, df_comax, df_cxmax, df_check
+    return df_e, df_fwhmx, df_fwhmy, df_comax, df_cxmax#, df_check
 
 ####################################################################################################################   
 

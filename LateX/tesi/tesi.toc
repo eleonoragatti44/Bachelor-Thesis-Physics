@@ -7,14 +7,14 @@
 \contentsline {chapter}{\numberline {2}Regressione con reti neurali}{13}{chapter.2}% 
 \contentsline {section}{\numberline {2.1}Machine learning e tipi di rete}{13}{section.2.1}% 
 \contentsline {section}{\numberline {2.2}Struttura di una rete neurale}{14}{section.2.2}% 
-\contentsline {chapter}{\numberline {3}Previsione delle propriet\IeC {\`a} di un diagramma di radiazione}{17}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Interpolazione}{17}{section.3.1}% 
-\contentsline {subsection}{\numberline {3.1.1}Interp2d}{17}{subsection.3.1.1}% 
-\contentsline {subsection}{\numberline {3.1.2}Curve Fit}{18}{subsection.3.1.2}% 
-\contentsline {subsection}{\numberline {3.1.3}Risultati dell'interpolazione}{19}{subsection.3.1.3}% 
-\contentsline {section}{\numberline {3.2}Reti neurali}{20}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}Architettura della rete}{20}{subsection.3.2.1}% 
-\contentsline {subsection}{\numberline {3.2.2}Pre Training}{23}{subsection.3.2.2}% 
-\contentsline {subsection}{\numberline {3.2.3}Training}{25}{subsection.3.2.3}% 
-\contentsline {section}{\numberline {3.3}Confronto di risultati}{25}{section.3.3}% 
-\contentsline {chapter}{\numberline {4}Conclusioni}{27}{chapter.4}% 
+\contentsline {chapter}{\numberline {3}Previsione delle propriet\IeC {\`a} di un diagramma di radiazione}{19}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Interpolazione}{19}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}Interp2d}{19}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.1.2}Curve Fit}{20}{subsection.3.1.2}% 
+\contentsline {subsection}{\numberline {3.1.3}Risultati dell'interpolazione}{21}{subsection.3.1.3}% 
+\contentsline {section}{\numberline {3.2}Reti neurali}{22}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Architettura della rete}{22}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}Pre Training}{25}{subsection.3.2.2}% 
+\contentsline {subsection}{\numberline {3.2.3}Training}{27}{subsection.3.2.3}% 
+\contentsline {section}{\numberline {3.3}Confronto dei risultati}{28}{section.3.3}% 
+\contentsline {chapter}{\numberline {4}Conclusioni}{33}{chapter.4}% 
