@@ -77,6 +77,8 @@ tabsize=4, % Number of spaces per tab in the code
 \usepackage{subcaption}
 \usepackage{afterpage}
 \usepackage{verbatim}
+\usepackage{caption}
+\usepackage[font=small,labelfont=bf]{caption}
 \usepackage[pdfa]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Tesi di laurea triennale di Eleonora Gatti}
@@ -181,10 +183,28 @@ La risposta angolare di un sistema ottico è quantificata da una funzione $\gamm
 \end{figure}
 %%%%%
 A partire dal diagramma di radiazione si definiscono alcuni parametri che permettono una sua descrizione; tali parametri sono i protagonisti di questo lavoro di tesi.
-La \textbf{Full Width Half Maximum} (FWHM) del main beam è la larghezza angolare a metà della sua altezza ed è uno dei parametri più importanti e più diffusi per la caratterizzazione della risoluzione di uno strumento\footnote{Tale parametro viene anche indicato come $\theta_\text{FWHM}$}. Nel corso dei prossimi capitoli verranno considerati due diversi valori per la FWHM, rispetto all'asse $x$ e rispetto all'asse $y$. Attraverso queste due grandezze è possibile definire un ulteriore parametro: l'\textbf{ellitticità}. Questa è definita come il rapporto tra le due FWHM ponendo al numeratore la più grande tra $\text{FWHM}_\text{x}$ e $\text{FWHM}_\text{y}$.
+La \textbf{Full Width Half Maximum} (FWHM) (Fig.~\ref{fwhm}) del main beam è la larghezza angolare a metà della sua altezza ed è uno dei parametri più importanti e più diffusi per la caratterizzazione della risoluzione di uno strumento\footnote{Tale parametro viene anche indicato come $\theta_\text{FWHM}$}. Nel corso dei prossimi capitoli verranno considerati due diversi valori per la FWHM, rispetto all'asse $x$ e rispetto all'asse $y$. Attraverso queste due grandezze è possibile definire un ulteriore parametro: l'\textbf{ellitticità}. Questa è definita come il rapporto tra le due FWHM ponendo al numeratore la più grande tra $\text{FWHM}_\text{x}$ e $\text{FWHM}_\text{y}$.
 Hanno inoltre grande importanza i parametri che riguardano la polarizzazione. Supponiamo di studiare un'antenna in trasmissione\footnote{Strumenti ottici per lo studio della CMB lavorano in ricezione ma è possibile studiare alternativamente un'antenna in trasmissione per il \textit{principio di reciprocità}.} e considerare un segnale polarizzato linearmente lungo una determinata direzione.
-\`E possibile definire una componente \textit{co-polare} ed una componente \textit{cross-polare} della radiazione. La componente co-polare è la radiazione irradiata lungo la direzione originale di polarizzazione mentre la componente cross-polare è la radiazione irradiata lungo la direzione perpendicolare a quella originale.
-In particolare i parametri utilizzati nei prossimi capitoli riguardano la componente \textbf{co-polare massima} e la componente \textbf{cross-polare massima}.
+\`E possibile definire una componente \textit{co-polare} ed una componente \textit{cross-polare} della radiazione (Fig.~\ref{plane_cut}). La componente co-polare è la frazione radiazione irradiata lungo la direzione originale di polarizzazione mentre la componente cross-polare è la frazione di radiazione irradiata lungo la direzione perpendicolare a quella originale.
+In particolare i parametri utilizzati nei prossimi capitoli riguardano la componente \textbf{co-polare massima} e la componente \textbf{cross-polare massima}. Data un'antenna in polarizzazione lineare il piano su cui giace il campo elettrico dell'onda trasmessa (o ricevuta) è detto piano E, mentre il piano ad esso perpendicolare è detto piano H.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.8\linewidth]{../figures/fwhm.png}
+	\caption{Rappresentazione schematica che mostra la FWHM. HPBW (Half Power Beam Width) e FWHM rappresentano lo stesso parametro. Sulla sinistra è rappresentata una beam function in scala lineare mentre sulla destra in scala logaritmica, la metà altezza del fascio si trova a $-3 \unit{dB}$ rispetto al massimo.}
+	\label{fwhm}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\linewidth]{../figures/plane_cut.png}
+	\caption{In questo grafico è rappresentata la componente co-polare su vari piani: piano E, piano H e piano a $45^{\circ}$ tra i due. Per quanto riguarda quest'ultimo piano è rappresentata anche la componente cross-polare. Il piano a $45^{\circ}$ è particolarmente interessante perchè su di esso la componente cross-polare è molto intensa.}
+	\label{plane_cut}
+\end{figure}
+
+\begin{comment}
+Sarebbe bene mettere una figura o due che mostrino in maniera schematica questi parametri (FWHM, max co-pol, max x-pol, magari anche l'ellitticità ma è difficile).
+\end{comment}
 
 
 Per fare misurazioni di CMB è necessario richiedere alcune condizioni relative agli strumenti ottici. In riferimento alla Fig.~\ref{power_spect} si nota che una certa scala angolare mi permette di selezionare i multipoli che è possibile osservare; è quindi necessario avere una FWHM che permetta di risolvere i dettagli della CMB entro certe scale angolari. La relazione approssimata che lega il valore di $\ell$ alla FWHM è: $\ell\sim{180^{\circ}}/{\theta_\text{FWHM}}$.
@@ -261,7 +281,7 @@ Nel caso di STRIP è ancora possibile simulare l'intera ottica tramite GRASP poi
 	%%%%%%%%%%%%%%%%%%%  CAPITOLO 2.1  %%%%%%%%%%%%%%%%%%%
 
 \section{Machine learning e tipi di rete}
-Il \textit{machine learning (ML)} è un campo di ricerca a metà tra statistica, intelligenza artificiale ed informatica ed è una banca della disciplina chiamata \textit{intelligenza artificiale (AI)}. La sua applicazione riguarda ormai vastissimi campi della scienza e non solo. Sono usate tecniche di machine learning per esempio per il riconoscimento facciale o per i suggerimenti di prodotti da comprare sulle piattaforme di shopping online, ma anche in ambito medico per la diagnosi di particolari malattie.
+Il \textit{machine learning (ML)} è un campo di ricerca a metà tra statistica, intelligenza artificiale ed informatica ed è una branca della disciplina chiamata \textit{intelligenza artificiale (AI)}. La sua applicazione riguarda ormai vastissimi campi della scienza e non solo. Sono usate tecniche di machine learning per esempio per il riconoscimento facciale o per i suggerimenti di prodotti da comprare sulle piattaforme di shopping online, ma anche in ambito medico per la diagnosi di particolari malattie.
 
 
 Negli ultimi decenni il campo del machine learning si è fortemente evoluto. È stata costruita un'ampia classe di algoritmi in grado di approssimare molto efficacemente processi non lineari. Una branca del ML vede protagoniste le \textit{reti neurali artificiali (ANN)}\footnote{Spesso vengono chiamate semplicemente reti neurali (NN).}.
@@ -333,7 +353,7 @@ dove \texttt{train\_loss} \`e la funzione di perdita che calcola l'errore tra ou
 Attraverso queste due righe di codice viene valutato il gradiente e vengono aggiornati i parametri di rete.
 
 
-Nel prossimo capitolo illustrerò le scelte fatte per la definizione dell'architettura di rete tutti gli step che sono stati necessari per ottenere le stime dei parametri del diagramma di radiazione.
+Nel prossimo capitolo illustrerò le scelte fatte per la definizione dell'architettura di rete e tutti gli step che sono stati necessari per ottenere le stime dei parametri del diagramma di radiazione.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -358,7 +378,7 @@ Nota: nei seguenti paragrafi verranno mostrati alcuni grafici rappresentativi de
 
 \section{Interpolazione}\label{interpolazione}
 Per stimare le proprietà di un diagramma di radiazione attraverso strumenti classici di interpolaizione ho utilizzato due metodi: \texttt{interp2d} del modulo \texttt{scipy.interpolate}, basato su un'interpolazione lineare, e \texttt{curve\_fit} del modulo \texttt{scipy.optimize}, che ha permesso di fittare i dati attraverso un paraboloide.
-Per poter effettuare l'interpolazione dei parametri e in seguito verificare la sua bontà, il dataset in fig.~\ref{dataset} è stato suddiviso in due subsets, considerando righe alterne, che ho chiamato \texttt{data\_int} e \texttt{data\_check}. Così facendo è stato possibile utilizzare metà dei dati per l'interpolazione e l'altra metà per la valutazione dell'errore tra il parametro stimato e quello esatto.
+Per poter effettuare l'interpolazione dei parametri e in seguito verificare la sua bontà, ho suddivido il dataset in fig.~\ref{dataset} in due subsets, considerando righe alterne, che ho chiamato \texttt{data\_int} e \texttt{data\_check}. Così facendo è stato possibile utilizzare metà dei dati per l'interpolazione e l'altra metà per la valutazione dell'errore tra il parametro stimato e quello esatto.
 
          %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.1.1  %%%%%%%%%%%%%%%%%%%
 
@@ -373,11 +393,14 @@ Il metodo \texttt{interp2d} effettua l'interpolazione a partire da una griglia b
 La successiva analisi ha riguardato la valutazione dell'errore tra il parametro stimato nei punti $(x,y)$ appartenenti a \texttt{data\_check} e il suo valore vero. In fig.~\ref{err_interp2d} è mostrato l'errore assoluto relativo all'ellitticità.
 Si nota che i punti della prima riga a partire dall'alto sono quelli affetti da errore massimo e, come verrà specificato nella sez.~\ref{risultati_interpolazione}, tali anomalie di bordo hanno determinato la scelta del metodo \texttt{curve\_fit} come termine di paragone con le reti neurali.
 
+
+\`E stato possibile notare che \texttt{interp2d} smette di funzionare nel momento in cui viene richiesta l'interpolazione di un punto che sta al di fuori del minimo poligono convesso che racchiude tutti i punti su cui è stato chiamato l'interpolatore. Se si volesse applicare questo metodo per la stima dei parametri è quindi necessario richiedere un campionamento, tramite i metodi di simulazione (vedi Sez.~\ref{simulazioni}), di \textit{tutti} i punti di bordo. In tal modo si è certi che i punti sui quali vado a stimare i parametri appartengono al dominio dei punti simulati.
+
          %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.1.2  %%%%%%%%%%%%%%%%%%%
 
 \subsection{Curve Fit}\label{curve_fit}
 Il metodo \texttt{curve\_fit} permette di fittare i dati con una funzione non lineare tramite il metodo dei minimi quadrati. Il metodo restituisce i valori ottimali dei parametri \texttt{popt} che minimizzano la discrepanza $f(xdata, *popt) - ydata$\footnote{In particolare \textit{xdata} è una coppia (x, y) e \textit{ydata} è il valore del parametro di interesse.}. Anche in questo caso ho utilizzato i due subset, \texttt{data\_int} e \texttt{data\_check}, per effettuare rispettivamente il fit e la valutazione dell'errore. Nel mio caso il fit è stato eseguito su un paraboloide in quanto questo richiama la forma della superficie focale.
-\begin{figure}
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[scale=0.8]{../figures/error_curve_fit.png}
 	\caption{Plot che mostra l'errore assoluto tra ellitticità interpolata tramite il metodo \texttt{curve\_fit} e ellitticità corretta.}
@@ -566,7 +589,7 @@ In Fig.~\ref{test_rete} sono rappresentati alcuni dei risultati ottenuti.
         %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.2.3  %%%%%%%%%%%%%%%%%%%
 
 \subsection{Training}\label{training}
-Per effettuare il training della rete ho innanzitutto creato una funzione che mi permettesse di inizializzare in pesi della rete. Questo è stato fatto poichè essi vengono inizializzati da Pytorch casualmente ed è quindi necessario avere a disposizione una funzione apposita che sia in grado di determinare la distribuzione dei loro valori iniziali. Con la giusta inizializzazione è più probabile che la rete converga.
+Per effettuare il training ho innanzitutto creato una funzione che mi permettesse di inizializzare in pesi della rete. Questo è stato fatto poichè essi vengono inizializzati da Pytorch casualmente ed è quindi necessario avere a disposizione una funzione apposita che sia in grado di determinare la distribuzione dei loro valori iniziali. Con la giusta inizializzazione è più probabile che la rete converga.
 \insertcode{../scripts/init_weights.py}{Inizializzazione di weights e biases}\label{init_weights}
 Com'è possibile osservare dal codice~\ref{init_weights}, i biases di rete sono inizializzati a $0$ mentre i weights sono distribuiti uniformemente tra $0$ e $1$.
 
@@ -590,55 +613,77 @@ Il grafico riportato in Fig.~\ref{hist_good} è rappresentativo del caso in cui 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/hist_good.png}
-	\caption{Sulla sinistra è rappresentato il confronto dell'errore tra valore vero e valore stimato tramite il metodo di interpolazione, in arancione, e tramite la rete neurale, in blu. Sulla destra è rappresentato lo stesso grafico sotto forma di istogramma.}
+	\caption{Sulla sinistra è rappresentato il confronto dell'errore tra valore vero e valore stimato tramite il metodo di interpolazione, in arancione, e tramite la rete neurale, in blu. Sulla destra è rappresentato lo stesso grafico sotto forma di istogramma. Il parametro analizzato è l'ellitticità e l'architettura della rete è data da due hidden layers e dalla Tanh come funzione d'attivazione.}
 	\label{hist_good}
 \end{figure}
 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/hist_bad.png}
-	\caption{Sulla sinistra è rappresentato il confronto dell'errore tra valore vero e valore stimato tramite il metodo di interpolazione, in arancione, e tramite la rete neurale, in blu. Sulla destra è rappresentato lo stesso grafico sotto forma di istogramma.}
+	\caption{Il significato del grafico è lo stesso di~\ref{hist_good} ma in questo caso il parametro analizzato è la FWHM rispetto a x e l'architettura della rete è data da un solo hidden layer dalla Tanh come funzione d'attivazione.}
 	\label{hist_bad}
 \end{figure}
 
 
-VIOLINS!
+I \textit{violin plots} permettono di visualizzare la densità di probabilità di ottenere un determinato valore dell'errore. Tanto più è piccata la curva per valori bassi dell'errore, quanto più il risultato è buono.
 
+
+Questi grafici mostrano che per i parametri di ellitticità e componente cross-polare massima le reti neurali, con la giusta architettura, forniscono risultati apprezzabilmente migliori rispetto a quelli ottenuti con l'interpolazione.
+Per i due parametri di FWHM e per la componente co-polare massima i risultati delle reti risultano migliori solo per poche specifiche architetture.
+\vspace{35mm}
 \begin{figure}[!ht]
-    \centering
-    \includegraphics[width=0.8\linewidth]{../figures/violin_plot_e.png}
-    \caption{Violin plot per l'ellitticità.}
-    \label{violin_e}
+	\begin{center}
+		\begin{subfigure}{\textwidth}
+		    \centering
+		    \includegraphics[width=\linewidth]{../figures/violin_plot_e.png}
+		    \caption{Violin plot per l'ellitticità.}
+		    \label{violin_e}
+		\end{subfigure}
+		\newline
+		\begin{subfigure}{\textwidth}
+		    \centering
+		    \includegraphics[width=\linewidth]{../figures/violin_plot_fwhmx.png}
+		    \caption{Violin plot per la fwhm(x).}
+		    \label{violin_fwhmx}
+		\end{subfigure}
+	\end{center}
+\end{figure}
+\newpage
+\begin{figure}[!ht]\ContinuedFloat
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../figures/violin_plot_fwhmy.png}
+		\caption{Violin plot per la fwhm(y).}
+		\label{violin_fwhmy}
+	\end{subfigure}
+	\newline
+	\begin{subfigure}{\textwidth}
+	    \centering
+	    \includegraphics[width=\linewidth]{../figures/violin_plot_comax.png}
+	    \caption{Violin plot per la componente co-polare massima.}
+	    \label{violin_comax}
+	\end{subfigure}
+	\newline
+	\begin{subfigure}{\textwidth}
+		\centering
+	    \includegraphics[width=\linewidth]{../figures/violin_plot_cxmax.png}
+	    \caption{Violin plot per la componente cross-polare massima.}
+	    \label{violin_cxmax}
+	\end{subfigure}
 \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=0.8\linewidth]{../figures/violin_plot_fwhmx.png}
-    \caption{Violin plot per la fwhm(x).}
-    \label{violin_fwhmx}
-\end{figure}
+\newpage
+
+Date le discrepanze nei risultati relativi all'elliticità e alla FWHM, e conoscendo la relazione che lega le due grandezze, ho rieseguito l'esercizio andando a valutare l'ellitticità come rapporto delle due FWHM ricavare tramite l'interpolazione e mediante l'utilizzo delle reti neurali. Il risultato in Fig.~\ref{violin_check} mostra che la rete e l'interpolazione hanno praticamente le stesse performance.
+L'alternativa che ci si poteva aspettare era quella di ottenere un grafico in cui la parte blu, relativa alle reti, fosse significativamente migliore. In quel caso la rete non sarebbe stata particolarmente efficace nel predirre le due FWHM ma una volta valutato il loro rapporto il valore dell'ellitticità sarebbe risultato molto buono. Se così fosse stato avremmo dedotto la presenza di un errore introdotto dalla rete nello stimare le due FWHM ma che veniva rimosso valutandone il rapporto.
+Questo risultato ci mostra invece che è prorpio il valore dell'elliticità a rendere più agevole la sua stima tramite la rete neurale.
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.8\linewidth]{../figures/violin_plot_fwhmy.png}
-	\caption{Violin plot per la fwhm(y).}
-	\label{violin_fwhmy}
+    \includegraphics[width=\linewidth]{../figures/violin_plot_check_e.png}
+    \caption{Violin plot dell'ellitticità valutata come rapporto tra le due FWHM.}
+    \label{violin_check}
 \end{figure}
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=0.8\linewidth]{../figures/violin_plot_comax.png}
-    \caption{Violin plot per la componente co-polare massima.}
-    \label{violin_comax}
-\end{figure}
-
-\begin{figure}[!ht]
-	\centering
-    \includegraphics[width=0.8\linewidth]{../figures/violin_plot_cxmax.png}
-    \caption{Violin plot per la componente cross-polare massima.}
-    \label{violin_cxmax}
-\end{figure}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -657,7 +702,12 @@ VIOLINS!
 %%%%%%%%%%%%%%%%%%%%  CAPITOLO 4  %%%%%%%%%%%%%%%%%%%%
 
 \chapter{Conclusioni}\label{conclusioni}
-La mia speranza è che questa tesi rappresenti un punto di partenza per ulteriori studi futuri. Ho mostrato che le reti neurali hanno un grande potenziale in questo ambito ma la ricerca sull'architettura migliore non la considero terminata. Uno sviluppo futuro riguarda senza dubbio l'applicazione del metodo di stima dei parametri del diagramma di radiazione attraverso le reti neurali a quegli strumenti che presentano sulla loro superficie focale migliaia di detector e per i quali risulta infattibile una simulazione completa con i metodi classici (\ref{simulazioni}).
+L'obiettivo prefissato inizialmente è stato raggiunto: ho mostrato come una rete neurale con un'architettura adeguata sia in grado
+di stimare i parametri del diagramma di radiazione in maniera più efficace rispetto ad una semplice interpolazione.
+Tuttavia il lavoro non è certo giunto al termine. La mia speranza è che questa tesi rappresenti un punto di partenza per ulteriori studi futuri. Ho mostrato che le reti neurali hanno un grande potenziale in questo ambito ma la ricerca sull'architettura migliore non la considero terminata. 
+Per verificare se si possono raggiungere risultati migliori sarà di fondamentale importanza ripetere le analisi presentate in questa tesi con un database più ampio. I risultati potrebbero migliorare e potrebbero suggerirci se è necessario avere a disposizione un maggior numero di campioni  per effettuare il training della rete o se invece è necessario effettuare una ricerca più profonda sull'architettura di rete migliore.
+Inoltre sarà estremamente interessante applicare la tecnica sviluppata ad un caso che presenta una diversa forma della superficie focale.
+Uno sviluppo futuro riguarda senza dubbio l'applicazione del metodo di stima dei parametri del diagramma di radiazione attraverso le reti neurali a strumenti che presentano sulla loro superficie focale migliaia di detector e per i quali risulta infattibile una simulazione completa con i metodi classici (\ref{simulazioni}).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
