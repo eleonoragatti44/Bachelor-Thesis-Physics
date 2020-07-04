@@ -285,6 +285,7 @@ def violin_from_df(df, par):
     g = sns.violinplot(x="architecture", y="value", hue="error", data=df, split=True, cut=0, order=names)
     g.set_title(f"Error for Network and Interpolation [{par}]")  
     g.set(xlabel="Architecture", ylabel="Error")
+    plt.rcParams.update({'font.size': 16})
     fig.savefig(f"./Plots/ViolinPlots/violin_plot_{par}.png", dpi=600)
     plt.show()
     

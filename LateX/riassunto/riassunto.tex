@@ -1,0 +1,43 @@
+\documentclass[12pt,a4paper,final]{report}			%definire grandezza testo, foglio e tipo di testo.
+
+\usepackage[utf8]{inputenc}			%definisce la codifica dei caratteri
+\usepackage[italian]{babel}				%definisce il pacchetto della lingua
+\usepackage{amsmath}						%contiene molti utili strumenti per la scrittura matematica
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{units} 					%unita di misura
+\usepackage{subcaption}  		%per le figure
+\usepackage{subcaption}		%DON'T KNOW. INVESTIGATE
+\usepackage{siunitx} 				%unita SI
+\usepackage{mathrsfs}			%per usare cose tipo \mathscr{}
+\usepackage{physics}				%contiene molta notazione utile; lo uso in particolare per \bra e \ket
+\usepackage{cite}
+\usepackage{caption}
+\usepackage[font=small,labelfont=bf]{caption}		% serve per ridurre la dimensione delle captions
+\usepackage[final]{pdfpages}		%per poter includere pdf
+
+\usepackage[a-1b]{pdfx}
+\usepackage[pdfa]{hyperref}
+
+\title{Riassunto di tesi}
+
+\begin{document}
+\begin{center}
+	\Huge 
+	Riassunto di tesi
+\end{center}
+\medskip 
+
+%CMB
+La \textbf{CMB}, Cosmic Microwave Background, \`e la radiazione a microonde di fondo cosmico che permea l’intero Universo. Secondo il Modello Cosmologico Standard (SCM) l’Universo ha avuto origine circa 14 miliardi di anni fa da una singolarit\`a iniziale: il Big Bang. Nei primissimi istanti dopo il Big Bang vi fu una rapidissima fase di espansione ($10^{-33}\unit{s}$), detta inflazione, seguita da un’espansione più lenta e regolare, che continua tutt’ora. Inizialmente materia e radiazione erano in equilibrio in un plasma estremamente caldo; la progressiva espansione ha causato un abbassamento della temperatura del plasma. L’equilibrio tra materia e radiazione venne a mancare a circa 380 000 anni dal Big Bang quando la temperatura raggiunse $T\simeq3000\unit{K}$. Questo caus\`o il disaccoppiamento tra materia e radiazione e da allora i fotoni primordiali sono liberi di vagare nello spazio e sono i costituenti della radiazione a microonde di fondo cosmico.
+
+%DIAGRAMMA RADIAZIONE
+Per l’analisi della CMB \`e nostro interesse studiare la direzione di provenienza della radiazione; consideriamo quindi, un fascio d’antenna modellato per misurare il segnale che proviene da una direzione specifica. La risposta di un sistema ottico ideale pu\`o essere allora rappresentata come una delta di Dirac: non nulla solo lungo la linea di vista. Tuttavia i fenomeni di interferenza e diffrazione rendono la situazione molto piu` complessa. La risposta angolare di un sistema ottico è quantificata da una funzione $\gamma(\theta,\phi)$ detta beam function che definisce il \textbf{diagramma di radiazione}.
+%PARAMETRI
+A partire dal diagramma di radiazione si definiscono alcuni parametri che permettono una sua descrizione; tali parametri sono i protagonisti di questo lavoro di tesi.
+La \textbf{Full Width Half Maximum} (FWHM) del main beam è la larghezza angolare a metà della sua altezza. Ho considerato due diversi valori per la FWHM, rispetto all'asse $x$ e rispetto all'asse $y$. Attraverso queste due grandezze è possibile definire un ulteriore parametro: l'\textbf{ellitticità}. Questa è definita come il rapporto tra le due FWHM.
+Supponiamo inoltre di studiare un'antenna in trasmissione e considerare un segnale polarizzato linearmente lungo una determinata direzione. La componente co-polare è la frazione radiazione irradiata lungo la direzione originale di polarizzazione mentre la componente cross-polare è la frazione di radiazione irradiata lungo la direzione perpendicolare a quella originale. In particolare i parametri utilizzati riguardano la componente \textbf{co-polare massima} e la componente \textbf{cross-polare massima}.
+
+
+\end{document}

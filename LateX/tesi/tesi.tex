@@ -115,7 +115,7 @@ Quasi tutta l'informazione che abbiamo a disposizione su oggetti astronomici mol
 Il range delle lunghezze d'onda delle microonde è $\lambda \sim 1 \unit{mm} \div 10 \unit{cm}$\footnote{Il confine tra onde radio e microonde non è netto, spesso si parla di radio estendendo il range di lunghezze d'onda anche a quello delle microonde.}.
 
 
-\`E estremamente importante fare osservazioni a grandi lunghezze d'onda, nel millimetrico e oltre, poichè esistono numerosissime sorgenti cosmologiche che emettono in questo range e possono essere analizzate tramite sistemi ottici nelle microonde.
+\`E estremamente importante fare osservazioni a grandi lunghezze d'onda, nel millimetrico e oltre, poiché esistono numerosissime sorgenti cosmologiche che emettono in questo range e possono essere analizzate tramite sistemi ottici nelle microonde.
 I segnali più comunemente studiati in radio astronomia e attraverso le microonde sono:
 \begin{itemize}
 	\item radiazione emessa da gas ionizzato;
@@ -159,7 +159,7 @@ Un sistema ottico è un dispositivo il cui scopo è quello di focalizzare la luc
 
 Per l'analisi della CMB è nostro interesse studiare la direzione di provenienza della radiazione. Consideriamo quindi, d'ora in poi, un fascio d'antenna modellato per misurare il segnale che proviene da una direzione specifica.
 La risposta di un sistema ottico ideale può essere allora rappresentata come una delta di Dirac: non nulla solo lungo la linea di vista.
-Tuttavia i fenomeni di interferenza e diffrazione rendono la situazione molto più complessa; in particolare nella radio astronomia e nell'astronomia a microonde il problema è particolarmente importante poichè le dimensioni degli elementi ottici degli strumenti sono comparabili con le lunghezze d'onda d'interesse.
+Tuttavia i fenomeni di interferenza e diffrazione rendono la situazione molto più complessa; in particolare nella radio astronomia e nell'astronomia a microonde il problema è particolarmente importante poiché le dimensioni degli elementi ottici degli strumenti sono comparabili con le lunghezze d'onda d'interesse.
 
 
 La risposta angolare di un sistema ottico è quantificata da una funzione $\gamma(\theta,\phi)$ detta \textit{beam function} che definisce il \textbf{diagramma di radiazione}. Idealmente $\gamma(\theta,\phi)$ dovrebbe corrispondere a una delta di Dirac\footnote{Questa idealizzazione viene spesso chiamata \textit{pencil beam idealization}} ma quello che viene in realtà osservato è una risposta simile a quella riportata in Fig.~\ref{diag_rad}.
@@ -198,7 +198,7 @@ In particolare i parametri utilizzati nei prossimi capitoli riguardano la compon
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/plane_cut.png}
-	\caption{In questo grafico è rappresentata la componente co-polare su vari piani: piano E, piano H e piano a $45^{\circ}$ tra i due. Per quanto riguarda quest'ultimo piano è rappresentata anche la componente cross-polare. Il piano a $45^{\circ}$ è particolarmente interessante perchè su di esso la componente cross-polare è molto intensa.}
+	\caption{In questo grafico è rappresentata la componente co-polare su vari piani: piano E, piano H e piano a $45^{\circ}$ tra i due. Per quanto riguarda quest'ultimo piano è rappresentata anche la componente cross-polare. Il piano a $45^{\circ}$ è particolarmente interessante perché su di esso la componente cross-polare è molto intensa.}
 	\label{plane_cut}
 \end{figure}
 
@@ -208,7 +208,7 @@ Sarebbe bene mettere una figura o due che mostrino in maniera schematica questi 
 
 
 Per fare misurazioni di CMB è necessario richiedere alcune condizioni relative agli strumenti ottici. In riferimento alla Fig.~\ref{power_spect} si nota che una certa scala angolare mi permette di selezionare i multipoli che è possibile osservare; è quindi necessario avere una FWHM che permetta di risolvere i dettagli della CMB entro certe scale angolari. La relazione approssimata che lega il valore di $\ell$ alla FWHM è: $\ell\sim{180^{\circ}}/{\theta_\text{FWHM}}$.
-Inoltre il livello dello spettro di potenza dei modi B è molto più basso di quello dei foreground e dei modi E; poichè si ha grande interesse nel misurare i modi B è necessaria una grande sensibilità strumentale. Per raggiungere elevate sensibilità è fondamentale avere a disposizione vasti piani focali che mi permettano di utilizzare un elevato numero di rivelatori.
+Inoltre il livello dello spettro di potenza dei modi B è molto più basso di quello dei foreground e dei modi E; poiché si ha grande interesse nel misurare i modi B è necessaria una grande sensibilità strumentale. Per raggiungere elevate sensibilità è fondamentale avere a disposizione vasti piani focali che mi permettano di utilizzare un elevato numero di rivelatori.
 Infine, per avere una misura pulita della CMB, è essenziale rimuovere tutti i foreground e avere quindi a disposizione misure a tante frequenze diverse, il che si traduce ancora una volta nella richiesta di un elevato numero di rivelatori.
 
 
@@ -243,7 +243,7 @@ Un grafico come quello in Fig.~\ref{beam_grasp} produce quindi una singola riga 
 	\label{dataset}
 \end{figure}
 
-Nel caso di STRIP è ancora possibile simulare l'intera ottica tramite GRASP poichè il numero di antenne è piuttosto limitato. Tuttavia per sistemi ottici più complessi in cui il numero di antenne diventa di circa 2 ordini di grandezza superiore, risulta del tutto impossibile effettuare una simulazione completa dell'intera ottica.
+Nel caso di STRIP è ancora possibile simulare l'intera ottica tramite GRASP poiché il numero di antenne è piuttosto limitato. Tuttavia per sistemi ottici più complessi in cui il numero di antenne diventa di circa 2 ordini di grandezza superiore, risulta del tutto impossibile effettuare una simulazione completa dell'intera ottica.
 \`E quindi forte la necessità di trovare una via alternativa che permetta di stimare i parametri che descrivono il beam in una qualsiasi posizione.
 
 \begin{figure}[!ht]
@@ -298,7 +298,7 @@ La classificazione individua l'appartenenza ad una classe e può essere supervis
 Un esempio di classificazione supervisionata è il riconoscimento di un numero a partire da un'immagine manoscritta. Un esempio invece di classificazione non supervisionata si ha quando, a partire da immagini di cifre manoscritte, si vuole determinare quali tra esse rappresentino lo stesso numero.
 
 
-Le reti neurali per la regressione entrano in gioco quando, date delle coppie input-output, si vuole determinare la funzione che approssimi al meglio la relazione. Per effettuare la stima delle proprietà di un diagramma di radiazione (Sez.~\ref{reti_neurali}) ho utilizzato quest'ultimo tipo di reti neurali. In particolare la ricerca alla base di questo lavoro di tesi è stata quella di una rete neurale che permettesse, a partire da una posizione sulla superficie focale, di stimare il valore di un determinato parametro del diagramma di radiazione. Come sarà possibile notare nei paragrafi successivi, la posizione sulla superficie focale è data da una coppia $(x, y)$, senza considerare la coordinata $z$; ho deciso di procedere così poichè i punti si trovano su una superficie ben definita, il che significa che dati $x$ e $y$ la $z$ è univocamente determinata.
+Le reti neurali per la regressione entrano in gioco quando, date delle coppie input-output, si vuole determinare la funzione che approssimi al meglio la relazione. Per effettuare la stima delle proprietà di un diagramma di radiazione (Sez.~\ref{reti_neurali}) ho utilizzato quest'ultimo tipo di reti neurali. In particolare la ricerca alla base di questo lavoro di tesi è stata quella di una rete neurale che permettesse, a partire da una posizione sulla superficie focale, di stimare il valore di un determinato parametro del diagramma di radiazione. Come sarà possibile notare nei paragrafi successivi, la posizione sulla superficie focale è data da una coppia $(x, y)$, senza considerare la coordinata $z$; ho deciso di procedere così poiché i punti si trovano su una superficie ben definita, il che significa che dati $x$ e $y$ la $z$ è univocamente determinata.
 
 
 Il programma utilizzato in questa tesi per sviluppare i codici che permettono di effettuare questo task è Python. Questo fornisce librerie apposite per il caricamento, l'analisi e la visualizzazione dei dati; le librerie utilizzate nei codici implementati sono: \textit{pandas}, \textit{numpy}, \textit{matplotlib}, \textit{seaborn}, \textit{pytorch}.
@@ -367,61 +367,87 @@ Nel prossimo capitolo illustrerò le scelte fatte per la definizione dell'archit
 %%%%%%%%%%%%%%%%%%%%  CAPITOLO 3  %%%%%%%%%%%%%%%%%%%%
 
 \chapter{Previsione delle proprietà di un diagramma di radiazione}\label{prev_param}
-In questo capitolo varrà analizzato come sono stati previsti i parametri del diagramma di radiazione tramite i metodi di interpolazione e tramite l'utilizzo di reti neurali. 
-L'analisi è stata effettuata su ogni parametro di interesse; tuttavia i risultati ottenuti sono spesso molto simili al variare del parametro e quelli riportati nei prossimi capitoli sono grafici che hanno carattere generale, nonostante si riferiscono quasi esclusivamente all'ellitticità. Ricordo che i parametri analizzati sono: ellitticità, FWHM (rispetto a x), FWHM (rispetto a y), componente co-polare massima e componente cross-polare massima.
+In questo capitolo descriverò vari metodi per predire il valore dei parametri del diagramma di radiazione tramite interpolazione e tramite l'utilizzo di reti neurali. 
+
+Per stimare il valore dei parametri ho simulato la risposta di un beam collocato su vari punti del piano focale. Questi sono espressi come coordinate $(x,y,z)$ in uno spazio cartesiano e sono rappresentati nel grafico~\ref{cplot_fs}.
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.6]{../figures/ContourPlot_z.png}
+	\caption{Contour plot dei punti sulla superficie focale. In rosso è evidenziata la griglia $13\text{x}13$ definita dalle componenti $x$ e $y$.}
+	\label{cplot_fs}
+\end{figure}
+I punti sono distributi su una griglia $13\text{x}13$ lungo le componenti $x$ e $y$. La griglia ha una dimensione di $\sim 70 \unit{cm}\text{x}70 \unit{cm}$, mentre la coordinata $z$ varia tra $0$ e $50 \unit{mm}$.
+
+
+Nonostante abbia eseguito la medesima analisi su ciascuno dei parametri descritti nel capitolo precedente (ellitticità, FWHM rispetto a x, FWHM rispetto a y, componente copolare massima, componente cross-polare massima), riporto in questo capitolo solo i risultati relativi all'ellitticità, in quanto gli altri risultati sono molto simili.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.6]{../figures/ContourPlot_e.png}
+	\caption{Contour plot dell'ellitticità. Il suo valore nei vari punti è dato dalla tabella~\ref{dataset}. In rosso sono evidenziati i punti attraverso i quali verrà effettuata l'interpolazione mentre in blu sono rappresentati i punti nei quali verrà valutato l'errore.}
+	\label{cplot_e}
+\end{figure}
 
 \begin{comment}
-Nota: nei seguenti paragrafi verranno mostrati alcuni grafici rappresentativi dei risultati ottenuti. L'analisi è stata effettuata su ogni parametro di interesse ma i risultati qui riportati riguardano esclusivamente l'ellitticità. I risultati sono infatti molto simili al variare del parametro e quelli riportati sono grafici che hanno carattere generale. I parametri analizzati sono: ellitticità, FWHM (rispetto a x), FWHM (rispetto a y), componente co-polare massima e componente cross-polare massima.
+Manca qui un paragrafo che spieghi le premesse della simulazione. Sono tante le cose da dire: (1) hai simulato la risposta di un beam collocato su vari punti del piano focale, (2) i punti sono espressi come coordinate (x, y, z) in uno spazio cartesiano, (3) i punti sono distribuiti secondo una griglia lungo le componenti x e y, (3) mancano le dimensioni della griglia (per quanti cm si estende lungo i due assi?, qual è la variabilità dell'asse z?).
 \end{comment}
 
     %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.1  %%%%%%%%%%%%%%%%%%%
 
 \section{Interpolazione}\label{interpolazione}
-Per stimare le proprietà di un diagramma di radiazione attraverso strumenti classici di interpolaizione ho utilizzato due metodi: \texttt{interp2d} del modulo \texttt{scipy.interpolate}, basato su un'interpolazione lineare, e \texttt{curve\_fit} del modulo \texttt{scipy.optimize}, che ha permesso di fittare i dati attraverso un paraboloide.
-Per poter effettuare l'interpolazione dei parametri e in seguito verificare la sua bontà, ho suddivido il dataset in fig.~\ref{dataset} in due subsets, considerando righe alterne, che ho chiamato \texttt{data\_int} e \texttt{data\_check}. Così facendo è stato possibile utilizzare metà dei dati per l'interpolazione e l'altra metà per la valutazione dell'errore tra il parametro stimato e quello esatto.
+Per stimare le proprietà di un diagramma di radiazione attraverso strumenti classici di interpolaizione ho utilizzato due metodi: \texttt{interp2d} del modulo \texttt{scipy.interpolate}, basato su un'interpolazione lineare tra punti adiacenti, e \texttt{curve\_fit} del modulo \texttt{scipy.optimize}, con cui ho interpolato i dati tramite un paraboloide.
+Per poter effettuare l'interpolazione dei parametri e in seguito verificare la sua bontà, ho suddivido il dataset in Fig.~\ref{dataset} in due subsets, considerando righe alterne, che ho chiamato \texttt{data\_int} e \texttt{data\_check}\footnote{I punti appartenenti a \texttt{data\_int} sono quelli indicati in rosso nel grafico~\ref{cplot_e}, mentre i punti appartenenti a \texttt{data\_int} sono quelli indicati in blu.}. Così facendo è stato possibile utilizzare metà dei dati per l'interpolazione e l'altra metà per la valutazione dell'errore tra il parametro stimato e quello esatto.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.8]{../figures/EsempioInterpolazione.png}
+	\caption{Grafico che mostra la differenza tra \texttt{interp1d} e \texttt{curve\_fit}. Il fit è stato fatto su una funzione della forma $f=a^{((b\cdot x)+c)}+d$, dove \textit{a, b, c, d} sono i parametri stimati da \texttt{curve\_fit} mentre il metodo \texttt{interp1d} stima il valore della funzione in un determinanto punto effettuando l'interpolazione tra i due punti noti ad esso adiacenti.}
+	\label{es_interp}
+\end{figure}
 
          %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.1.1  %%%%%%%%%%%%%%%%%%%
 
 \subsection{Interp2d}\label{interp2d}
-\begin{figure}[t]
+Il metodo \texttt{interp2d}\footnote{\texttt{interp2d} è il corrispettivo di \texttt{interp1d} ma in due dimensioni.} effettua l'interpolazione a partire da una griglia bidimensionale\footnote{La griglia non deve essere necessariamente regolare.}, nel mio caso questa è rappresentata dalle coppie $(x,y)$ appartenti al subset \texttt{data\_int}. Una volta specificato il parametro di interesse, l'algoritmo effettua un'interpolazione lineare e ritorna una funzione in grado di prevedere il valore del parametro in nuovi punti.
+La successiva analisi ha riguardato la valutazione dell'errore tra il parametro stimato nei punti $(x,y)$ appartenenti a \texttt{data\_check} e il suo valore vero. In Fig.~\ref{err_interp2d} è mostrato l'errore assoluto relativo all'ellitticità.
+Si nota che i punti della prima riga a partire dall'alto sono quelli affetti da errore massimo e, come verrà specificato nella Sez.~\ref{risultati_interpolazione}, tali anomalie di bordo hanno determinato la scelta del metodo \texttt{curve\_fit} come termine di paragone con le reti neurali.
+\begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=0.8]{../figures/errore_assoluto_ell.png}
+	\includegraphics[scale=0.6]{../figures/errore_assoluto_ell.png}
 	\caption{Contour plot in scala logaritmica dell'errore assoluto tra ellitticità interpolata tramite il metodo \texttt{interp2d} e ellitticità corretta. In rosso sono evidenziati i punti attraverso i quali è stata effettuata l'interpolazione mentre in blu sono rappresentati i punti nei quali è stato valutato l'errore.}
 	\label{err_interp2d}
 \end{figure}
-Il metodo \texttt{interp2d} effettua l'interpolazione a partire da una griglia bidimensionale\footnote{La griglia non deve essere necessariamente regolare.}, nel mio caso questa è rappresentata dalle coppie (x, y) appartenti al subset \texttt{data\_int}. Una volta specificato il parametro di interesse, l'algoritmo effettua un'interpolazione lineare e ritorna una funzione in grado di prevedere il valore del parametro in nuovi punti.
-La successiva analisi ha riguardato la valutazione dell'errore tra il parametro stimato nei punti $(x,y)$ appartenenti a \texttt{data\_check} e il suo valore vero. In fig.~\ref{err_interp2d} è mostrato l'errore assoluto relativo all'ellitticità.
-Si nota che i punti della prima riga a partire dall'alto sono quelli affetti da errore massimo e, come verrà specificato nella sez.~\ref{risultati_interpolazione}, tali anomalie di bordo hanno determinato la scelta del metodo \texttt{curve\_fit} come termine di paragone con le reti neurali.
 
 
-\`E stato possibile notare che \texttt{interp2d} smette di funzionare nel momento in cui viene richiesta l'interpolazione di un punto che sta al di fuori del minimo poligono convesso che racchiude tutti i punti su cui è stato chiamato l'interpolatore. Se si volesse applicare questo metodo per la stima dei parametri è quindi necessario richiedere un campionamento, tramite i metodi di simulazione (vedi Sez.~\ref{simulazioni}), di \textit{tutti} i punti di bordo. In tal modo si è certi che i punti sui quali vado a stimare i parametri appartengono al dominio dei punti simulati.
+A causa del funzionamento di \texttt{interp2d} non è possibile ottenere stime affidabili se il punto $(x, y)$ cade al di fuori del poligono convesso che racchiude i punti usati per l'interpolazione. Nel grafico~\ref{es_interp} non è infatti possibile stimare il valore di $y$ per $x>10$ o $x<0$.
+\`E quindi conveniente effettuare un campionamento, tramite i metodi di simulazione (vedi Sez.~\ref{simulazioni}), soprattutto al bordo della regione di spazio di interesse. In tal modo si è certi che i punti sui quali vado a stimare i parametri appartengono al dominio dei punti simulati.
 
          %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.1.2  %%%%%%%%%%%%%%%%%%%
 
 \subsection{Curve Fit}\label{curve_fit}
-Il metodo \texttt{curve\_fit} permette di fittare i dati con una funzione non lineare tramite il metodo dei minimi quadrati. Il metodo restituisce i valori ottimali dei parametri \texttt{popt} che minimizzano la discrepanza $f(xdata, *popt) - ydata$\footnote{In particolare \textit{xdata} è una coppia (x, y) e \textit{ydata} è il valore del parametro di interesse.}. Anche in questo caso ho utilizzato i due subset, \texttt{data\_int} e \texttt{data\_check}, per effettuare rispettivamente il fit e la valutazione dell'errore. Nel mio caso il fit è stato eseguito su un paraboloide in quanto questo richiama la forma della superficie focale.
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=0.8]{../figures/error_curve_fit.png}
+	\includegraphics[scale=0.7]{../figures/error_curve_fit.png}
 	\caption{Plot che mostra l'errore assoluto tra ellitticità interpolata tramite il metodo \texttt{curve\_fit} e ellitticità corretta.}
 	\label{err_curve_fit}
 \end{figure}
+Il metodo \texttt{curve\_fit} permette di fittare i dati con una funzione tramite il metodo dei minimi quadrati. Il metodo restituisce i valori ottimali dei parametri \texttt{popt} che minimizzano la discrepanza $f(xdata, *popt) - ydata$\footnote{In particolare \textit{xdata} è una coppia $(x,y)$ e \textit{ydata} è il valore del parametro di interesse.}. Anche in questo caso ho utilizzato i due subset, \texttt{data\_int} e \texttt{data\_check}, per effettuare rispettivamente il fit e la valutazione dell'errore. Nel mio caso il fit è stato eseguito su un paraboloide in quanto questo richiama l'andamento dell'ellitticità.
 
         %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.1.3  %%%%%%%%%%%%%%%%%%%
 
 \subsection{Risultati dell'interpolazione}\label{risultati_interpolazione}
-Ho poi comparato i due metodi per stabilire quale poter utilizzare come confronto con i risultati delle reti neurali.
+Ho poi comparato i due metodi di interpolazione.
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=0.8]{../figures/error_comparison_all.png}
-	\caption{Confronto dell'errore prodotto dai due metodi di interpolazione relativo all'ellitticità.}
+	\includegraphics[width=\linewidth]{../figures/punti_prob.png}
+	\caption{Confronto dell'errore prodotto dai due metodi di interpolazione relativo all'ellitticità. I punti indicati dalle frecce sono i responsabili dei picchi della curva verde.}
 	\label{err_int}
 \end{figure}
-In fig.~\ref{err_int} sono confrontate le curve che rappresentano l'errore tra dato interpolato e dato corretto per i due metodi utilizzati. Si nota immediatamente la presenza di alcuni punti problematici riguardanti \texttt{interp2d} che non rendono possibile un confronto tra le due curve.
+In Fig.~\ref{err_int} sono confrontate le curve che rappresentano l'errore tra dato interpolato e dato corretto per i due metodi utilizzati. Si nota immediatamente che la curva relativa a \texttt{interp2d} è sensibilmente peggiore di quella relativa \texttt{curve\_fit}. Questo è dovuto alla presenza di alcuni picchi problematici che risultano essere dati dall'interpolazione del dato per punti sul bordo.
 
 
-Analizzando più in dettaglio il comportamento del metodo \texttt{interp2d} è possibile mostrare che i punti affetti da errore maggiore sono punti di bordo. L'analisi è stata fatta plottando il valore interpolato e valore esatto del parametro per ogni riga di punti della griglia 13x13.
-In fig.~\ref{plot_row} è mostrato il diverso comportamento di \texttt{interp2d} per una riga di punti di bordo e una riga di punti interni alla griglia.
+Analizzando infatti più in dettaglio il comportamento del metodo \texttt{interp2d} è possibile mostrare che i punti affetti da errore maggiore sono punti di bordo. L'analisi è stata fatta plottando il valore interpolato e valore esatto del parametro per ogni riga di punti della griglia $13\text{x}13$.
+In Fig.~\ref{plot_row} è mostrato il diverso comportamento di \texttt{interp2d} per una riga di punti di bordo e una riga di punti interni alla griglia.
 
 \begin{figure}[!ht]
 \centering
@@ -442,7 +468,16 @@ In fig.~\ref{plot_row} è mostrato il diverso comportamento di \texttt{interp2d}
 	\label{plot_row}
 \end{figure}
 
-Per poter andare a confrontare gli errori dei due metodi di interpolazione ho creato un subset del dataset iniziale rimuovendo i punti più esterni: \texttt{data\_mask}. Il passaggio successivo è stato plottare nuovamente l'errore come in fig.~\ref{err_int} e il risultato ottenuto è mostrato in fig.~\ref{err_int_mask}.
+Per poter andare a confrontare nuovamente gli errori dei due metodi di interpolazione ho creato un subset del dataset iniziale rimuovendo i punti più esterni: \texttt{data\_mask}. Il nuovo dataset è costituito dai punti blu raffigurati in Fig.~\ref{data_mask}.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/PuntiMask.png}
+	\caption{Rappresentazione dei punti appartenenti al subset \texttt{data\_mask}, in blu. In rosso sono rappresentati i punti di bordo che ho rimosso.}
+	\label{data_mask}
+\end{figure}
+
+Il passaggio successivo è stato plottare nuovamente l'errore come in Fig.~\ref{err_int} e il risultato ottenuto è mostrato in Fig.~\ref{err_int_mask}.
 
 \begin{figure}[!ht]
 	\centering
@@ -451,17 +486,17 @@ Per poter andare a confrontare gli errori dei due metodi di interpolazione ho cr
 	\label{err_int_mask}
 \end{figure}
 
-Il plot in fig.~\ref{err_int_mask} mostra ancora dei punti nei quali l'errore di \texttt{interp2d} è molto maggiore rispetto a quello di \texttt{curve\_fit}, per tale motivo ho deciso di considerare esclusivamente il metodo \texttt{curve\_fit} come termine di paragone tra i risultati relativi all'interpolazione e quelli relativi alle reti neurali, come verrà mostrato nella sezione~\ref{risultati}.
+Il plot in Fig.~\ref{err_int_mask} mostra ancora dei punti nei quali l'errore di \texttt{interp2d} è molto maggiore rispetto a quello di \texttt{curve\_fit}, per tale motivo ho deciso di considerare esclusivamente il metodo \texttt{curve\_fit} come termine di paragone tra i risultati relativi all'interpolazione e quelli relativi alle reti neurali, come verrà mostrato nella sezione~\ref{risultati}.
 
-
+\newpage
      %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.2  %%%%%%%%%%%%%%%%%%%
 \section{Reti neurali}\label{reti_neurali}
-In questa sezione mostro come sono state create le architetture delle reti neurali utilizzate per effettuare la regressione, com'è stata verificata la loro validità, come sono stati gestiti i dati a disposizione per definire \texttt{training set} e \texttt{validazion set} e com'è avvenuto il processo di training. Infine verrà presentato il confronto dei risultati ottenuti tramite l'utilizzo dell'interpolazione e delle reti (~\ref{risultati}).
+In questa sezione mostro come ho creato le architetture delle reti neurali utilizzate per effettuare la regressione, come ho verificato la loro validità, come ho gestito i dati a disposizione per definire \texttt{training set} e \texttt{validazion set} e come ho implementato il processo di training. Infine presenterò il confronto dei risultati ottenuti tramite l'utilizzo dell'interpolazione e delle reti (~\ref{risultati}).
 
         %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.2.1  %%%%%%%%%%%%%%%%%%%
 
 \subsection{Architettura della rete}\label{architettura}
-Quando si costruisce una rete neurale è necessario definire alcuni elementi che andranno a caratterizzare una particolare architettura di rete.
+Quando si costruisce una rete neurale di tipo feed-forward (il tipo usato in questo lavoro) è necessario definire alcuni elementi che andranno a caratterizzare una particolare architettura di rete.
 Tali elementi sono:
 \begin{itemize}
 	\item La dimensione dell'\textit{input layer}.
@@ -473,22 +508,24 @@ Tali elementi sono:
 	\item La \textit{loss function}.
 \end{itemize}
 La scelta dei loro valori non è mai univoca, non esiste una regola fissa per avere la ricetta perfetta che porta ai risultati migliori.
-Nel mio lavoro di tesi ho utilizzato 6 diverse architetture; alcuni degli elementi appena citati sono stati mantenuti invariati per ogni architettura\footnote{L'input, per esempio, è sempre una coppia (x, y) che definisce una posizione mentre l'output è un singolo valore di un particolare parametro in quel punto.}, mentre altri sono stati modificati.
+Nel mio lavoro di tesi ho utilizzato 6 diverse architetture; alcuni degli elementi appena citati sono stati mantenuti invariati per ogni architettura\footnote{L'input, per esempio, è sempre una coppia (x, y) che definisce la posizione del beam sul piano focale, mentre l'output è un singolo valore di un particolare parametro in quel punto.}, mentre altri sono stati modificati.
 
 
 Per poter decrivere al meglio la scelta delle architetture è necessario fare alcune osservazioni.
 Uno dei problemi più diffusi nell'ambito delle reti neurali è quello dell'\textbf{overfitting}. Si va incontro ad overfitting quando, per esempio, si utilizza un numero estremamente elevato di neuroni se confrontato con gli elementi che si hanno a disposizione per il training.
 Ogni neurone è infatti caratterizzato da due parametri liberi (\textit{weight} e \textit{bias}), la presenza di un elevato numero di parametri liberi fa si che la rete impari perfettamente la corrispondenza tra input e output degli elementi nel training set, ma in tal modo si perde il carattere predittivo necessario per ottenere risultati validi. La dimensione del \textit{trainig set} andrà dunque a fissare un limite superiore del numero di neuroni totali della rete.
 Un'ulteriore osservazione di fondamentale importanza riguarda la normalizzazione dei dati. I dati relativi al parametro d'interesse, ovvero i dati di output, sono stati infatti normalizzati per agevolare la convergenza della rete. Tale normalizzazione è descritta in dettaglio nella sezione~\ref{pre_training}.
-Non è stato invece necessario normalizzare l'input poichè appartenente, già in partenza, a un range ottimale\footnote{Sia i valori di x che di y oscillano tra -0.34 e +0.34}.
+Non è stato invece necessario normalizzare l'input poiché l'intervallo di valori\footnote{Sia i valori di $x$ che di $y$ oscillano tra $-0.34$ \unit{m} e $+0.34$ \unit{m}.} non è sembrato così ristretto da richiedere una normalizzazione.
+
+
 Con tali premesse è ora possibile giustificare le scelte fatte nella definizione dell'architettura delle reti. I parametri rimasti sempre invariati sono:
 \begin{itemize}
 	\item Dimensione dell'\textbf{input layer}: 2
 	\item Dimensione dell'\textbf{output layer}: 1
-	\item \textbf{Optimizer}: \texttt{optim.Adam}\footnote{\`E uno dei più comuni \textit{optimizer} forniti da \textit{PyTorch}.}
+	\item \textbf{Optimizer}: \texttt{optim.Adam}\footnote{\`E uno degli \textit{optimizer} forniti da \textit{PyTorch}.}
 	\item \textbf{Loss function}: \texttt{MSELoss}\footnote{Errore quadratico medio.}
 \end{itemize}
-Le 6 architetture costruite sono state ottenute tramite una diversa combinazione di funzioni di attivazione e numero di hidden layers. Le funzioni di attivazione che ho utilizzato sono la \textbf{Tanh} e \textbf{Sigmoid}, rappresentate in fig.~\ref{act_fun}. Per ogni funzione di attivazione ho considerato 3 reti con un numero crescente di hidden layers. Al variare del numero di hidden layers ho modificato il numero di neuroni relativo ad ogni layer. Le architetture finali sono riportate in tabella~\ref{architetture}.
+Le 6 architetture costruite sono state ottenute tramite una diversa combinazione di funzioni di attivazione e numero di hidden layers. Le funzioni di attivazione che ho utilizzato sono la \textbf{Tanh} e \textbf{Sigmoid}, rappresentate in Fig.~\ref{act_fun}. Per ogni funzione di attivazione ho considerato 3 reti con un numero crescente di hidden layers. Al variare del numero di hidden layers ho modificato il numero di neuroni relativo ad ogni layer. Le architetture finali sono riportate in tabella~\ref{architetture}.
 
 \begin{table}
 	\centering
@@ -536,7 +573,7 @@ Le 6 architetture costruite sono state ottenute tramite una diversa combinazione
         %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.2.2  %%%%%%%%%%%%%%%%%%%
 
 \subsection{Pre Training}\label{pre_training}
-In fase di pre-training ho effetuato due operazioni principali: la normalizzazione dei dati e lo split del dataset in un \texttt{training\_set} ed un \texttt{validation\_set}. Ho inoltre effettuato un test per la verifica della convergenza della rete.
+In fase di pre-training ho effetuato due operazioni: la normalizzazione dei dati e lo split del dataset in un \texttt{training\_set} ed un \texttt{validation\_set}. Ho inoltre effettuato un test per la verifica della convergenza della rete.
 
 
 Gli output sono stati normalizzati in modo da appartenere all'intervallo $[0, 1]$, nel caso di \textit{Sigmoid} come funzione di attivazione, oppure a $[-1, 1]$ nel caso di \textit{Tanh}. Le formule utilizzate per la normalizzazione nei due casi sono:
@@ -551,17 +588,17 @@ L'equazione~\ref{norm1} permette una normalizzazione dell'output in $[0, 1]$ men
 
 Come nel caso dell'interpolazione, a partire dal dataset in Fig.~\ref{dataset} sono stati creati due subsets per poter effettuare separatamente il training della rete e la verifica della bontà delle sue previsioni. Circa il $75\%$ (126) degli elementi totali (169) costituisce il \texttt{training\_set} mentre il restante $25\%$ (43) costituische il \texttt{validation\_set}. Questa operazione di caricamento è stata fatta tramite un metodo messo a disposizione da \textit{PyTorch}, \texttt{DataLoader}, attraverso il seguente codice:
 \insertcode{../scripts/loader.py}{Loader}\label{loader}
-La scelta degli elementi che vanno a finire in un determinato subset è fatta casualmente grazie alla specifica \texttt{suffle = True}.
+La scelta degli elementi che vanno a finire in un determinato subset è fatta casualmente grazie a \texttt{suffle = True}.
 
 
 Una volta definita l'architettura di rete ed effettuate le operazioni di pre-training è necessario verificare la convergenza della rete, per essere certi che non vada in overfitting. Questo è stato fatto per ogni parametro e per ogni architettura.
 Per effettuare il test della rete ho utilizzato un metodo di validazione chiamato \textbf{K-Fold}. Il metodo consiste in:
 \begin{itemize}
 	\item mescolare il dataset iniziale;
-	\item sezionare il dataset attraverso $K splits$ di eguale numerosità. Nel mio caso $K=5$;
+	\item sezionare il dataset attraverso $K suddivisioni$ di eguale numerosità. Nel mio caso $K=5$;
 	\item utilizzare $K-1$ parti per il \texttt{training\_set} e la parte rimanente per il \texttt{validation\_set};
 	\item valutare la \textit{loss function} relativa al training e al validation;
-	\item ripetere l'operazione per $K$ volte in modo da testare, a turno, tutti gli elementi del dataset.
+	\item ripetere l'operazione per $K$ volte usando a ogni iterazione una delle K parti per il \texttt{validation\_set}, e le altre K-1 per il \texttt{training\_set}.
 \end{itemize}
 
 \begin{figure}[!ht]
@@ -579,7 +616,7 @@ Per effettuare il test della rete ho utilizzato un metodo di validazione chiamat
 		\caption{Test di rete per il parametro \textit{co\_max}. L'architettura di rete è data da 1 hidden layer e dalla $Sigmoid$ come funzione d'attivazione.}
 		\label{test2}
 	\end{subfigure}
-	\caption{Test di rete per due diversi parametri e due diverse architetture. I grafici rappresenta il valore di \textit{loss} per il training e il validation; Nel caso ~\ref{test1} le curve tendono a 0 ma, come si nota dallo zoom-in, non valgono esattamente 0. Nel caso ~\ref{test2} invece non viene raggiunto un buon valore di \textit{loss}, quella particolare architettura non sarà quindi ottimale per il parametro \textit{co\_max}. Grafici di questo tipo ci mostrano che le reti non vanno in overfitting perchè, se così fosse, le curve relative al validation dovrebbero crescere all'aumentare delle epoche.}
+	\caption{Test di rete per due diversi parametri e due diverse architetture. I grafici rappresenta il valore di \textit{loss} per il training e il validation; Nel caso ~\ref{test1} le curve tendono a 0 ma, come si nota dallo zoom-in, non valgono esattamente 0. Nel caso ~\ref{test2} invece non viene raggiunto un buon valore di \textit{loss}, quella particolare architettura non sarà quindi ottimale per il parametro \textit{co\_max}. Grafici di questo tipo ci mostrano che le reti non vanno in overfitting perché, se così fosse, le curve relative al validation dovrebbero crescere all'aumentare delle epoche.}
 	\label{test_rete}
 \end{figure}
 
@@ -589,7 +626,7 @@ In Fig.~\ref{test_rete} sono rappresentati alcuni dei risultati ottenuti.
         %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.2.3  %%%%%%%%%%%%%%%%%%%
 
 \subsection{Training}\label{training}
-Per effettuare il training ho innanzitutto creato una funzione che mi permettesse di inizializzare in pesi della rete. Questo è stato fatto poichè essi vengono inizializzati da Pytorch casualmente ed è quindi necessario avere a disposizione una funzione apposita che sia in grado di determinare la distribuzione dei loro valori iniziali. Con la giusta inizializzazione è più probabile che la rete converga.
+Per effettuare il training ho innanzitutto creato una funzione che mi permettesse di inizializzare i pesi della rete. Questo è stato fatto poiché essi vengono inizializzati da Pytorch casualmente ed è quindi necessario avere a disposizione una funzione apposita che sia in grado di determinare la distribuzione dei loro valori iniziali. Con la giusta inizializzazione è più probabile che la rete converga.
 \insertcode{../scripts/init_weights.py}{Inizializzazione di weights e biases}\label{init_weights}
 Com'è possibile osservare dal codice~\ref{init_weights}, i biases di rete sono inizializzati a $0$ mentre i weights sono distribuiti uniformemente tra $0$ e $1$.
 
@@ -608,7 +645,7 @@ Prima di presentare i risultati ottenuti riassumo le analisi che ho effettuato. 
 Per ogni analisi ho prodotto due grafici che confrontano i risultati ottenuti tramite le  reti neurali e tramite l'interpolazione. Infine ho creato dei \textit{violin plots} che mi permettessero, in un unico grafico, di comparare i due metodi al variare delle arichitetture.
 
 
-Il grafico riportato in Fig.~\ref{hist_good} è rappresentativo del caso in cui le reti neurali predicono il valore del parametro in maniera più efficace rispetto all'interpolazione, mentre quello riportato in Fig.~\ref{hist_bad} mostra che nessuno dei due approci è apprezzabilmente più efficace dell'altro.
+Il grafico riportato in Fig.~\ref{hist_good} è rappresentativo del caso in cui le reti neurali predicono il valore del parametro in maniera più efficace rispetto all'interpolazione, mentre quello riportato in Fig.~\ref{hist_bad} mostra che nessuno dei due approcci è apprezzabilmente più efficace dell'altro.
 
 \begin{figure}[!ht]
 	\centering
@@ -620,35 +657,29 @@ Il grafico riportato in Fig.~\ref{hist_good} è rappresentativo del caso in cui 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/hist_bad.png}
-	\caption{Il significato del grafico è lo stesso di~\ref{hist_good} ma in questo caso il parametro analizzato è la FWHM rispetto a x e l'architettura della rete è data da un solo hidden layer dalla Tanh come funzione d'attivazione.}
+	\caption{Il significato del grafico è lo stesso di~\ref{hist_good} ma in questo caso il parametro analizzato è la FWHM rispetto a $x$ e l'architettura della rete è data da un solo hidden layer dalla Tanh come funzione d'attivazione.}
 	\label{hist_bad}
 \end{figure}
 
 
 I \textit{violin plots} permettono di visualizzare la densità di probabilità di ottenere un determinato valore dell'errore. Tanto più è piccata la curva per valori bassi dell'errore, quanto più il risultato è buono.
 
-
-Questi grafici mostrano che per i parametri di ellitticità e componente cross-polare massima le reti neurali, con la giusta architettura, forniscono risultati apprezzabilmente migliori rispetto a quelli ottenuti con l'interpolazione.
-Per i due parametri di FWHM e per la componente co-polare massima i risultati delle reti risultano migliori solo per poche specifiche architetture.
-\vspace{35mm}
+\vspace{30mm}
 \begin{figure}[!ht]
-	\begin{center}
-		\begin{subfigure}{\textwidth}
-		    \centering
-		    \includegraphics[width=\linewidth]{../figures/violin_plot_e.png}
-		    \caption{Violin plot per l'ellitticità.}
-		    \label{violin_e}
-		\end{subfigure}
-		\newline
-		\begin{subfigure}{\textwidth}
-		    \centering
-		    \includegraphics[width=\linewidth]{../figures/violin_plot_fwhmx.png}
-		    \caption{Violin plot per la fwhm(x).}
-		    \label{violin_fwhmx}
-		\end{subfigure}
-	\end{center}
+	\begin{subfigure}{\textwidth}
+	    \centering
+	    \includegraphics[width=\linewidth]{../figures/violin_plot_e.png}
+	    \caption{Violin plot per l'ellitticità.}
+	    \label{violin_e}
+	\end{subfigure}
+	\newline
+	\begin{subfigure}{\textwidth}
+	    \centering
+	    \includegraphics[width=\linewidth]{../figures/violin_plot_fwhmx.png}
+	    \caption{Violin plot per la fwhm(x).}
+	    \label{violin_fwhmx}
+	\end{subfigure}
 \end{figure}
-\newpage
 \begin{figure}[!ht]\ContinuedFloat
 	\begin{subfigure}{\textwidth}
 		\centering
@@ -671,11 +702,14 @@ Per i due parametri di FWHM e per la componente co-polare massima i risultati de
 	    \label{violin_cxmax}
 	\end{subfigure}
 \end{figure}
-
 \newpage
 
+Questi grafici mostrano che per i parametri di ellitticità e componente cross-polare massima le reti neurali, con la giusta architettura\footnote{Per esempio, \textit{Tanh\_2L} per l'ellitticità o \textit{Tanh\_3L} per la componente cross-polare massima.}, forniscono risultati apprezzabilmente migliori rispetto a quelli ottenuti con l'interpolazione.
+Per i due parametri di FWHM e per la componente co-polare massima i risultati delle reti risultano migliori solo per poche specifiche architetture.
+
+
 Date le discrepanze nei risultati relativi all'elliticità e alla FWHM, e conoscendo la relazione che lega le due grandezze, ho rieseguito l'esercizio andando a valutare l'ellitticità come rapporto delle due FWHM ricavare tramite l'interpolazione e mediante l'utilizzo delle reti neurali. Il risultato in Fig.~\ref{violin_check} mostra che la rete e l'interpolazione hanno praticamente le stesse performance.
-L'alternativa che ci si poteva aspettare era quella di ottenere un grafico in cui la parte blu, relativa alle reti, fosse significativamente migliore. In quel caso la rete non sarebbe stata particolarmente efficace nel predirre le due FWHM ma una volta valutato il loro rapporto il valore dell'ellitticità sarebbe risultato molto buono. Se così fosse stato avremmo dedotto la presenza di un errore introdotto dalla rete nello stimare le due FWHM ma che veniva rimosso valutandone il rapporto.
+L'alternativa che ci si poteva aspettare era quella di ottenere un grafico in cui la parte blu, relativa alle reti, fosse significativamente migliore. In quel caso la rete non sarebbe stata particolarmente efficace nel predirre le due FWHM a una volta valutato il loro rapporto il valore dell'ellitticità sarebbe risultato molto buono. Se così fosse stato avremmo dedotto la presenza di una correlazione nell'errore introdotto dalla rete nello stimare le due FWHM che veniva ridotto valutandone il rapporto.
 Questo risultato ci mostra invece che è prorpio il valore dell'elliticità a rendere più agevole la sua stima tramite la rete neurale.
 
 \begin{figure}[!ht]
@@ -702,11 +736,15 @@ Questo risultato ci mostra invece che è prorpio il valore dell'elliticità a re
 %%%%%%%%%%%%%%%%%%%%  CAPITOLO 4  %%%%%%%%%%%%%%%%%%%%
 
 \chapter{Conclusioni}\label{conclusioni}
-L'obiettivo prefissato inizialmente è stato raggiunto: ho mostrato come una rete neurale con un'architettura adeguata sia in grado
-di stimare i parametri del diagramma di radiazione in maniera più efficace rispetto ad una semplice interpolazione.
-Tuttavia il lavoro non è certo giunto al termine. La mia speranza è che questa tesi rappresenti un punto di partenza per ulteriori studi futuri. Ho mostrato che le reti neurali hanno un grande potenziale in questo ambito ma la ricerca sull'architettura migliore non la considero terminata. 
+Alla luce di quanto esposto nei precedenti capitoli è possibile affermare che lo scopo di questa tesi è stato raggiunto. Ho infatti stabilito un criterio per discriminare la bontà dei diversi metodi di stima dei parametri del diagramma di radiazione. Tale criterio mi ha permesso di affermare che, con la giusta architettura, le reti neurali consentono di stimare i parametri di interesse più efficacemente rispetto ai metodi di interpolazione utilizzati.
+
+\begin{comment}
+Stai in pratica dicendo che lo scopo della tesi era di far vedere che le reti neurali funzionano meglio dell'interpolazione, ma questo non è un approccio scientifico. Lo scienziato dovrebbe porsi come scopo quello di valutare la tecnica migliore tra interpolazione e rete neurale. Lo "scopo che hai raggiunto" è quello di stabilire un criterio per discriminare la bontà tra diversi modi di fare regressione di parametri del beam (usando una griglia, dividendo tra training set e validation set, facendo grafici a violino), e questo è stato un successo; come conseguenza di ciò l'hai applicato a tre casi specifici (interp2d, curve_fit e reti neurali), e hai verificato che con questi criteri vincono le reti neurali. Ma la tua tesi sarebbe stato un successo anche se avessi dimostrato che interp2d era il migliore.
+\end{comment}
+
+Tuttavia il lavoro non è certo giunto al termine. La mia speranza è che questa tesi rappresenti un punto di partenza per ulteriori studi futuri. Ho mostrato che le reti neurali hanno potenzialità promettenti in questo ambito ma la ricerca sull'architettura migliore non la considero terminata. 
 Per verificare se si possono raggiungere risultati migliori sarà di fondamentale importanza ripetere le analisi presentate in questa tesi con un database più ampio. I risultati potrebbero migliorare e potrebbero suggerirci se è necessario avere a disposizione un maggior numero di campioni  per effettuare il training della rete o se invece è necessario effettuare una ricerca più profonda sull'architettura di rete migliore.
-Inoltre sarà estremamente interessante applicare la tecnica sviluppata ad un caso che presenta una diversa forma della superficie focale.
+Inoltre sarà estremamente interessante applicare la tecnica sviluppata ad un caso che presenti una diversa forma della superficie focale.
 Uno sviluppo futuro riguarda senza dubbio l'applicazione del metodo di stima dei parametri del diagramma di radiazione attraverso le reti neurali a strumenti che presentano sulla loro superficie focale migliaia di detector e per i quali risulta infattibile una simulazione completa con i metodi classici (\ref{simulazioni}).
 
 
