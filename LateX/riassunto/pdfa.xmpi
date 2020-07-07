@@ -69,19 +69,19 @@
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:pdfaid="http://www.aiim.org/pdfa/ns/id/"> 
    <pdfaid:part>1</pdfaid:part> 
-   <pdfaid:conformance>B</pdfaid:conformance> 
+   <pdfaid:conformance>A</pdfaid:conformance> 
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/"> 
    <xmp:CreatorTool>LaTeX with hyperref</xmp:CreatorTool> 
-   <xmp:ModifyDate>2020-07-02T19:59:04+02:00</xmp:ModifyDate> 
-   <xmp:CreateDate>2020-07-02T19:59:04+02:00</xmp:CreateDate> 
-   <xmp:MetadataDate>2020-07-02T19:59:04+02:00</xmp:MetadataDate> 
+   <xmp:ModifyDate>2020-07-06T19:29:21+02:00</xmp:ModifyDate> 
+   <xmp:CreateDate>2020-07-06T19:29:21+02:00</xmp:CreateDate> 
+   <xmp:MetadataDate>2020-07-06T19:29:21+02:00</xmp:MetadataDate> 
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpRights = "http://ns.adobe.com/xap/1.0/rights/"> 
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"> 
    <xmpMM:DocumentID>uuid:E8D7485D-4BEE-2464-2B0A-DBA4C006AA03</xmpMM:DocumentID> 
-   <xmpMM:InstanceID>uuid:084BBAEB-92A0-1E78-BF5F-BC960894EE1C</xmpMM:InstanceID> 
+   <xmpMM:InstanceID>uuid:98E84D2E-3D41-3D0D-EC52-A8EF1F159AD8</xmpMM:InstanceID> 
   </rdf:Description> 
  </rdf:RDF> 
 </x:xmpmeta> 

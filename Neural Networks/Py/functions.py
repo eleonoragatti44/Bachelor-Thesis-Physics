@@ -273,7 +273,7 @@ def plot_from_path(PATH):
                 hist.legend(labels=["Network error", "Interpolation error"])
                 hist.set(xlabel="Error", ylabel="Count")
             plot.set(xlabel = "Index", ylabel = "Error")
-            fig.savefig(f"./Plots/Hist/{Title_str}.png", bbox_inches='tight', dpi=600)
+            fig.savefig(f"./Plots/Hist/{Title_str}.pdf", bbox_inches='tight', dpi=600)
             plt.show()
     
 ####################################################################################################################   
@@ -282,11 +282,11 @@ def violin_from_df(df, par):
     names=df["architecture"].unique()
     names.sort()
     fig, axs = plt.subplots(1, 1, figsize = (18, 8))
-    g = sns.violinplot(x="architecture", y="value", hue="error", data=df, split=True, cut=0, order=names)
+    g = sns.violinplot(x="architecture", y="value", hue="error", data=df, split=True, cut=0, order=names, palette="muted", saturation=1)
     g.set_title(f"Error for Network and Interpolation [{par}]")  
     g.set(xlabel="Architecture", ylabel="Error")
     plt.rcParams.update({'font.size': 16})
-    fig.savefig(f"./Plots/ViolinPlots/violin_plot_{par}.png", dpi=600)
+    fig.savefig(f"./Plots/ViolinPlots/violin_plot_{par}.pdf", dpi=600)
     plt.show()
     
 ####################################################################################################################     
@@ -405,13 +405,23 @@ def mod_df(df):
 
 def getstats(df):
     archs = ["Tanh_1L", "Tanh_2L", "Tanh_3L", "Sigmoid_1L", "Sigmoid_2L", "Sigmoid_3L"]
+    
+    filt_int = df.loc[ df["error"] == "[Int]"]
+    err_lower_int, median_int, err_upper_int = np.percentile(filt_int["value"], [25, 50, 75])
+    print("Int\tMin, Med, Max: ", np.percentile(filt_int["value"], [5,50,95]))
+    print(r"${:.4f}_{{{:.4f}}}^{{{:.4f}}}$".format(median_int, median_int - err_lower_int, err_upper_int - median_int))
+    
     for arch in archs:
+        print("\n")
         print(arch)
-        filt = df.loc[df_e["architecture"] == arch]
-        filt_net = filt.loc[ df_e["error"] == "[Net]"]
-        print("Net\tMin, Med, Max: ", np.percentile(filt_net["value"], [5,50,95]))
-        filt_int = filt.loc[ df_e["error"] == "[Int]"]
-        print("Int\tMin, Med, Max: ", np.percentile(filt_int["value"], [5,50,95]), "\n")    
+        filt = df.loc[df["architecture"] == arch]
+        filt_net = filt.loc[ df["error"] == "[Net]"]
+        
+        err_lower, median, err_upper = np.percentile(filt_net["value"], [25, 50, 75])
+        print("Net\tMin, Med, Max: ", np.percentile(filt_net["value"], [25,50,75]))
+        print(r"${:.4f}_{{{:.4f}}}^{{{:.4f}}}$".format(median, median - err_lower, err_upper - median))
+        
+        
     
     
     

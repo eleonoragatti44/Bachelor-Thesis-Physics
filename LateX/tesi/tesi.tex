@@ -5,6 +5,7 @@
 \usepackage[a4paper, headheight=15mm, width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{xcolor}
+\usepackage{adjustbox}
 \usepackage{cite}
 \usepackage[final]{pdfpages}
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -30,6 +31,9 @@
     tabsize=2
 }
 
+
+\usepackage{stackengine}
+\newcommand\xrowht[2][0]{\addstackgap[.5\dimexpr#2\relax]{\vphantom{#1}}}
 
 \definecolor{DarkGreen}{rgb}{0.0,0.4,0.0}
 \definecolor{Blue}{rgb}{0.0,0.0,0.0} % Comment color
@@ -369,13 +373,14 @@ Nel prossimo capitolo illustrerò le scelte fatte per la definizione dell'archit
 \chapter{Previsione delle proprietà di un diagramma di radiazione}\label{prev_param}
 In questo capitolo descriverò vari metodi per predire il valore dei parametri del diagramma di radiazione tramite interpolazione e tramite l'utilizzo di reti neurali. 
 
-Per stimare il valore dei parametri ho simulato la risposta di un beam collocato su vari punti del piano focale. Questi sono espressi come coordinate $(x,y,z)$ in uno spazio cartesiano e sono rappresentati nel grafico~\ref{cplot_fs}.
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=0.6]{../figures/ContourPlot_z.png}
-	\caption{Contour plot dei punti sulla superficie focale. In rosso è evidenziata la griglia $13\text{x}13$ definita dalle componenti $x$ e $y$.}
+	\includegraphics[scale=0.6]{../figures/ContourPlot_z.pdf}
+	\caption{Contour plot dei punti sulla superficie focale in corrispondenza dei quali è stato calcolato il beam con GRASP. In rosso è evidenziata la griglia $13\text{x}13$ definita dalle componenti $x$ e $y$. Le gradazioni di colore rappresentano la coordinata spaziale $z$. Il modello di telescopio è quello mostrato in Fig.~\ref{strip}.}
 	\label{cplot_fs}
 \end{figure}
+
+Per stimare il valore dei parametri ho simulato la risposta di un beam collocato su vari punti del piano focale. Questi sono espressi come coordinate $(x,y,z)$ in uno spazio cartesiano e sono rappresentati nel grafico~\ref{cplot_fs}.
 I punti sono distributi su una griglia $13\text{x}13$ lungo le componenti $x$ e $y$. La griglia ha una dimensione di $\sim 70 \unit{cm}\text{x}70 \unit{cm}$, mentre la coordinata $z$ varia tra $0$ e $50 \unit{mm}$.
 
 
@@ -383,8 +388,8 @@ Nonostante abbia eseguito la medesima analisi su ciascuno dei parametri descritt
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=0.6]{../figures/ContourPlot_e.png}
-	\caption{Contour plot dell'ellitticità. Il suo valore nei vari punti è dato dalla tabella~\ref{dataset}. In rosso sono evidenziati i punti attraverso i quali verrà effettuata l'interpolazione mentre in blu sono rappresentati i punti nei quali verrà valutato l'errore.}
+	\includegraphics[scale=0.6]{../figures/ContourPlot_e.pdf}
+	\caption{Contour plot dell'ellitticità. Il suo valore nei vari punti è dato dalla tabella~\ref{dataset}. In rosso sono evidenziati i punti attraverso i quali verrà effettuata l'interpolazione dei parametri del beam mentre in blu sono rappresentati i punti in corrispondenza dei quali ho cercato di prevedere le caratteristiche del beam tramite uno dei metodi descritti in questo lavoro.}
 	\label{cplot_e}
 \end{figure}
 
@@ -395,12 +400,12 @@ Manca qui un paragrafo che spieghi le premesse della simulazione. Sono tante le 
     %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.1  %%%%%%%%%%%%%%%%%%%
 
 \section{Interpolazione}\label{interpolazione}
-Per stimare le proprietà di un diagramma di radiazione attraverso strumenti classici di interpolaizione ho utilizzato due metodi: \texttt{interp2d} del modulo \texttt{scipy.interpolate}, basato su un'interpolazione lineare tra punti adiacenti, e \texttt{curve\_fit} del modulo \texttt{scipy.optimize}, con cui ho interpolato i dati tramite un paraboloide.
+Per stimare le proprietà di un diagramma di radiazione attraverso strumenti classici di interpolazione ho utilizzato due metodi: \texttt{interp2d} del modulo \texttt{scipy.interpolate}, basato su un'interpolazione lineare tra punti adiacenti, e \texttt{curve\_fit} del modulo \texttt{scipy.optimize}, con cui ho interpolato i dati tramite un paraboloide; il diagramma in Fig.~\ref{es_interp} chiarisce la differenza tra i due approcci.
 Per poter effettuare l'interpolazione dei parametri e in seguito verificare la sua bontà, ho suddivido il dataset in Fig.~\ref{dataset} in due subsets, considerando righe alterne, che ho chiamato \texttt{data\_int} e \texttt{data\_check}\footnote{I punti appartenenti a \texttt{data\_int} sono quelli indicati in rosso nel grafico~\ref{cplot_e}, mentre i punti appartenenti a \texttt{data\_int} sono quelli indicati in blu.}. Così facendo è stato possibile utilizzare metà dei dati per l'interpolazione e l'altra metà per la valutazione dell'errore tra il parametro stimato e quello esatto.
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=0.8]{../figures/EsempioInterpolazione.png}
+	\includegraphics[scale=0.8]{../figures/EsempioInterpolazione.pdf}
 	\caption{Grafico che mostra la differenza tra \texttt{interp1d} e \texttt{curve\_fit}. Il fit è stato fatto su una funzione della forma $f=a^{((b\cdot x)+c)}+d$, dove \textit{a, b, c, d} sono i parametri stimati da \texttt{curve\_fit} mentre il metodo \texttt{interp1d} stima il valore della funzione in un determinanto punto effettuando l'interpolazione tra i due punti noti ad esso adiacenti.}
 	\label{es_interp}
 \end{figure}
@@ -413,7 +418,7 @@ La successiva analisi ha riguardato la valutazione dell'errore tra il parametro 
 Si nota che i punti della prima riga a partire dall'alto sono quelli affetti da errore massimo e, come verrà specificato nella Sez.~\ref{risultati_interpolazione}, tali anomalie di bordo hanno determinato la scelta del metodo \texttt{curve\_fit} come termine di paragone con le reti neurali.
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=0.6]{../figures/errore_assoluto_ell.png}
+	\includegraphics[scale=0.6]{../figures/errore_assoluto_ell.pdf}
 	\caption{Contour plot in scala logaritmica dell'errore assoluto tra ellitticità interpolata tramite il metodo \texttt{interp2d} e ellitticità corretta. In rosso sono evidenziati i punti attraverso i quali è stata effettuata l'interpolazione mentre in blu sono rappresentati i punti nei quali è stato valutato l'errore.}
 	\label{err_interp2d}
 \end{figure}
@@ -427,12 +432,11 @@ A causa del funzionamento di \texttt{interp2d} non è possibile ottenere stime a
 \subsection{Curve Fit}\label{curve_fit}
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=0.7]{../figures/error_curve_fit.png}
+	\includegraphics[scale=0.7]{../figures/error_curve_fit.pdf}
 	\caption{Plot che mostra l'errore assoluto tra ellitticità interpolata tramite il metodo \texttt{curve\_fit} e ellitticità corretta.}
 	\label{err_curve_fit}
 \end{figure}
 Il metodo \texttt{curve\_fit} permette di fittare i dati con una funzione tramite il metodo dei minimi quadrati. Il metodo restituisce i valori ottimali dei parametri \texttt{popt} che minimizzano la discrepanza $f(xdata, *popt) - ydata$\footnote{In particolare \textit{xdata} è una coppia $(x,y)$ e \textit{ydata} è il valore del parametro di interesse.}. Anche in questo caso ho utilizzato i due subset, \texttt{data\_int} e \texttt{data\_check}, per effettuare rispettivamente il fit e la valutazione dell'errore. Nel mio caso il fit è stato eseguito su un paraboloide in quanto questo richiama l'andamento dell'ellitticità.
-
         %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.1.3  %%%%%%%%%%%%%%%%%%%
 
 \subsection{Risultati dell'interpolazione}\label{risultati_interpolazione}
@@ -443,9 +447,8 @@ Ho poi comparato i due metodi di interpolazione.
 	\caption{Confronto dell'errore prodotto dai due metodi di interpolazione relativo all'ellitticità. I punti indicati dalle frecce sono i responsabili dei picchi della curva verde.}
 	\label{err_int}
 \end{figure}
-In Fig.~\ref{err_int} sono confrontate le curve che rappresentano l'errore tra dato interpolato e dato corretto per i due metodi utilizzati. Si nota immediatamente che la curva relativa a \texttt{interp2d} è sensibilmente peggiore di quella relativa \texttt{curve\_fit}. Questo è dovuto alla presenza di alcuni picchi problematici che risultano essere dati dall'interpolazione del dato per punti sul bordo.
-
-
+\newline
+In Fig.~\ref{err_int} sono confrontate le curve che rappresentano l'errore tra dato interpolato e dato corretto per i due metodi utilizzati. Si nota immediatamente che la curva relativa a \texttt{interp2d} è sensibilmente peggiore di quella relativa \texttt{curve\_fit}. Questo è dovuto alla presenza di alcuni picchi problematici che risultano essere causati dai punti sul bordo.
 Analizzando infatti più in dettaglio il comportamento del metodo \texttt{interp2d} è possibile mostrare che i punti affetti da errore maggiore sono punti di bordo. L'analisi è stata fatta plottando il valore interpolato e valore esatto del parametro per ogni riga di punti della griglia $13\text{x}13$.
 In Fig.~\ref{plot_row} è mostrato il diverso comportamento di \texttt{interp2d} per una riga di punti di bordo e una riga di punti interni alla griglia.
 
@@ -453,26 +456,26 @@ In Fig.~\ref{plot_row} è mostrato il diverso comportamento di \texttt{interp2d}
 \centering
 	\begin{subfigure}{\textwidth}
 	    \centering
-	    \includegraphics[width=\linewidth]{../figures/row_bordo.png}
+	    \includegraphics[width=\linewidth]{../figures/row_bordo.pdf}
 	    \caption{Punti di bordo}
 	    \label{plot_row_bordo}
 	\end{subfigure}
 \newline
 	\begin{subfigure}{\textwidth}
 		\centering
-	    \includegraphics[width=\linewidth]{../figures/row_interno.png}
+	    \includegraphics[width=\linewidth]{../figures/row_interno.pdf}
 		\caption{Punti interni}
 		\label{plot_row_interno}
 	\end{subfigure}
-	\caption{Plot del valore dell'ellitticità per due diverse righe di punti. Sono indicati il valore vero, in rosso, il dato previsto con \texttt{interp2d}, in verde e con \texttt{curve\_fit}, in blu. Nel grafico~\ref{plot_row_bordo} è mostrato l'andamento dell'ellitticità per una riga di punti di bordo mentre nel grafico~\ref{plot_row_interno} viene analizzata l'ellitticità di una riga interna della griglia di punti. Nel grafico sulla sinistra sono evidenziati in blu i punti, sulla riga analizzata, su cui è effettuata la verifica dell'interpolazione. Al variare del parametro variano i punti problematici per \texttt{interp2d} ma l'andameto generale rimane lo stesso, il presente plot è dunque da considerarsi rappresentativo di tutti i casi analizzati.}
+	\caption{Plot del valore dell'ellitticità per due diverse righe di punti. Sono indicati il valore vero, in rosso, il dato previsto con \texttt{interp2d}, in verde e con \texttt{curve\_fit}, in blu. Nel grafico~\ref{plot_row_bordo} è mostrato l'andamento dell'ellitticità per una riga di punti di bordo mentre nel grafico~\ref{plot_row_interno} viene analizzata l'ellitticità di una riga interna della griglia di punti. Nel grafico sulla sinistra sono evidenziati in blu i punti, sulla riga analizzata, su cui è effettuata la verifica dell'interpolazione. Al variare del parametro variano i punti problematici per \texttt{interp2d} ma l'andamento generale rimane lo stesso, il presente plot è dunque da considerarsi rappresentativo di tutti i casi analizzati.}
 	\label{plot_row}
 \end{figure}
 
-Per poter andare a confrontare nuovamente gli errori dei due metodi di interpolazione ho creato un subset del dataset iniziale rimuovendo i punti più esterni: \texttt{data\_mask}. Il nuovo dataset è costituito dai punti blu raffigurati in Fig.~\ref{data_mask}.
+Per poter confrontare nuovamente gli errori dei due metodi di interpolazione ho creato un subset del dataset iniziale rimuovendo i punti più esterni: \texttt{data\_mask}. Il nuovo dataset è costituito dai punti blu raffigurati in Fig.~\ref{data_mask}.
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../figures/PuntiMask.png}
+	\includegraphics[width=0.6\linewidth]{../figures/PuntiMask.pdf}
 	\caption{Rappresentazione dei punti appartenenti al subset \texttt{data\_mask}, in blu. In rosso sono rappresentati i punti di bordo che ho rimosso.}
 	\label{data_mask}
 \end{figure}
@@ -481,8 +484,8 @@ Il passaggio successivo è stato plottare nuovamente l'errore come in Fig.~\ref{
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=0.8]{../figures/error_comparison.png}
-	\caption{Confronto dell'errore relativo ai due metodi di interpolazione dopo aver rimosso i punti di bordo.}
+	\includegraphics[width=\linewidth]{../figures/PuntiProblematiciMask.png}
+	\caption{Confronto dell'errore relativo ai due metodi di interpolazione dopo aver rimosso i punti di bordo. I punti indicati dalle frecce sono i responsabili dei picchi della curva verde.}
 	\label{err_int_mask}
 \end{figure}
 
@@ -514,7 +517,7 @@ Nel mio lavoro di tesi ho utilizzato 6 diverse architetture; alcuni degli elemen
 Per poter decrivere al meglio la scelta delle architetture è necessario fare alcune osservazioni.
 Uno dei problemi più diffusi nell'ambito delle reti neurali è quello dell'\textbf{overfitting}. Si va incontro ad overfitting quando, per esempio, si utilizza un numero estremamente elevato di neuroni se confrontato con gli elementi che si hanno a disposizione per il training.
 Ogni neurone è infatti caratterizzato da due parametri liberi (\textit{weight} e \textit{bias}), la presenza di un elevato numero di parametri liberi fa si che la rete impari perfettamente la corrispondenza tra input e output degli elementi nel training set, ma in tal modo si perde il carattere predittivo necessario per ottenere risultati validi. La dimensione del \textit{trainig set} andrà dunque a fissare un limite superiore del numero di neuroni totali della rete.
-Un'ulteriore osservazione di fondamentale importanza riguarda la normalizzazione dei dati. I dati relativi al parametro d'interesse, ovvero i dati di output, sono stati infatti normalizzati per agevolare la convergenza della rete. Tale normalizzazione è descritta in dettaglio nella sezione~\ref{pre_training}.
+Per migliorare la convergenza della rete ho normalizzato i valori di output come spiegato nella sezione~\ref{pre_training}.
 Non è stato invece necessario normalizzare l'input poiché l'intervallo di valori\footnote{Sia i valori di $x$ che di $y$ oscillano tra $-0.34$ \unit{m} e $+0.34$ \unit{m}.} non è sembrato così ristretto da richiedere una normalizzazione.
 
 
@@ -527,7 +530,7 @@ Con tali premesse è ora possibile giustificare le scelte fatte nella definizion
 \end{itemize}
 Le 6 architetture costruite sono state ottenute tramite una diversa combinazione di funzioni di attivazione e numero di hidden layers. Le funzioni di attivazione che ho utilizzato sono la \textbf{Tanh} e \textbf{Sigmoid}, rappresentate in Fig.~\ref{act_fun}. Per ogni funzione di attivazione ho considerato 3 reti con un numero crescente di hidden layers. Al variare del numero di hidden layers ho modificato il numero di neuroni relativo ad ogni layer. Le architetture finali sono riportate in tabella~\ref{architetture}.
 
-\begin{table}
+\begin{table}[!ht]
 	\centering
 	\begin{tabular}{||c | c | c||}
 	\hline
@@ -605,14 +608,14 @@ Per effettuare il test della rete ho utilizzato un metodo di validazione chiamat
 \centering
 	\begin{subfigure}{\textwidth}
 	    \centering
-	    \includegraphics[width=0.8\linewidth]{../figures/validation_e_zoom.png}
+	    \includegraphics[width=0.77\linewidth]{../figures/validation_e_zoom.pdf}
 	    \caption{Test di rete per il parametro \textit{e}. L'architettura di rete è data da 1 hidden layer e dalla $Tanh$ come funzione d'attivazione.}
 	    \label{test1}
 	\end{subfigure}
 	\newline
 	\begin{subfigure}{\textwidth}
 		\centering
-	    \includegraphics[width=0.8\linewidth]{../figures/validation_co_max_zoom.png}
+	    \includegraphics[width=0.77\linewidth]{../figures/validation_co_max_zoom.pdf}
 		\caption{Test di rete per il parametro \textit{co\_max}. L'architettura di rete è data da 1 hidden layer e dalla $Sigmoid$ come funzione d'attivazione.}
 		\label{test2}
 	\end{subfigure}
@@ -633,7 +636,7 @@ Com'è possibile osservare dal codice~\ref{init_weights}, i biases di rete sono 
 
 Dopo aver inizializzato i pesi ho caricato i dataset per il training e per il validation attraverso il codice~\ref{loader}.
 Il training è stato effettuato su 30000 epoche. Il numero è elevato ma, avendo provato tramite la fase di validazione, spiegata in dettaglio nella Sez.~\ref{pre_training}, che la rete non va in overfitting ho deciso di mantenerlo. 
-Inoltre ogni 5000 epoche è stato rieffettuato uno \textit{shuffle} del \texttt{training\_set} e del \texttt{validation\_set}, sempre attraverso il codice~\ref{loader}. Questa tecnica, chiamata di \textit{shuffling}, è utilizzata per minimizzare i problemi di overfitting e permette di rendere più robusto il processo di convergenza.
+Inoltre ogni 5000 epoche ho rieffettuato uno \textit{shuffle} del \texttt{training\_set} e del \texttt{validation\_set}, sempre attraverso il codice~\ref{loader}. Questa tecnica, chiamata di \textit{shuffling}, è utilizzata per minimizzare i problemi di overfitting e permette di rendere più robusto il processo di convergenza.
 
 
 Nella prossima sezione verranno presentati i risultati ottenuti e confrontati con quelli relativi all'interpolazione.
@@ -649,63 +652,164 @@ Il grafico riportato in Fig.~\ref{hist_good} è rappresentativo del caso in cui 
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=\linewidth]{../figures/hist_good.png}
+	\includegraphics[width=\linewidth]{../figures/hist_good.pdf}
 	\caption{Sulla sinistra è rappresentato il confronto dell'errore tra valore vero e valore stimato tramite il metodo di interpolazione, in arancione, e tramite la rete neurale, in blu. Sulla destra è rappresentato lo stesso grafico sotto forma di istogramma. Il parametro analizzato è l'ellitticità e l'architettura della rete è data da due hidden layers e dalla Tanh come funzione d'attivazione.}
 	\label{hist_good}
 \end{figure}
-
+\vspace{1cm}
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=\linewidth]{../figures/hist_bad.png}
-	\caption{Il significato del grafico è lo stesso di~\ref{hist_good} ma in questo caso il parametro analizzato è la FWHM rispetto a $x$ e l'architettura della rete è data da un solo hidden layer dalla Tanh come funzione d'attivazione.}
+	\includegraphics[width=\linewidth]{../figures/hist_bad.pdf}
+	\caption{Il significato del grafico è lo stesso di~\ref{hist_good} ma in questo caso il parametro analizzato è la FWHM rispetto a $x$ e l'architettura della rete è data da un solo hidden layer dalla Tanh come funzione d'attivazione. Il valore dell'errore è espresso in gradi.}
 	\label{hist_bad}
 \end{figure}
 
-
+\newpage
 I \textit{violin plots} permettono di visualizzare la densità di probabilità di ottenere un determinato valore dell'errore. Tanto più è piccata la curva per valori bassi dell'errore, quanto più il risultato è buono.
 
-\vspace{30mm}
+\vspace{3cm}
 \begin{figure}[!ht]
 	\begin{subfigure}{\textwidth}
 	    \centering
-	    \includegraphics[width=\linewidth]{../figures/violin_plot_e.png}
+	    \includegraphics[width=\linewidth]{../figures/violin_plot_e.pdf}
 	    \caption{Violin plot per l'ellitticità.}
 	    \label{violin_e}
 	\end{subfigure}
 	\newline
+	\newline
+	\newline
+	\newline
 	\begin{subfigure}{\textwidth}
 	    \centering
-	    \includegraphics[width=\linewidth]{../figures/violin_plot_fwhmx.png}
-	    \caption{Violin plot per la fwhm(x).}
+	    \includegraphics[width=\linewidth]{../figures/violin_plot_fwhmx.pdf}
+	    \caption{Violin plot per la fwhm(x). L'errore è espresso in gradi.}
 	    \label{violin_fwhmx}
 	\end{subfigure}
 \end{figure}
+\newpage
 \begin{figure}[!ht]\ContinuedFloat
+	\vspace{4cm}
 	\begin{subfigure}{\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{../figures/violin_plot_fwhmy.png}
-		\caption{Violin plot per la fwhm(y).}
+		\includegraphics[width=\linewidth]{../figures/violin_plot_fwhmy.pdf}
+		\caption{Violin plot per la fwhm(y). L'errore è espresso in gradi.}
 		\label{violin_fwhmy}
 	\end{subfigure}
 	\newline
-	\begin{subfigure}{\textwidth}
-	    \centering
-	    \includegraphics[width=\linewidth]{../figures/violin_plot_comax.png}
-	    \caption{Violin plot per la componente co-polare massima.}
-	    \label{violin_comax}
-	\end{subfigure}
+	\newline
+	\newline
 	\newline
 	\begin{subfigure}{\textwidth}
-		\centering
-	    \includegraphics[width=\linewidth]{../figures/violin_plot_cxmax.png}
-	    \caption{Violin plot per la componente cross-polare massima.}
-	    \label{violin_cxmax}
+	    \centering
+	    \includegraphics[width=\linewidth]{../figures/violin_plot_comax.pdf}
+	    \caption{Violin plot per la componente co-polare massima. L'errore è espresso in $dBi$.\footnote{Il $dBi$ è il guadagno in decibel rispetto a un'antenna isotropa.}}
+	    \label{violin_comax}
 	\end{subfigure}
 \end{figure}
 \newpage
+\begin{figure}[!t]\ContinuedFloat
+	\begin{subfigure}{\textwidth}
+		\centering
+	    \includegraphics[width=\linewidth]{../figures/violin_plot_cxmax.pdf}
+	    \caption{Violin plot per la componente cross-polare massima. L'errore è espresso in $dBi$.}
+	    \label{violin_cxmax}
+	\end{subfigure}
+\end{figure}
 
+\pagebreak
 Questi grafici mostrano che per i parametri di ellitticità e componente cross-polare massima le reti neurali, con la giusta architettura\footnote{Per esempio, \textit{Tanh\_2L} per l'ellitticità o \textit{Tanh\_3L} per la componente cross-polare massima.}, forniscono risultati apprezzabilmente migliori rispetto a quelli ottenuti con l'interpolazione.
 Per i due parametri di FWHM e per la componente co-polare massima i risultati delle reti risultano migliori solo per poche specifiche architetture.
+In Tab.~\ref{stats} sono riportati i risultati numerici rappresentativi della bontà dei modelli.
+
+%\makebox[\textwidth][c]{}
+
+
+
+\begin{table}[!ht]
+	%\centerfloat
+	\centering
+	\begin{adjustbox}{center}
+	\begin{tabular}{|| c || c | c | c | c | c||}
+	\hline
+	& \textbf{Ellitticità} & \textbf{$\text{FWHM}_\text{x}$} & \textbf{$\text{FWHM}_\text{y}$} & \textbf{Co\_max} & \textbf{Cx\_max} \\
+	\hline\hline\xrowht[()]{20pt}
+	\textbf{Interpolation} & $0.0082_{-0.0039}^{+0.0045}$ & $0.0022_{-0.0010}^{+0.0023}$ & $0.0028_{-0.0015}^{+0.0026}$ & $0.0240_{-0.0139}^{+0.0240}$ & $1.2566_{-0.6049}^{+0.5671}$\\
+	\hline\xrowht[()]{20pt}
+	\textbf{Tanh\_1L} & $0.0026_{-0.0018}^{+0.0018}$ & $0.0016_{-0.0008}^{+0.0021}$ & $0.0017_{-0.0007}^{+0.0015}$ & $0.0230_{-0.0152}^{+0.0163}$ & $0.4951_{-0.2269}^{+0.2935}$\\
+	\hline\xrowht[()]{20pt}
+	\textbf{Tanh\_2L} & $0.0016_{-0.0009}^{+0.0024}$ & $0.0012_{-0.0006}^{+0.0014}$ & $0.0011_{-0.0008}^{+0.0016}$ & $0.0171_{-0.0092}^{+0.0143}$ & $0.3621_{-0.1703}^{+0.3880}$\\
+	\hline\xrowht[()]{20pt}
+	\textbf{Tanh\_3L} & $0.0021_{-0.0012}^{+0.0018}$ & $0.0018_{-0.0009}^{+0.0009}$ & $0.0021_{-0.0008}^{+0.0022}$ & $0.0235_{-0.0167}^{+0.0125}$ & $0.2744_{-0.1177}^{+0.3445}$\\
+	\hline\xrowht[()]{20pt}
+	\textbf{Sigmoid\_1L} & $0.0022_{-0.0013}^{+0.0018}$ & $0.0019_{-0.0011}^{+0.0029}$ & $0.0013_{-0.0005}^{+0.0007}$ & $0.0345_{-0.0204}^{+0.0099}$ & $0.3718_{-0.2263}^{+0.2297}$\\
+	\hline\xrowht[()]{20pt}
+	\textbf{Sigmoid\_2L} & $0.0106_{-0.0058}^{+0.0081}$ & $0.0026_{-0.0015}^{+0.0018}$ & $0.0013_{-0.0007}^{+0.0010}$ & $0.0225_{-0.0105}^{+0.0085}$ & $0.4753_{-0.2230}^{+0.1931}$\\
+	\hline\xrowht[()]{20pt}
+	\textbf{Sigmoid\_3L} & $0.0028_{-0.0015}^{+0.0023}$ & $0.0023_{-0.0007}^{+0.0012}$ & $0.0030_{-0.0019}^{+0.0011}$ & $0.0285_{-0.0112}^{+0.0126}$ & $0.3146_{-0.2096}^{+0.2574}$\\
+	\hline
+	\end{tabular}
+	\end{adjustbox}
+	\caption{In tabella è espressa la mediana dell'errore (in grande) con intervallo di variabilità espresso tramite il $25^\circ$ e il $75^\circ$ percentile. Le colonne rappresentano i parametri analizzati mentre le righe indicano il metodo attraverso cui sono stati stimati i parametri.}
+	\label{stats}
+\end{table}
+
+
+I valori che definiscono l'intervallo di variabilità dell'errore sono dati da $median-25^\circ\,percentile$, mostrato comepedice, e da $75^\circ\,percentile-median$, mostrato come apice.
+%\footnote{Il pedice è dato da $median-25^\circ\,percentile$ mentre l'apice è dato da $75^\circ\,percentile-median$.}
+
+\begin{comment}		%%% Stessa tabella ma con 3 cifre significative
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|| c || c | c | c | c | c||}
+	\hline
+	& Ellitticità & $\text{FWHM}_\text{x}$ & $\text{FWHM}_\text{y}$ & Co\_max & Cx\_max \\
+	\hline\hline
+	Interpolation & $0.008_{0.004}^{0.005}$ & $0.002_{0.001}^{0.002}$ & $0.003_{0.002}^{0.003}$ & $0.024_{0.014}^{0.024}$ &  $1.257_{0.605}^{0.567}$\\
+	\hline
+	Tanh\_1L & $0.003_{0.002}^{0.002}$ & $0.002_{0.001}^{0.002}$ & $0.002_{0.001}^{0.001}$ & $0.023_{0.015}^{0.016}$ &  $0.495_{0.227}^{0.294}$\\
+	\hline
+	Tanh\_2L & $0.002_{0.001}^{0.002}$ & $0.001_{0.001}^{0.001}$ & $0.001_{0.001}^{0.002}$ & $0.017_{0.009}^{0.014}$ &  $0.362_{0.170}^{0.388}$\\
+	\hline
+	Tanh\_3L & $0.002_{0.001}^{0.002}$ & $0.002_{0.001}^{0.001}$ & $0.002_{0.001}^{0.002}$ & $0.024_{0.017}^{0.012}$ & $0.274_{0.118}^{0.344}$\\
+	\hline
+	Sigmoid\_1L & $0.002_{0.001}^{0.002}$ & $0.002_{0.001}^{0.003}$ & $0.001_{0.000}^{0.001}$ & $0.035_{0.020}^{0.010}$ &  $0.372_{0.226}^{0.230}$\\
+	\hline
+	Sigmoid\_2L & $0.011_{0.006}^{0.008}$ & $0.003_{0.002}^{0.002}$ & $0.001_{0.001}^{0.001}$ & $0.022_{0.010}^{0.008}$ &  $0.475_{0.223}^{0.193}$\\
+	\hline
+	Sigmoid\_3L & $0.003_{0.002}^{0.002}$ & $0.002_{0.001}^{0.001}$ & $0.003_{0.002}^{0.001}$ & $0.028_{0.011}^{0.013}$ &  $0.315_{0.210}^{0.257}$\\
+	\hline
+	\end{tabular}
+	\caption{Rappresentazione schematica delle architetture costruite.}
+	\label{stats}
+\end{table}
+
+
+		%%% Stessa tabella ma con 5 cifre significative
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|| c || c | c | c | c | c||}
+	\hline
+	& Ellitticità & $\text{FWHM}_\text{x}$ & $\text{FWHM}_\text{y}$ & Co\_max & Cx\_max \\
+	\hline\hline
+	Interpolation & $0.00815_{0.00395}^{0.00451}$ & $0.00220_{0.00100}^{0.00231}$ & $0.00276_{0.00153}^{0.00262}$ & $0.02401_{0.01394}^{0.02398}$ &  $1.25659_{0.60485}^{0.56715}$\\
+	\hline
+	Tanh\_1L & $0.00262_{0.00176}^{0.00180}$ & $0.00161_{0.00085}^{0.00206}$ & $0.00172_{0.00075}^{0.00147}$ & $0.02305_{0.01525}^{0.01628}$ &  $0.49508_{0.22687}^{0.29350}$\\
+	\hline
+	Tanh\_2L & $0.00165_{0.00089}^{0.00239}$ & $0.00125_{0.00064}^{0.00144}$ & $0.00114_{0.00076}^{0.00159}$ & $0.01714_{0.00924}^{0.01433}$ &  $0.36213_{0.17030}^{0.38798}$\\
+	\hline
+	Tanh\_3L & $0.00209_{0.00116}^{0.00175}$ & $0.00175_{0.00089}^{0.00085}$ & $0.00206_{0.00080}^{0.00221}$ & $0.02351_{0.01673}^{0.01246}$ & $0.27445_{0.11771}^{0.34445}$ \\
+	\hline
+	Sigmoid\_1L & $0.00218_{0.00126}^{0.00182}$ & $0.00189_{0.00113}^{0.00286}$ & $0.00135_{0.00045}^{0.00070}$ & $0.03453_{0.02035}^{0.00989}$ &  $0.37176_{0.22632}^{0.22967}$\\
+	\hline
+	Sigmoid\_2L & $0.01057_{0.00576}^{0.00805}$ & $0.00265_{0.00152}^{0.00180}$ & $0.00131_{0.00073}^{0.00097}$ & $0.02247_{0.01049}^{0.00846}$ &  $0.47531_{0.22296}^{0.19306}$\\
+	\hline
+	Sigmoid\_3L & $0.00284_{0.00152}^{0.00231}$ & $0.00226_{0.00068}^{0.00116}$ & $0.00296_{0.00186}^{0.00109}$ & $0.02849_{0.01119}^{0.01263}$ &  $0.31463_{0.20958}^{0.25739}$\\
+	\hline
+	\end{tabular}
+	\caption{Rappresentazione schematica delle architetture costruite.}
+	\label{stats}
+\end{table}
+\end{comment}
 
 
 Date le discrepanze nei risultati relativi all'elliticità e alla FWHM, e conoscendo la relazione che lega le due grandezze, ho rieseguito l'esercizio andando a valutare l'ellitticità come rapporto delle due FWHM ricavare tramite l'interpolazione e mediante l'utilizzo delle reti neurali. Il risultato in Fig.~\ref{violin_check} mostra che la rete e l'interpolazione hanno praticamente le stesse performance.
@@ -714,7 +818,7 @@ Questo risultato ci mostra invece che è prorpio il valore dell'elliticità a re
 
 \begin{figure}[!ht]
 	\centering
-    \includegraphics[width=\linewidth]{../figures/violin_plot_check_e.png}
+    \includegraphics[width=\linewidth]{../figures/violin_plot_check_e.pdf}
     \caption{Violin plot dell'ellitticità valutata come rapporto tra le due FWHM.}
     \label{violin_check}
 \end{figure}

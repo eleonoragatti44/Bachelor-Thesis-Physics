@@ -126,7 +126,7 @@ def graph(data_ver, data_int, par, name):
     ax2.set_xlabel('x')
     ax2.set_ylabel('y')
     ax2.set_title(f'Errore assoluto [{name}] (log)')
-    fig2.savefig(f'./Plots/Errore assoluto [{name}] (log)', dpi=800)
+    fig2.savefig(f'./Plots/Errore assoluto [{name}] (log).pdf', dpi=800)
 
 ####################################################################################################################
     
