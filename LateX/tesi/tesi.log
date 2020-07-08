@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.1)  6 JUL 2020 19:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.1)  8 JUL 2020 18:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -886,55 +886,59 @@ Capitolo 1.
 <../figures/power_spect.png, id=163, 879.285pt x 723.70375pt>
 File: ../figures/power_spect.png Graphic file (type png)
 <use ../figures/power_spect.png>
-Package pdftex.def Info: ../figures/power_spect.png  used on input line 150.
+Package pdftex.def Info: ../figures/power_spect.png  used on input line 151.
 (pdftex.def)             Requested size: 298.75262pt x 245.89038pt.
  [7 <../figures/power_spect.png>]
-<../figures/diag_rad.png, id=181, 863.225pt x 712.6625pt>
+<../figures/diag_rad.png, id=179, 863.225pt x 712.6625pt>
 File: ../figures/diag_rad.png Graphic file (type png)
 <use ../figures/diag_rad.png>
-Package pdftex.def Info: ../figures/diag_rad.png  used on input line 175.
+Package pdftex.def Info: ../figures/diag_rad.png  used on input line 173.
 (pdftex.def)             Requested size: 213.39566pt x 176.17519pt.
-<../figures/risposta_ottica.png, id=182, 835.12pt x 746.79pt>
+<../figures/risposta_ottica.png, id=180, 835.12pt x 746.79pt>
 File: ../figures/risposta_ottica.png Graphic file (type png)
 <use ../figures/risposta_ottica.png>
-Package pdftex.def Info: ../figures/risposta_ottica.png  used on input line 181
+Package pdftex.def Info: ../figures/risposta_ottica.png  used on input line 179
 .
 (pdftex.def)             Requested size: 192.0548pt x 171.73529pt.
  [8 <../figures/diag_rad.png> <../figures/risposta_ottica.png>]
-<../figures/fwhm.png, id=207, 871.255pt x 594.22pt>
+<../figures/fwhm.png, id=204, 871.255pt x 594.22pt>
 File: ../figures/fwhm.png Graphic file (type png)
 <use ../figures/fwhm.png>
-Package pdftex.def Info: ../figures/fwhm.png  used on input line 197.
-(pdftex.def)             Requested size: 341.43436pt x 232.8601pt.
-<../figures/plane_cut.png, id=208, 637.92174pt x 359.96019pt>
+Package pdftex.def Info: ../figures/fwhm.png  used on input line 195.
+(pdftex.def)             Requested size: 298.75262pt x 203.75487pt.
+ [9 <../figures/fwhm.png>]
+<../figures/plane_cut.png, id=216, 637.92174pt x 359.96019pt>
 File: ../figures/plane_cut.png Graphic file (type png)
 <use ../figures/plane_cut.png>
-Package pdftex.def Info: ../figures/plane_cut.png  used on input line 204.
+Package pdftex.def Info: ../figures/plane_cut.png  used on input line 205.
 (pdftex.def)             Requested size: 426.79134pt x 240.82603pt.
- [9 <../figures/fwhm.png>]
-<../figures/strip.png, id=218, 360.6273pt x 208.8603pt>
+
+Underfull \vbox (badness 5133) has occurred while \output is active []
+
+ [10 <../figures/plane_cut.png>]
+<../figures/strip.png, id=222, 360.6273pt x 208.8603pt>
 File: ../figures/strip.png Graphic file (type png)
 <use ../figures/strip.png>
-Package pdftex.def Info: ../figures/strip.png  used on input line 228.
+Package pdftex.def Info: ../figures/strip.png  used on input line 231.
 (pdftex.def)             Requested size: 256.0774pt x 148.30779pt.
- [10 <../figures/plane_cut.png>]
-<../figures/dataset.png, id=231, 1174.3875pt x 668.4975pt>
+<../figures/dataset.png, id=225, 1174.3875pt x 668.4975pt>
 File: ../figures/dataset.png Graphic file (type png)
 <use ../figures/dataset.png>
-Package pdftex.def Info: ../figures/dataset.png  used on input line 245.
+Package pdftex.def Info: ../figures/dataset.png  used on input line 243.
 (pdftex.def)             Requested size: 341.43436pt x 194.34892pt.
  [11 <../figures/strip.png> <../figures/dataset.png>]
-<../figures/off-axis_co.png, id=241, 487.8225pt x 402.5439pt>
+<../figures/off-axis_co.png, id=239, 487.8225pt x 402.5439pt>
 File: ../figures/off-axis_co.png Graphic file (type png)
 <use ../figures/off-axis_co.png>
-Package pdftex.def Info: ../figures/off-axis_co.png  used on input line 257.
+Package pdftex.def Info: ../figures/off-axis_co.png  used on input line 260.
 (pdftex.def)             Requested size: 209.1301pt x 172.56839pt.
-<../figures/off-axis_cx.png, id=242, 501.5538pt x 402.5439pt>
+<../figures/off-axis_cx.png, id=240, 501.5538pt x 402.5439pt>
 File: ../figures/off-axis_cx.png Graphic file (type png)
 <use ../figures/off-axis_cx.png>
-Package pdftex.def Info: ../figures/off-axis_cx.png  used on input line 263.
+Package pdftex.def Info: ../figures/off-axis_cx.png  used on input line 266.
 (pdftex.def)             Requested size: 209.1301pt x 167.84496pt.
- [12 <../figures/off-axis_co.png> <../figures/off-axis_cx.png>]
+
+[12 <../figures/off-axis_co.png> <../figures/off-axis_cx.png>]
 Capitolo 2.
 [13
 
@@ -942,104 +946,99 @@ Capitolo 2.
 <../figures/schema_rete.png, id=263, 1236.62pt x 593.21625pt>
 File: ../figures/schema_rete.png Graphic file (type png)
 <use ../figures/schema_rete.png>
-Package pdftex.def Info: ../figures/schema_rete.png  used on input line 317.
+Package pdftex.def Info: ../figures/schema_rete.png  used on input line 319.
 (pdftex.def)             Requested size: 256.0774pt x 122.84116pt.
-
-Underfull \vbox (badness 1168) has occurred while \output is active []
-
- [14]
-<../figures/learning_process.png, id=271, 725.20938pt x 382.93062pt>
+ [14 <../figures/schema_rete.png>]
+<../figures/learning_process.png, id=273, 725.20938pt x 382.93062pt>
 File: ../figures/learning_process.png Graphic file (type png)
 <use ../figures/learning_process.png>
-Package pdftex.def Info: ../figures/learning_process.png  used on input line 32
-8.
+Package pdftex.def Info: ../figures/learning_process.png  used on input line 33
+0.
 (pdftex.def)             Requested size: 298.75262pt x 157.75047pt.
-
-[15 <../figures/schema_rete.png> <../figures/learning_process.png>]
-<../figures/ciclo_training.png, id=284, 487.8225pt x 596.2275pt>
+<../figures/ciclo_training.png, id=278, 487.8225pt x 596.2275pt>
 File: ../figures/ciclo_training.png Graphic file (type png)
 <use ../figures/ciclo_training.png>
-Package pdftex.def Info: ../figures/ciclo_training.png  used on input line 344.
+Package pdftex.def Info: ../figures/ciclo_training.png  used on input line 346.
 
 (pdftex.def)             Requested size: 170.71393pt x 208.64636pt.
-
+ [15 <../figures/learning_process.png>]
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
-(../scripts/opt.py) [16 <../figures/ciclo_training.png>] [17] [18
-
-]
+(../scripts/opt.py) [16 <../figures/ciclo_training.png>]
 Capitolo 3.
-<../figures/ContourPlot_z.pdf, id=311, 562.22363pt x 499.4457pt>
+<../figures/ContourPlot_z.pdf, id=303, 562.22363pt x 499.4457pt>
 File: ../figures/ContourPlot_z.pdf Graphic file (type pdf)
 <use ../figures/ContourPlot_z.pdf>
-Package pdftex.def Info: ../figures/ContourPlot_z.pdf  used on input line 378.
+Package pdftex.def Info: ../figures/ContourPlot_z.pdf  used on input line 380.
 (pdftex.def)             Requested size: 337.33678pt x 299.66971pt.
-[19 <../figures/ContourPlot_z.pdf>]
-<../figures/ContourPlot_e.pdf, id=356, 548.10931pt x 467.49657pt>
+[17
+
+ <../figures/ContourPlot_z.pdf>]
+<../figures/ContourPlot_e.pdf, id=346, 548.10931pt x 467.49657pt>
 File: ../figures/ContourPlot_e.pdf Graphic file (type pdf)
 <use ../figures/ContourPlot_e.pdf>
-Package pdftex.def Info: ../figures/ContourPlot_e.pdf  used on input line 391.
+Package pdftex.def Info: ../figures/ContourPlot_e.pdf  used on input line 393.
 (pdftex.def)             Requested size: 328.86812pt x 280.50009pt.
 
-Overfull \hbox (8.27527pt too wide) in paragraph at lines 403--405
+Overfull \hbox (8.27527pt too wide) in paragraph at lines 405--407
 \OT1/cmr/m/n/12 di in-ter-po-la-zio-ne ho uti-liz-za-to due me-to-di: \OT1/cmtt
 /m/n/12 interp2d \OT1/cmr/m/n/12 del mo-du-lo \OT1/cmtt/m/n/12 scipy.interpolat
 e\OT1/cmr/m/n/12 ,
  []
 
-[20 <../figures/ContourPlot_e.pdf>]
-<../figures/EsempioInterpolazione.pdf, id=400, 368.21669pt x 245.32721pt>
+[18 <../figures/ContourPlot_e.pdf>]
+<../figures/EsempioInterpolazione.pdf, id=391, 368.21669pt x 245.32721pt>
 File: ../figures/EsempioInterpolazione.pdf Graphic file (type pdf)
 <use ../figures/EsempioInterpolazione.pdf>
 Package pdftex.def Info: ../figures/EsempioInterpolazione.pdf  used on input li
-ne 408.
+ne 410.
 (pdftex.def)             Requested size: 294.57373pt x 196.26202pt.
-<../figures/errore_assoluto_ell.pdf, id=405, 479.95883pt x 379.50749pt>
+<../figures/errore_assoluto_ell.pdf, id=396, 479.95883pt x 379.50749pt>
 File: ../figures/errore_assoluto_ell.pdf Graphic file (type pdf)
 <use ../figures/errore_assoluto_ell.pdf>
 Package pdftex.def Info: ../figures/errore_assoluto_ell.pdf  used on input line
- 421.
+ 423.
 (pdftex.def)             Requested size: 287.97751pt x 227.70625pt.
- [21 <../figures/EsempioInterpolazione.pdf>]
-<../figures/error_curve_fit.pdf, id=442, 391.72661pt x 271.29054pt>
+ [19 <../figures/EsempioInterpolazione.pdf>]
+<../figures/error_curve_fit.pdf, id=434, 391.72661pt x 271.29054pt>
 File: ../figures/error_curve_fit.pdf Graphic file (type pdf)
 <use ../figures/error_curve_fit.pdf>
-Package pdftex.def Info: ../figures/error_curve_fit.pdf  used on input line 435
+Package pdftex.def Info: ../figures/error_curve_fit.pdf  used on input line 437
 .
 (pdftex.def)             Requested size: 274.20674pt x 189.90207pt.
-[22 <../figures/errore_assoluto_ell.pdf> <../figures/error_curve_fit.pdf
+[20 <../figures/errore_assoluto_ell.pdf> <../figures/error_curve_fit.pdf
 
 pdfTeX warning: pdflatex (file ../figures/error_curve_fit.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >]
-<../figures/punti_prob.png, id=519, 1279.78125pt x 562.1pt>
+<../figures/punti_prob.png, id=511, 1279.78125pt x 562.1pt>
 File: ../figures/punti_prob.png Graphic file (type png)
 <use ../figures/punti_prob.png>
-Package pdftex.def Info: ../figures/punti_prob.png  used on input line 446.
+Package pdftex.def Info: ../figures/punti_prob.png  used on input line 448.
 (pdftex.def)             Requested size: 426.79134pt x 187.44911pt.
-<../figures/row_bordo.pdf, id=522, 1432.23302pt x 607.54492pt>
+<../figures/row_bordo.pdf, id=514, 1432.23302pt x 607.54492pt>
 File: ../figures/row_bordo.pdf Graphic file (type pdf)
 <use ../figures/row_bordo.pdf>
-Package pdftex.def Info: ../figures/row_bordo.pdf  used on input line 459.
+Package pdftex.def Info: ../figures/row_bordo.pdf  used on input line 461.
 (pdftex.def)             Requested size: 426.79134pt x 181.04118pt.
-<../figures/row_interno.pdf, id=523, 1444.20168pt x 609.05135pt>
+<../figures/row_interno.pdf, id=515, 1444.20168pt x 609.05135pt>
 File: ../figures/row_interno.pdf Graphic file (type pdf)
 <use ../figures/row_interno.pdf>
-Package pdftex.def Info: ../figures/row_interno.pdf  used on input line 466.
+Package pdftex.def Info: ../figures/row_interno.pdf  used on input line 468.
 (pdftex.def)             Requested size: 426.79134pt x 179.98456pt.
-<../figures/PuntiMask.pdf, id=529, 578.16pt x 578.16pt>
+<../figures/PuntiMask.pdf, id=521, 578.16pt x 578.16pt>
 File: ../figures/PuntiMask.pdf Graphic file (type pdf)
 <use ../figures/PuntiMask.pdf>
-Package pdftex.def Info: ../figures/PuntiMask.pdf  used on input line 478.
+Package pdftex.def Info: ../figures/PuntiMask.pdf  used on input line 480.
 (pdftex.def)             Requested size: 256.0774pt x 256.07619pt.
-<../figures/PuntiProblematiciMask.png, id=532, 1283.79625pt x 546.04pt>
+<../figures/PuntiProblematiciMask.png, id=524, 1283.79625pt x 546.04pt>
 File: ../figures/PuntiProblematiciMask.png Graphic file (type png)
 <use ../figures/PuntiProblematiciMask.png>
 Package pdftex.def Info: ../figures/PuntiProblematiciMask.png  used on input li
-ne 487.
+ne 489.
 (pdftex.def)             Requested size: 426.79134pt x 181.52686pt.
- [23 <../figures/punti_prob.png>] [24 <../figures/row_bordo.pdf> <../figures/ro
+ [21 <../figures/punti_prob.png>] [22 <../figures/row_bordo.pdf> <../figures/ro
 w_interno.pdf
 
 pdfTeX warning: pdflatex (file ../figures/row_interno.pdf): PDF inclusion: mult
@@ -1047,153 +1046,153 @@ iple pdfs with page group included in a single page
 >]
 Underfull \vbox (badness 4024) has occurred while \output is active []
 
- [25 <../figures/PuntiMask.pdf> <../figures/PuntiProblematiciMask.png>] [26]
-<../figures/tanh.png, id=671, 615.29875pt x 614.295pt>
+ [23 <../figures/PuntiMask.pdf> <../figures/PuntiProblematiciMask.png>] [24]
+<../figures/tanh.png, id=662, 615.29875pt x 614.295pt>
 File: ../figures/tanh.png Graphic file (type png)
 <use ../figures/tanh.png>
-Package pdftex.def Info: ../figures/tanh.png  used on input line 561.
+Package pdftex.def Info: ../figures/tanh.png  used on input line 563.
 (pdftex.def)             Requested size: 192.0548pt x 191.73238pt.
-<../figures/sigmoid.png, id=672, 615.29875pt x 614.295pt>
+<../figures/sigmoid.png, id=663, 615.29875pt x 614.295pt>
 File: ../figures/sigmoid.png Graphic file (type png)
 <use ../figures/sigmoid.png>
-Package pdftex.def Info: ../figures/sigmoid.png  used on input line 567.
+Package pdftex.def Info: ../figures/sigmoid.png  used on input line 569.
 (pdftex.def)             Requested size: 192.0548pt x 191.73238pt.
- [27 <../figures/tanh.png> <../figures/sigmoid.png>] (../scripts/loader.py)
-Overfull \hbox (30.85748pt too wide) in paragraph at lines 602--603
+ [25 <../figures/tanh.png> <../figures/sigmoid.png>] (../scripts/loader.py)
+Overfull \hbox (30.85748pt too wide) in paragraph at lines 604--605
 []\OT1/cmr/m/n/12 utilizzare $\OML/cmm/m/it/12 K \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/
 m/n/12 1$ par-ti per il \OT1/cmtt/m/n/12 training[]set \OT1/cmr/m/n/12 e la par
 -te ri-ma-nen-te per il \OT1/cmtt/m/n/12 validation[]set\OT1/cmr/m/n/12 ; 
  []
 
-[28]
-<../figures/validation_e_zoom.pdf, id=703, 1095.43506pt x 636.69699pt>
+[26]
+<../figures/validation_e_zoom.pdf, id=695, 1095.43506pt x 636.69699pt>
 File: ../figures/validation_e_zoom.pdf Graphic file (type pdf)
 <use ../figures/validation_e_zoom.pdf>
 Package pdftex.def Info: ../figures/validation_e_zoom.pdf  used on input line 6
-11.
+13.
 (pdftex.def)             Requested size: 328.63115pt x 191.01056pt.
-<../figures/validation_co_max_zoom.pdf, id=704, 1094.86665pt x 645.17268pt>
+<../figures/validation_co_max_zoom.pdf, id=696, 1094.86665pt x 645.17268pt>
 File: ../figures/validation_co_max_zoom.pdf Graphic file (type pdf)
 <use ../figures/validation_co_max_zoom.pdf>
 Package pdftex.def Info: ../figures/validation_co_max_zoom.pdf  used on input l
-ine 618.
+ine 620.
 (pdftex.def)             Requested size: 328.63115pt x 193.65173pt.
- [29 <../figures/validation_e_zoom.pdf> <../figures/validation_co_max_zoom.pdf
+ [27 <../figures/validation_e_zoom.pdf> <../figures/validation_co_max_zoom.pdf
 
 pdfTeX warning: pdflatex (file ../figures/validation_co_max_zoom.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
 >] (../scripts/init_weights.py)
-<../figures/hist_good.pdf, id=811, 1213.82549pt x 628.12352pt>
+<../figures/hist_good.pdf, id=803, 1213.82549pt x 628.12352pt>
 File: ../figures/hist_good.pdf Graphic file (type pdf)
 <use ../figures/hist_good.pdf>
-Package pdftex.def Info: ../figures/hist_good.pdf  used on input line 655.
+Package pdftex.def Info: ../figures/hist_good.pdf  used on input line 657.
 (pdftex.def)             Requested size: 426.79134pt x 220.85287pt.
-<../figures/hist_bad.pdf, id=812, 1213.82549pt x 628.48111pt>
+<../figures/hist_bad.pdf, id=804, 1213.82549pt x 628.48111pt>
 File: ../figures/hist_bad.pdf Graphic file (type pdf)
 <use ../figures/hist_bad.pdf>
-Package pdftex.def Info: ../figures/hist_bad.pdf  used on input line 662.
+Package pdftex.def Info: ../figures/hist_bad.pdf  used on input line 664.
 (pdftex.def)             Requested size: 426.79134pt x 220.97862pt.
- [30] [31 <../figures/hist_good.pdf> <../figures/hist_bad.pdf
+ [28] [29 <../figures/hist_good.pdf> <../figures/hist_bad.pdf
 
 pdfTeX warning: pdflatex (file ../figures/hist_bad.pdf): PDF inclusion: multipl
 e pdfs with page group included in a single page
 >]
-<../figures/violin_plot_e.pdf, id=921, 1078.67445pt x 508.03795pt>
+<../figures/violin_plot_e.pdf, id=912, 1078.67445pt x 508.03795pt>
 File: ../figures/violin_plot_e.pdf Graphic file (type pdf)
 <use ../figures/violin_plot_e.pdf>
-Package pdftex.def Info: ../figures/violin_plot_e.pdf  used on input line 674.
+Package pdftex.def Info: ../figures/violin_plot_e.pdf  used on input line 676.
 (pdftex.def)             Requested size: 426.79134pt x 201.01pt.
-<../figures/violin_plot_fwhmx.pdf, id=922, 1092.96722pt x 515.46127pt>
+<../figures/violin_plot_fwhmx.pdf, id=913, 1092.96722pt x 515.46127pt>
 File: ../figures/violin_plot_fwhmx.pdf Graphic file (type pdf)
 <use ../figures/violin_plot_fwhmx.pdf>
 Package pdftex.def Info: ../figures/violin_plot_fwhmx.pdf  used on input line 6
-84.
+86.
 (pdftex.def)             Requested size: 426.79134pt x 201.28078pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 672--688
+Underfull \hbox (badness 10000) in paragraph at lines 674--690
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 672--688
+Underfull \hbox (badness 10000) in paragraph at lines 674--690
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 672--688
+Underfull \hbox (badness 10000) in paragraph at lines 674--690
 
  []
 
-[32 <../figures/violin_plot_e.pdf> <../figures/violin_plot_fwhmx.pdf
+[30 <../figures/violin_plot_e.pdf> <../figures/violin_plot_fwhmx.pdf
 
 pdfTeX warning: pdflatex (file ../figures/violin_plot_fwhmx.pdf): PDF inclusion
 : multiple pdfs with page group included in a single page
 >]
-<../figures/violin_plot_fwhmy.pdf, id=1014, 1090.29341pt x 511.90138pt>
+<../figures/violin_plot_fwhmy.pdf, id=1004, 1090.29341pt x 511.90138pt>
 File: ../figures/violin_plot_fwhmy.pdf Graphic file (type pdf)
 <use ../figures/violin_plot_fwhmy.pdf>
 Package pdftex.def Info: ../figures/violin_plot_fwhmy.pdf  used on input line 6
-94.
+96.
 (pdftex.def)             Requested size: 426.79134pt x 200.38277pt.
-<../figures/violin_plot_comax.pdf, id=1015, 1083.42915pt x 504.47679pt>
+<../figures/violin_plot_comax.pdf, id=1005, 1083.42915pt x 504.47679pt>
 File: ../figures/violin_plot_comax.pdf Graphic file (type pdf)
 <use ../figures/violin_plot_comax.pdf>
 Package pdftex.def Info: ../figures/violin_plot_comax.pdf  used on input line 7
-04.
+06.
 (pdftex.def)             Requested size: 426.79134pt x 198.72345pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 692--708
+Underfull \hbox (badness 10000) in paragraph at lines 694--710
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 692--708
+Underfull \hbox (badness 10000) in paragraph at lines 694--710
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 692--708
+Underfull \hbox (badness 10000) in paragraph at lines 694--710
 
  []
 
-[33 <../figures/violin_plot_fwhmy.pdf> <../figures/violin_plot_comax.pdf
+[31 <../figures/violin_plot_fwhmy.pdf> <../figures/violin_plot_comax.pdf
 
 pdfTeX warning: pdflatex (file ../figures/violin_plot_comax.pdf): PDF inclusion
 : multiple pdfs with page group included in a single page
 >]
-<../figures/violin_plot_cxmax.pdf, id=1108, 1065.37929pt x 513.15044pt>
+<../figures/violin_plot_cxmax.pdf, id=1100, 1065.37929pt x 513.15044pt>
 File: ../figures/violin_plot_cxmax.pdf Graphic file (type pdf)
 <use ../figures/violin_plot_cxmax.pdf>
 Package pdftex.def Info: ../figures/violin_plot_cxmax.pdf  used on input line 7
-13.
+15.
 (pdftex.def)             Requested size: 426.79134pt x 205.5619pt.
- [34 <../figures/violin_plot_cxmax.pdf>]
-<../figures/violin_plot_check_e.pdf, id=1163, 1084.21272pt x 508.3017pt>
+ [32 <../figures/violin_plot_cxmax.pdf>]
+<../figures/violin_plot_check_e.pdf, id=1155, 1084.21272pt x 508.3017pt>
 File: ../figures/violin_plot_check_e.pdf Graphic file (type pdf)
 <use ../figures/violin_plot_check_e.pdf>
 Package pdftex.def Info: ../figures/violin_plot_check_e.pdf  used on input line
- 821.
+ 823.
 (pdftex.def)             Requested size: 426.79134pt x 200.09056pt.
- [35 <../figures/violin_plot_check_e.pdf>] [36
+ [33 <../figures/violin_plot_check_e.pdf>] [34
 
 ]
 Capitolo 4.
-(./tesi.bbl [37] [38
+(./tesi.bbl [35] [36
 
-] [39])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 868.
- [40]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 868.
+] [37])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 870.
+ [38]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 870.
  (./tesi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 868.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 868.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 870.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 870.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: 12D4681A8712CFF81318281404293CDB;1252.
  ) 
 Here is how much of TeX's memory you used:
- 14234 strings out of 492616
- 213183 string characters out of 6129481
- 540643 words of memory out of 5000000
+ 14232 strings out of 492616
+ 213169 string characters out of 6129481
+ 540315 words of memory out of 5000000
  17726 multiletter control sequences out of 15000+600000
  17420 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1221,10 +1220,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2019/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf-di
 st/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on tesi.pdf (40 pages, 6518114 bytes).
+Output written on tesi.pdf (38 pages, 6517497 bytes).
 PDF statistics:
- 1335 PDF objects out of 1440 (max. 8388607)
- 601 compressed objects within 7 object streams
- 133 named destinations out of 1000 (max. 500000)
+ 1325 PDF objects out of 1440 (max. 8388607)
+ 594 compressed objects within 6 object streams
+ 131 named destinations out of 1000 (max. 500000)
  335 words of extra memory for PDF output out of 10000 (max. 10000000)
 

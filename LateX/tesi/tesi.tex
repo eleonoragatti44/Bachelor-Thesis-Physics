@@ -111,7 +111,7 @@ tabsize=4, % Number of spaces per tab in the code
 %%%%%%%%%%%%%%%%%%%%  CAPITOLO 1  %%%%%%%%%%%%%%%%%%%%
 
 \chapter{Sistemi ottici nelle microonde}\label{intro_sistemi_ottici}
-Quasi tutta l'informazione che abbiamo a disposizione su oggetti astronomici molto distanti è contenuta nella radiazione elettromagnetica emessa. Per secoli l'unico tipo di analisi possibile è stata quella nello spettro del visibile. Oggigiorno esistono svariate branche dell'astrofisica che analizzano segnali provenienti dall'Universo a diverse frequenze elettromagnetiche; una di queste branche riguarda lo studio del cosmo attraverso le microonde. 
+Quasi tutta l'informazione che abbiamo a disposizione su oggetti astronomici molto distanti è contenuta nella radiazione elettromagnetica emessa. Per secoli l'unico tipo di analisi possibile è stata quella nello spettro del visibile. Oggigiorno esistono svariate branche dell'astrofisica che analizzano segnali provenienti dall'Universo a diverse frequenze elettromagnetiche; una di queste branche riguarda lo studio del cielo attraverso le microonde. 
 
     %%%%%%%%%%%%%%%%%%%  CAPITOLO 1.1  %%%%%%%%%%%%%%%%%%%
 
@@ -119,11 +119,12 @@ Quasi tutta l'informazione che abbiamo a disposizione su oggetti astronomici mol
 Il range delle lunghezze d'onda delle microonde è $\lambda \sim 1 \unit{mm} \div 10 \unit{cm}$\footnote{Il confine tra onde radio e microonde non è netto, spesso si parla di radio estendendo il range di lunghezze d'onda anche a quello delle microonde.}.
 
 
-\`E estremamente importante fare osservazioni a grandi lunghezze d'onda, nel millimetrico e oltre, poiché esistono numerosissime sorgenti cosmologiche che emettono in questo range e possono essere analizzate tramite sistemi ottici nelle microonde.
+\`E estremamente importante fare osservazioni a grandi lunghezze d'onda, nel millimetrico e oltre, poiché varie sorgenti cosmologiche emettono in questo range.
 I segnali più comunemente studiati in radio astronomia e attraverso le microonde sono:
 \begin{itemize}
+	\item emissione a $21\,\unit{cm}$ dell'idrogeno neutro;
 	\item radiazione emessa da gas ionizzato;
-	\item radiazione di sincrotrone, dovuta al moto di particelle cariche libere di muoversi nell'Universo e deviate da campi magnetici;
+	\item radiazione di sincrotrone, dovuta al moto di particelle cariche libere di vagare nell'Universo e deviate da campi magnetici;
 	\item effetto Sunyaev-Zeldovich, che permette di rivelare ammassi di galassie altrimenti non visibili;
 	\item emissioni del Sole;
 	\item radiazioni da regioni H II; si tratta di regioni nello spazio in cui sono presenti stelle molto calde (di tipo O o di tipo B) che ionizzano il gas intorno ad esse il quale emette nelle microonde e nel radio;
@@ -153,7 +154,7 @@ La radiazione della CMB è polarizzata e lo spettro di potenza della polarizzazi
 \end{figure}
 
 Se vogliamo effettuare una corretta misura della polarizzazione della CMB è necessario sottrarre al segnale misurato tutte le anisotropie dovute a oggetti presenti tra l'osservatore e la LSS. Si utilizza comunemente il termine \textit{foreground} per riferirsi a tutte le emissioni nell'intervallo di frequenze compreso tra 10 e 1000 GHz presenti tra noi e il guscio sferico definito dalla LSS.
-Il problema della separazione delle componenti (\textit{component separation}) implica la necessità di effettuare misure a multibanda lungo tutto il range di frequenze comprese tra 10 e 1000 GHz con una sensibilità sufficiente per poter rivelare il debole segnale dei modi B e allo stesso tempo caratterizzare il foreground ed ottenere una mappa pulita della CMB.
+Il problema della separazione delle componenti (\textit{component separation}) implica la necessità di effettuare misure a multibanda lungo tutto il range di frequenze comprese tra 10 e 1000 GHz con una sensibilità sufficiente per poter rivelare il debole segnale dei modi B e allo stesso tempo caratterizzare il foreground ed ottenere una mappa pulita della CMB. Di conseguenza, in questo genere di esperimenti, come in ogni ambito in cui sia richiesta buona copertura in frequenze ed elevata sensibilità, è necessario prevedere grandi piani focali popolati da svariati ricevitori (fino a $10^5$).
 
 
     %%%%%%%%%%%%%%%%%%%  CAPITOLO 1.2  %%%%%%%%%%%%%%%%%%%
@@ -161,13 +162,10 @@ Il problema della separazione delle componenti (\textit{component separation}) i
 Un sistema ottico è un dispositivo il cui scopo è quello di focalizzare la luce proveniente dal cielo e farla propagare verso un rivelatore.
 
 
-Per l'analisi della CMB è nostro interesse studiare la direzione di provenienza della radiazione. Consideriamo quindi, d'ora in poi, un fascio d'antenna modellato per misurare il segnale che proviene da una direzione specifica.
+Per l'analisi di segnali provenienti dal cielo, è importante ricostruire la direzione di provenienza della radiazione. Consideriamo quindi, d'ora in poi, un fascio d'antenna modellato per misurare il segnale che proviene da una direzione specifica.
 La risposta di un sistema ottico ideale può essere allora rappresentata come una delta di Dirac: non nulla solo lungo la linea di vista.
-Tuttavia i fenomeni di interferenza e diffrazione rendono la situazione molto più complessa; in particolare nella radio astronomia e nell'astronomia a microonde il problema è particolarmente importante poiché le dimensioni degli elementi ottici degli strumenti sono comparabili con le lunghezze d'onda d'interesse.
+Tuttavia i fenomeni di interferenza e diffrazione rendono la situazione molto più complessa; in particolare nella radio astronomia e nell'astronomia a microonde il problema è particolarmente importante poiché le dimensioni degli elementi ottici degli strumenti sono comparabili con le lunghezze d'onda d'interesse (dal millimetro alla decina di centimetri, ed oltre).
 
-
-La risposta angolare di un sistema ottico è quantificata da una funzione $\gamma(\theta,\phi)$ detta \textit{beam function} che definisce il \textbf{diagramma di radiazione}. Idealmente $\gamma(\theta,\phi)$ dovrebbe corrispondere a una delta di Dirac\footnote{Questa idealizzazione viene spesso chiamata \textit{pencil beam idealization}} ma quello che viene in realtà osservato è una risposta simile a quella riportata in Fig.~\ref{diag_rad}.
-\`E possibile osservare la presenza di un \textit{main beam} e di lobi secondari. Tipicamente la maggior parte della radiazione è contenuta nel main beam.
 \begin{figure}[!ht]
 \centering
 	\begin{subfigure}{0.5\textwidth}
@@ -185,19 +183,22 @@ La risposta angolare di un sistema ottico è quantificata da una funzione $\gamm
 \caption{Tipico andamento della \textit{beam function} $\gamma(\theta,\phi)$. La Fig.~\ref{beam} rappresenta il diagramma di radiazione tridimensionale di un'antenna direzionale.\cite{cmb}. La Fig.~\ref{beam_cut} rappresenta una sezione dello stesso grafico su un piano parallelo all'asse del main lobe.\cite{planck}}
 \label{diag_rad}
 \end{figure}
-%%%%%
+
+La risposta angolare di un sistema ottico è quantificata da una funzione $\gamma(\theta,\phi)$ detta \textit{beam function} che definisce il \textbf{diagramma di radiazione}. Idealmente $\gamma(\theta,\phi)$ dovrebbe corrispondere a una delta di Dirac\footnote{Questa idealizzazione viene spesso chiamata \textit{pencil beam idealization}} ma quello che viene in realtà osservato è una risposta simile a quella riportata in Fig.~\ref{diag_rad}.
+\`E possibile osservare la presenza di un \textit{main beam} e di lobi secondari. Tipicamente la maggior parte della radiazione è contenuta nel main beam.
+
+
 A partire dal diagramma di radiazione si definiscono alcuni parametri che permettono una sua descrizione; tali parametri sono i protagonisti di questo lavoro di tesi.
 La \textbf{Full Width Half Maximum} (FWHM) (Fig.~\ref{fwhm}) del main beam è la larghezza angolare a metà della sua altezza ed è uno dei parametri più importanti e più diffusi per la caratterizzazione della risoluzione di uno strumento\footnote{Tale parametro viene anche indicato come $\theta_\text{FWHM}$}. Nel corso dei prossimi capitoli verranno considerati due diversi valori per la FWHM, rispetto all'asse $x$ e rispetto all'asse $y$. Attraverso queste due grandezze è possibile definire un ulteriore parametro: l'\textbf{ellitticità}. Questa è definita come il rapporto tra le due FWHM ponendo al numeratore la più grande tra $\text{FWHM}_\text{x}$ e $\text{FWHM}_\text{y}$.
-Hanno inoltre grande importanza i parametri che riguardano la polarizzazione. Supponiamo di studiare un'antenna in trasmissione\footnote{Strumenti ottici per lo studio della CMB lavorano in ricezione ma è possibile studiare alternativamente un'antenna in trasmissione per il \textit{principio di reciprocità}.} e considerare un segnale polarizzato linearmente lungo una determinata direzione.
-\`E possibile definire una componente \textit{co-polare} ed una componente \textit{cross-polare} della radiazione (Fig.~\ref{plane_cut}). La componente co-polare è la frazione radiazione irradiata lungo la direzione originale di polarizzazione mentre la componente cross-polare è la frazione di radiazione irradiata lungo la direzione perpendicolare a quella originale.
-In particolare i parametri utilizzati nei prossimi capitoli riguardano la componente \textbf{co-polare massima} e la componente \textbf{cross-polare massima}. Data un'antenna in polarizzazione lineare il piano su cui giace il campo elettrico dell'onda trasmessa (o ricevuta) è detto piano E, mentre il piano ad esso perpendicolare è detto piano H.
-
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.8\linewidth]{../figures/fwhm.png}
+	\includegraphics[width=0.7\linewidth]{../figures/fwhm.png}
 	\caption{Rappresentazione schematica che mostra la FWHM. HPBW (Half Power Beam Width) e FWHM rappresentano lo stesso parametro. Sulla sinistra è rappresentata una beam function in scala lineare mentre sulla destra in scala logaritmica, la metà altezza del fascio si trova a $-3 \unit{dB}$ rispetto al massimo.}
 	\label{fwhm}
 \end{figure}
+Hanno inoltre grande importanza i parametri che riguardano la polarizzazione. Supponiamo di studiare un'antenna in trasmissione\footnote{Strumenti ottici per lo studio della CMB lavorano in ricezione ma è possibile studiare alternativamente un'antenna in trasmissione per il \textit{principio di reciprocità}.} e considerare un segnale polarizzato linearmente lungo una determinata direzione.
+\`E possibile definire una componente \textit{co-polare} ed una componente \textit{cross-polare} della radiazione (Fig.~\ref{plane_cut}). La componente co-polare è la frazione radiazione irradiata lungo la direzione originale di polarizzazione mentre la componente cross-polare è la frazione di radiazione irradiata lungo la direzione perpendicolare a quella originale.
+In particolare i parametri utilizzati nei prossimi capitoli riguardano la componente \textbf{co-polare massima} e la componente \textbf{cross-polare massima}. Data un'antenna in polarizzazione lineare il piano su cui giace il campo elettrico dell'onda trasmessa (o ricevuta) è detto piano E, mentre il piano ad esso perpendicolare è detto piano H.
 
 \begin{figure}[!ht]
 	\centering
@@ -211,8 +212,10 @@ Sarebbe bene mettere una figura o due che mostrino in maniera schematica questi 
 \end{comment}
 
 
-Per fare misurazioni di CMB è necessario richiedere alcune condizioni relative agli strumenti ottici. In riferimento alla Fig.~\ref{power_spect} si nota che una certa scala angolare mi permette di selezionare i multipoli che è possibile osservare; è quindi necessario avere una FWHM che permetta di risolvere i dettagli della CMB entro certe scale angolari. La relazione approssimata che lega il valore di $\ell$ alla FWHM è: $\ell\sim{180^{\circ}}/{\theta_\text{FWHM}}$.
-Inoltre il livello dello spettro di potenza dei modi B è molto più basso di quello dei foreground e dei modi E; poiché si ha grande interesse nel misurare i modi B è necessaria una grande sensibilità strumentale. Per raggiungere elevate sensibilità è fondamentale avere a disposizione vasti piani focali che mi permettano di utilizzare un elevato numero di rivelatori.
+Per fare misurazioni del cielo è necessario richiedere alcune condizioni relative alla risoluzione angolare degli strumenti ottici. In riferimento alla CMB, se si osserva la Fig.~\ref{power_spect} si nota che una certa scala angolare permette di selezionare i multipoli che è possibile osservare; è quindi necessario avere una FWHM che permetta di risolvere i dettagli della CMB entro certe scale angolari. Per sorgenti celesti diverse dalla CMB il discorso è lo stesso, ma cambia ovviamente la risoluzione angolare richiesta. La relazione approssimata che lega il valore di $\ell$ alla FWHM è: $\ell\sim{180^{\circ}}/{\theta_\text{FWHM}}$.
+
+
+Oltre al requisito sulla risoluzione angolare per il sistema ottico, gli esperimenti di misura di segnali astrofisici hanno requisiti anche sulla sensibilità. Sempre considerando il caso della CMB il livello dello spettro di potenza dei modi B è molto più basso di quello dei foreground e dei modi E; poiché si ha grande interesse nel misurare i modi B è necessaria una grande sensibilità strumentale. Per raggiungere elevate sensibilità è fondamentale avere a disposizione vasti piani focali che permettano di utilizzare un elevato numero di rivelatori.
 Infine, per avere una misura pulita della CMB, è essenziale rimuovere tutti i foreground e avere quindi a disposizione misure a tante frequenze diverse, il che si traduce ancora una volta nella richiesta di un elevato numero di rivelatori.
 
 
@@ -231,14 +234,9 @@ Esistono diversi software in grado di simulare un fascio d'antenna e quindi la s
 \end{figure}
 
 Nel corso di questo lavoro di tesi ho utilizzato dei dati relativi ad un particolare strumento per l'analisi della CMB: \textit{STRIP}.
-Lo strumento STRIP (STRatospheric Italian Polarimeter) fa parte dell'esperimento internazionele \textit{LSPE} (Large-Scale Polarization Explorer) ideato per effettuare misure di CMB ad elevate scale angolari.
+Lo strumento STRIP fa parte dell'esperimento internazionele \textit{LSPE} (Large-Scale Polarization Explorer) ideato per effettuare misure di CMB ad elevate scale angolari.
 In particolare STRIP è stato progettato per la misura di radiazione a basse frequenze; esso presenta 49 antenne a 43 GHz e 6 antenne a 90 GHz. In Fig.~\ref{strip} è rappresentato il modello di STRIP attraverso il software \textit{GRASP} (General Reflector Antenna Software Package).
 Attraverso GRASP è stato possibile ottenere la tabella in Fig.~\ref{dataset} che riporta le caratteristiche del beam data una posizione $(x, y, z)$ sulla superficie focale.
-
-
-GRASP è uno strumento molto potente che permette di simulare sistemi ottici complessi.
-Tuttavia i tempi di calcolo di GRASP sono elevati\footnote{Per produrre i dati in Fig.~\ref{dataset} sono stati impiegati due giorni.}; per ogni simulazione, e quindi per ogni antenna, vengono costruiti dei grafici come quelli riportati in Fig.~\ref{beam_grasp} e poi da quelli vengono ricavati i valori riportati nel dataset ~\ref{dataset}.
-Un grafico come quello in Fig.~\ref{beam_grasp} produce quindi una singola riga della tabella ~\ref{dataset}.
 
 \begin{figure}[!ht]
 	\centering
@@ -246,6 +244,11 @@ Un grafico come quello in Fig.~\ref{beam_grasp} produce quindi una singola riga 
 	\caption{Dataset relativo allo strumento STRIP ottenuto tramite la simulazione in GRASP. Tale dataset è stato utilizzato per l'analisi descritta nei capitoli successivi.}
 	\label{dataset}
 \end{figure}
+
+GRASP è uno strumento molto potente che permette di simulare sistemi ottici complessi.
+Tuttavia i tempi di calcolo di GRASP sono elevati\footnote{Per produrre i dati in Fig.~\ref{dataset} sono stati impiegati due giorni.}; per ogni simulazione, e quindi per ogni antenna, vengono costruiti dei grafici come quelli riportati in Fig.~\ref{beam_grasp} e poi da quelli vengono ricavati i valori riportati nel dataset ~\ref{dataset}.
+Un grafico come quello in Fig.~\ref{beam_grasp} produce quindi una singola riga della tabella ~\ref{dataset}.
+
 
 Nel caso di STRIP è ancora possibile simulare l'intera ottica tramite GRASP poiché il numero di antenne è piuttosto limitato. Tuttavia per sistemi ottici più complessi in cui il numero di antenne diventa di circa 2 ordini di grandezza superiore, risulta del tutto impossibile effettuare una simulazione completa dell'intera ottica.
 \`E quindi forte la necessità di trovare una via alternativa che permetta di stimare i parametri che descrivono il beam in una qualsiasi posizione.
@@ -268,6 +271,7 @@ Nel caso di STRIP è ancora possibile simulare l'intera ottica tramite GRASP poi
 \label{beam_grasp}
 \end{figure}
 
+In questo lavoro di tesi mi sono occupata di studiare due metodi alternativi a una completa simulazione elettromagnetica del sistema ottico: metodi classici di interpolazione, e regressione tramite reti neurali. Nel prossimo capitolo approfondirò questo aspetto, che è l'aspetto più originale del mio lavoro.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -289,28 +293,26 @@ Il \textit{machine learning (ML)} è un campo di ricerca a metà tra statistica,
 
 
 Negli ultimi decenni il campo del machine learning si è fortemente evoluto. È stata costruita un'ampia classe di algoritmi in grado di approssimare molto efficacemente processi non lineari. Una branca del ML vede protagoniste le \textit{reti neurali artificiali (ANN)}\footnote{Spesso vengono chiamate semplicemente reti neurali (NN).}.
-Queste tecniche si basano sull'apprendimento tramite esempi, i quali sono rappresentati da coppie input-output come un'immagine e la sua descrizione (input: foto di un gatto, output: "gatto") o una posizione a cui è associato un particolare valore di campo elettrico (input: (x, y, z), output: E(x, y, z)). È quindi di fondamentale importanza avere a disposizione un ampio database attraverso il quale effettuare un \textbf{training}.
-Una rete neurale approssima una funzione $y=f(x)$ tramite una serie di neuroni connessi tra loro. Ogni neurone è caratterizzato da 2 parametri, come spiegato in Sez.~\ref{struttura_rete}, e l'approssimazione della relazione tra $x$ e $y$ è effettuata tramite l'ottimizzazione di tali parametri a partire dalle coppie $(x, y)$ che descrivono il comportamento della funzione $f$ in casi realistici. L'ottimizzazione dei parametri è da intendersi in termini di minimizzazione di una particolare funzione che prende il nome di \textbf{loss function}, che quantifica la discrepanza tra il comportamento di $f$ e quello della rete neurale. Riassumendo, quello che accade all'interno di una rete neurale quando si vuole approssimare una corrispondenza tra input e output è una modifica dei parametri di rete in modo da ottenere un valore di \textit{loss} il più piccolo possibile. 
-
-
-Il \textit{deep learning} è un'ulteriore branca delle NN che entra in gioco quando si utilizzano reti neurali con un elevato numero di layers e di neuroni: le \textit{deep neural networks}. In questo lavoro di tesi ho creato reti con un ridotto numero di layers, queste non rientrano nel campo del deep learning.
+Queste tecniche si basano sull'apprendimento tramite esempi, i quali sono rappresentati da coppie input-output come un'immagine e la sua descrizione (input: foto di un gatto, output: "gatto") o una posizione a cui è associato un particolare valore di campo elettrico (input: (x, y, z), output: E(x, y, z)). È quindi di fondamentale importanza avere a disposizione un ampio database di esempi attraverso il quale effettuare un \textbf{training}.
+Una rete neurale approssima una funzione $y=f(x)$ tramite una serie di neuroni connessi tra loro. Ogni neurone è caratterizzato da 2 parametri, come spiegato in Sez.~\ref{struttura_rete}, e l'approssimazione della relazione tra $x$ e $y$ è effettuata tramite l'ottimizzazione di tali parametri a partire dalle coppie $(x, y)$ che descrivono il comportamento della funzione $f$ in casi realistici. L'ottimizzazione dei parametri è da intendersi in termini di minimizzazione di una particolare funzione che prende il nome di \textbf{loss function}, che quantifica la discrepanza tra il comportamento di $f$ e quello della rete neurale. 
 
 
 Esistono due classi di problemi affrontati con la tecnica delle reti neurali: la \textit{classificazione} e la \textit{regressione}.
 Si ha una rete classificazionale se nell'approssimare $y=f(x)$, $y$ può assumere un valore preso dagli elementi di un insieme discreto, mentre si ha una rete regressionale quando $y$ può assumere un continuo di valori.
 La classificazione individua l'appartenenza ad una classe e può essere supervisionata o non supervisionata. Parliamo di classificazione supervisionata quando sono note a priori le diverse classi di appartenenza; se invece si vogliono determinare delle classi di similitudine senza conoscere a priori i pattern rappresentativi, si ha un problema di classificazione non supervisionata.
 Un esempio di classificazione supervisionata è il riconoscimento di un numero a partire da un'immagine manoscritta. Un esempio invece di classificazione non supervisionata si ha quando, a partire da immagini di cifre manoscritte, si vuole determinare quali tra esse rappresentino lo stesso numero.
+Le reti neurali per la regressione entrano in gioco quando, date delle coppie input-output, si vuole determinare la funzione che approssimi al meglio la relazione, e la variabile $y$ può assumere infiniti valori. Per effettuare la stima delle proprietà di un diagramma di radiazione (Sez.~\ref{reti_neurali}) ho utilizzato quest'ultimo tipo di reti neurali.
 
 
-Le reti neurali per la regressione entrano in gioco quando, date delle coppie input-output, si vuole determinare la funzione che approssimi al meglio la relazione. Per effettuare la stima delle proprietà di un diagramma di radiazione (Sez.~\ref{reti_neurali}) ho utilizzato quest'ultimo tipo di reti neurali. In particolare la ricerca alla base di questo lavoro di tesi è stata quella di una rete neurale che permettesse, a partire da una posizione sulla superficie focale, di stimare il valore di un determinato parametro del diagramma di radiazione. Come sarà possibile notare nei paragrafi successivi, la posizione sulla superficie focale è data da una coppia $(x, y)$, senza considerare la coordinata $z$; ho deciso di procedere così poiché i punti si trovano su una superficie ben definita, il che significa che dati $x$ e $y$ la $z$ è univocamente determinata.
+La ricerca alla base di questo lavoro di tesi è stata quella di una rete neurale che permettesse, a partire da una posizione sulla superficie focale, di stimare il valore di un determinato parametro del diagramma di radiazione (es. l'ellitticità o la FWHM). Come sarà possibile notare nei paragrafi successivi, la posizione sulla superficie focale è data da una coppia $(x, y)$, senza considerare la coordinata $z$; ho deciso di procedere così poiché i punti si trovano su una superficie ben definita, il che significa che dati $x$ e $y$ la $z$ è univocamente determinata.
 
 
-Il programma utilizzato in questa tesi per sviluppare i codici che permettono di effettuare questo task è Python. Questo fornisce librerie apposite per il caricamento, l'analisi e la visualizzazione dei dati; le librerie utilizzate nei codici implementati sono: \textit{pandas}, \textit{numpy}, \textit{matplotlib}, \textit{seaborn}, \textit{pytorch}.
+Ho sviluppato i miei codici usando \textbf{Python} e le librerie \textit{pandas}, \textit{numpy}, \textit{matplotlib}, \textit{seaborn}, \textit{pytorch}.
 
 	%%%%%%%%%%%%%%%%%%%  CAPITOLO 2.2  %%%%%%%%%%%%%%%%%%%
 
 \section{Struttura di una rete neurale}\label{struttura_rete}
-Unarete neurale è basata sull'interconnessioni di unità fondamentali: i \textbf{neuroni}.
+Una rete neurale è basata sull'interconnessione di unità fondamentali: i \textbf{neuroni}.
 Essa può essere rappresentata come in figura~\ref{schema_rete}.
 \begin{figure}[!ht]
 	\centering
@@ -376,7 +378,7 @@ In questo capitolo descriverò vari metodi per predire il valore dei parametri d
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[scale=0.6]{../figures/ContourPlot_z.pdf}
-	\caption{Contour plot dei punti sulla superficie focale in corrispondenza dei quali è stato calcolato il beam con GRASP. In rosso è evidenziata la griglia $13\text{x}13$ definita dalle componenti $x$ e $y$. Le gradazioni di colore rappresentano la coordinata spaziale $z$. Il modello di telescopio è quello mostrato in Fig.~\ref{strip}.}
+	\caption{Rappresentazione della sulla superficie focale usata in questo lavoro. I punti rossi mostrano le posizioni in cui è stata fatta una simulazione completa del beam usando GRASP. Le gradazioni di colore rappresentano la coordinata spaziale $z$. Il modello di telescopio è quello mostrato in Fig.~\ref{strip}.}
 	\label{cplot_fs}
 \end{figure}
 
@@ -384,7 +386,7 @@ Per stimare il valore dei parametri ho simulato la risposta di un beam collocato
 I punti sono distributi su una griglia $13\text{x}13$ lungo le componenti $x$ e $y$. La griglia ha una dimensione di $\sim 70 \unit{cm}\text{x}70 \unit{cm}$, mentre la coordinata $z$ varia tra $0$ e $50 \unit{mm}$.
 
 
-Nonostante abbia eseguito la medesima analisi su ciascuno dei parametri descritti nel capitolo precedente (ellitticità, FWHM rispetto a x, FWHM rispetto a y, componente copolare massima, componente cross-polare massima), riporto in questo capitolo solo i risultati relativi all'ellitticità, in quanto gli altri risultati sono molto simili.
+Nonostante abbia eseguito la medesima analisi su ciascuno dei parametri descritti nel capitolo precedente (ellitticità, FWHM rispetto a x, FWHM rispetto a y, componente copolare massima, componente cross-polare massima), discuto in dettaglio in questo capitolo solo i risultati relativi all'ellitticità, in quanto gli altri risultati sono molto simili.
 
 \begin{figure}[!ht]
 	\centering
@@ -425,7 +427,7 @@ Si nota che i punti della prima riga a partire dall'alto sono quelli affetti da 
 
 
 A causa del funzionamento di \texttt{interp2d} non è possibile ottenere stime affidabili se il punto $(x, y)$ cade al di fuori del poligono convesso che racchiude i punti usati per l'interpolazione. Nel grafico~\ref{es_interp} non è infatti possibile stimare il valore di $y$ per $x>10$ o $x<0$.
-\`E quindi conveniente effettuare un campionamento, tramite i metodi di simulazione (vedi Sez.~\ref{simulazioni}), soprattutto al bordo della regione di spazio di interesse. In tal modo si è certi che i punti sui quali vado a stimare i parametri appartengono al dominio dei punti simulati.
+\`E quindi conveniente effettuare un campionamento, tramite i metodi di simulazione (vedi Sez.~\ref{simulazioni}), soprattutto al bordo della regione di spazio di interesse. In tal modo sono stata certa che i punti sui quali ho stimato i parametri appartengono al dominio dei punti simulati.
 
          %%%%%%%%%%%%%%%%%%%  CAPITOLO 3.1.2  %%%%%%%%%%%%%%%%%%%
 
@@ -448,7 +450,7 @@ Ho poi comparato i due metodi di interpolazione.
 	\label{err_int}
 \end{figure}
 \newline
-In Fig.~\ref{err_int} sono confrontate le curve che rappresentano l'errore tra dato interpolato e dato corretto per i due metodi utilizzati. Si nota immediatamente che la curva relativa a \texttt{interp2d} è sensibilmente peggiore di quella relativa \texttt{curve\_fit}. Questo è dovuto alla presenza di alcuni picchi problematici che risultano essere causati dai punti sul bordo.
+In Fig.~\ref{err_int} sono confrontate le curve che rappresentano l'errore tra dato interpolato e dato corretto per i due metodi utilizzati. Si nota che la curva relativa a \texttt{interp2d} è sensibilmente peggiore di quella relativa a \texttt{curve\_fit}. Questo è dovuto alla presenza di alcuni picchi problematici che risultano essere causati dai punti sul bordo.
 Analizzando infatti più in dettaglio il comportamento del metodo \texttt{interp2d} è possibile mostrare che i punti affetti da errore maggiore sono punti di bordo. L'analisi è stata fatta plottando il valore interpolato e valore esatto del parametro per ogni riga di punti della griglia $13\text{x}13$.
 In Fig.~\ref{plot_row} è mostrato il diverso comportamento di \texttt{interp2d} per una riga di punti di bordo e una riga di punti interni alla griglia.
 
@@ -510,8 +512,8 @@ Tali elementi sono:
 	\item L'\textit{optimizer}.
 	\item La \textit{loss function}.
 \end{itemize}
-La scelta dei loro valori non è mai univoca, non esiste una regola fissa per avere la ricetta perfetta che porta ai risultati migliori.
-Nel mio lavoro di tesi ho utilizzato 6 diverse architetture; alcuni degli elementi appena citati sono stati mantenuti invariati per ogni architettura\footnote{L'input, per esempio, è sempre una coppia (x, y) che definisce la posizione del beam sul piano focale, mentre l'output è un singolo valore di un particolare parametro in quel punto.}, mentre altri sono stati modificati.
+La scelta dei loro valori non è mai univoca, non esiste una regola fissa per dedurre risultati migliori.
+Nel mio lavoro di tesi ho utilizzato 6 diverse architetture; alcuni degli elementi appena citati sono stati mantenuti invariati per ogni architettura\footnote{L'input, per esempio, è sempre una coppia $(x, y)$ che definisce la posizione del beam sul piano focale, mentre l'output è un singolo valore di un particolare parametro in quel punto.}, mentre altri sono stati modificati.
 
 
 Per poter decrivere al meglio la scelta delle architetture è necessario fare alcune osservazioni.
@@ -609,17 +611,17 @@ Per effettuare il test della rete ho utilizzato un metodo di validazione chiamat
 	\begin{subfigure}{\textwidth}
 	    \centering
 	    \includegraphics[width=0.77\linewidth]{../figures/validation_e_zoom.pdf}
-	    \caption{Test di rete per il parametro \textit{e}. L'architettura di rete è data da 1 hidden layer e dalla $Tanh$ come funzione d'attivazione.}
+	    \caption{Test di rete per il parametro \textit{e} (ellitticità). L'architettura di rete è data da 1 hidden layer e dalla $Tanh$ come funzione d'attivazione.}
 	    \label{test1}
 	\end{subfigure}
 	\newline
 	\begin{subfigure}{\textwidth}
 		\centering
 	    \includegraphics[width=0.77\linewidth]{../figures/validation_co_max_zoom.pdf}
-		\caption{Test di rete per il parametro \textit{co\_max}. L'architettura di rete è data da 1 hidden layer e dalla $Sigmoid$ come funzione d'attivazione.}
+		\caption{Test di rete per il parametro \textit{co\_max} (componente co-polare massima). L'architettura di rete è data da 1 hidden layer e dalla $Sigmoid$ come funzione d'attivazione.}
 		\label{test2}
 	\end{subfigure}
-	\caption{Test di rete per due diversi parametri e due diverse architetture. I grafici rappresenta il valore di \textit{loss} per il training e il validation; Nel caso ~\ref{test1} le curve tendono a 0 ma, come si nota dallo zoom-in, non valgono esattamente 0. Nel caso ~\ref{test2} invece non viene raggiunto un buon valore di \textit{loss}, quella particolare architettura non sarà quindi ottimale per il parametro \textit{co\_max}. Grafici di questo tipo ci mostrano che le reti non vanno in overfitting perché, se così fosse, le curve relative al validation dovrebbero crescere all'aumentare delle epoche.}
+	\caption{Test di rete per due diversi parametri e due diverse architetture. I grafici rappresentano il valore di \textit{loss} per il training e il validation; Nel caso ~\ref{test1} le curve tendono a 0 ma, come si nota dallo zoom-in, non valgono esattamente 0. Nel caso ~\ref{test2} invece non viene raggiunto un buon valore di \textit{loss}, quella particolare architettura non sarà quindi ottimale per la stima del parametro \textit{co\_max}. Grafici di questo tipo ci mostrano che le reti non vanno in overfitting perché, se così fosse, le curve relative al validation dovrebbero crescere all'aumentare delle epoche.}
 	\label{test_rete}
 \end{figure}
 
@@ -754,7 +756,7 @@ In Tab.~\ref{stats} sono riportati i risultati numerici rappresentativi della bo
 \end{table}
 
 
-I valori che definiscono l'intervallo di variabilità dell'errore sono dati da $median-25^\circ\,percentile$, mostrato comepedice, e da $75^\circ\,percentile-median$, mostrato come apice.
+I valori che definiscono l'intervallo di variabilità dell'errore sono dati da $median-25^\circ\,percentile$, mostrato come pedice, e da $75^\circ\,percentile-median$, mostrato come apice.
 %\footnote{Il pedice è dato da $median-25^\circ\,percentile$ mentre l'apice è dato da $75^\circ\,percentile-median$.}
 
 \begin{comment}		%%% Stessa tabella ma con 3 cifre significative
@@ -812,9 +814,9 @@ I valori che definiscono l'intervallo di variabilità dell'errore sono dati da $
 \end{comment}
 
 
-Date le discrepanze nei risultati relativi all'elliticità e alla FWHM, e conoscendo la relazione che lega le due grandezze, ho rieseguito l'esercizio andando a valutare l'ellitticità come rapporto delle due FWHM ricavare tramite l'interpolazione e mediante l'utilizzo delle reti neurali. Il risultato in Fig.~\ref{violin_check} mostra che la rete e l'interpolazione hanno praticamente le stesse performance.
-L'alternativa che ci si poteva aspettare era quella di ottenere un grafico in cui la parte blu, relativa alle reti, fosse significativamente migliore. In quel caso la rete non sarebbe stata particolarmente efficace nel predirre le due FWHM a una volta valutato il loro rapporto il valore dell'ellitticità sarebbe risultato molto buono. Se così fosse stato avremmo dedotto la presenza di una correlazione nell'errore introdotto dalla rete nello stimare le due FWHM che veniva ridotto valutandone il rapporto.
-Questo risultato ci mostra invece che è prorpio il valore dell'elliticità a rendere più agevole la sua stima tramite la rete neurale.
+Date le discrepanze nei risultati relativi all'elliticità e alla FWHM, e conoscendo la relazione che lega le due grandezze, ho rieseguito l'esercizio andando a valutare l'ellitticità come rapporto delle due FWHM ricavate tramite l'interpolazione e mediante l'utilizzo delle reti neurali. Il risultato in Fig.~\ref{violin_check} mostra che la rete e l'interpolazione hanno praticamente le stesse performance.
+L'alternativa che ci si poteva aspettare era quella di ottenere un grafico in cui la parte blu, relativa alle reti, fosse significativamente migliore. In quel caso la rete non sarebbe stata particolarmente efficace nel predire le due FWHM ma una volta valutato il loro rapporto il valore dell'ellitticità sarebbe risultato molto buono. Se così fosse stato avremmo dedotto la presenza di una correlazione nell'errore introdotto dalla rete nello stimare le due FWHM che veniva ridotto valutandone il rapporto.
+Questo risultato ci mostra invece che è proprio il valore dell'elliticità a rendere più agevole la sua stima tramite la rete neurale.
 
 \begin{figure}[!ht]
 	\centering

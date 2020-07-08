@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex tesi"] 1594057885 "tesi.aux" "tesi.bbl" "tesi" 1594057894
+["bibtex tesi"] 1594223641 "tesi.aux" "tesi.bbl" "tesi" 1594224128
   "../bibliografia/my_bib.bib" 1593414179 8565 ed6d5294ce35ea718b8521f15311b53c ""
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "tesi.aux" 1594057893 28567 509405b1895636ccb59b55e7aa43d50f "pdflatex"
+  "tesi.aux" 1594224127 28626 1319a54bc0dd8b61d42776a2d03f7a17 "pdflatex"
   (generated)
-  "tesi.bbl"
   "tesi.blg"
-["pdflatex"] 1594057885 "tesi.tex" "tesi.pdf" "tesi" 1594057894
+  "tesi.bbl"
+["pdflatex"] 1594224120 "tesi.tex" "tesi.pdf" "tesi" 1594224128
   "../figures/ContourPlot_e.pdf" 1594031473 18087 76f71fa3f00385a2a80e0a467de8cc28 ""
   "../figures/ContourPlot_z.pdf" 1593938690 18411 fd93373af1fc7c5c0edaf142afcbfb19 ""
   "../figures/EsempioInterpolazione.pdf" 1593938758 11869 7fd99b8d39e51c6a74fd28067b39f167 ""
@@ -195,14 +195,14 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1569925911 4259636 93969923163e7ced23f417f203ce9dbd ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "tesi.aux" 1594057893 28567 509405b1895636ccb59b55e7aa43d50f "pdflatex"
-  "tesi.bbl" 1594057885 6047 65ba3d147c6d1f44eab1bb4ae091fb53 "bibtex tesi"
-  "tesi.out" 1594057893 1252 12d4681a8712cff81318281404293cdb "pdflatex"
-  "tesi.tex" 1594057876 68663 2f9ed3a1c5f7ea48097d3fb2132dd01c ""
-  "tesi.toc" 1594057893 1626 e9f0f882778820ddd5bbff17394b3ef4 "pdflatex"
+  "tesi.aux" 1594224127 28626 1319a54bc0dd8b61d42776a2d03f7a17 "pdflatex"
+  "tesi.bbl" 1594223642 6047 65ba3d147c6d1f44eab1bb4ae091fb53 "bibtex tesi"
+  "tesi.out" 1594224127 1252 12d4681a8712cff81318281404293cdb "pdflatex"
+  "tesi.tex" 1594224120 68900 ec665ca9b300769ec02839f095d66868 ""
+  "tesi.toc" 1594224127 1626 49655a0e81842902079aa3205ce7cdd1 "pdflatex"
   (generated)
-  "tesi.log"
-  "tesi.aux"
   "tesi.out"
+  "tesi.aux"
   "tesi.pdf"
+  "tesi.log"
   "tesi.toc"

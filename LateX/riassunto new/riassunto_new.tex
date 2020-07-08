@@ -1,5 +1,5 @@
 \documentclass[12pt,a4paper,final]{report}			%definire grandezza testo, foglio e tipo di testo.
-\usepackage[headheight=20mm, width=150mm,top=23mm,bottom=23mm,left=29mm,right=29mm]{geometry}
+\usepackage[headheight=20mm, width=150mm,top=23mm,bottom=23mm,left=25mm,right=25mm]{geometry}
 \usepackage{pdf14}
 \usepackage[utf8]{inputenc}			%definisce la codifica dei caratteri
 \usepackage[italian]{babel}				%definisce il pacchetto della lingua
@@ -7,6 +7,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{makeidx}
+\linespread{1.2}
 \usepackage{units} 					%unita di misura
 \usepackage{subcaption}  		%per le figure
 \usepackage{subcaption}		%DON'T KNOW. INVESTIGATE
@@ -37,34 +38,26 @@
 
 
 %CMB
-La \textbf{CMB}, Cosmic Microwave Background, \`e la radiazione a microonde di fondo cosmico che permea l’intero Universo, originatasi dal disaccoppiamento tra materia e radiazione, avvenuto circa 380\,000 anni dopo il Big Bang. Lo studio della CMB è estremamente importante perché consente di studiare le condizioni in cui l'Universo si è formato, andando a caratterizzare i suoi parametri fisici in tempi molto prossimi al Big Bang (fino a $10^{-30}\,\text{s}$).
+L’obiettivo di questo lavoro di tesi è quello di costruire una rete neurale che sia in grado di prevedere i parametri che caratterizzano la risposta angolare di un ricevitore, quali ellitticità, full width half maximum e cross-polarizzazione, in funzione di una posizione sulla superficie focale di uno strumento. In questa tesi ho inoltre confrontato le prestazioni di reti neurali con metodi tradizionali basati sull'interpolazione di tali parametri.
 
 %DIAGRAMMA RADIAZIONE
 
 \begin{comment}
-Mettiti nella prospettiva di un lettore che non sa nulla di queste cose (ad esempio, un membro di commissione che fa fisica dell'atmosfera, o fisica dello stato solido): stai dando per scontati troppi concetti. Prova a metterlo così:«Negli esperimenti di CMB, e più in generale in qualsiasi esperimento di radioastronomia, è molto importante non solo misurare il segnale, ma anche ricostruire accuratamente la sua direzione di provenienza. La risposta ottica di un sistema si quantifica solitamente tramite il cosiddetto fascio d'antenna, una funzione matematica $\gamma$che associa a una direzione sulla sfera celeste $(\theta, \phi)$ un numero puro che indica l'efficienza nel catturare la radiazione: $\gamma(\theta, \phi) = 1$ se l'efficienza è massima, $\gamma(theta, \phi) = 0$ se lo strumento è cieco lungo tale direzione.»
+La \textbf{CMB}, Cosmic Microwave Background, \`e la radiazione a microonde di fondo cosmico che permea l’intero Universo, originatasi dal disaccoppiamento tra materia e radiazione, avvenuto circa 380\,000 anni dopo il Big Bang. Lo studio della CMB è estremamente importante perché consente di studiare le condizioni in cui l'Universo si è formato, andando a caratterizzare i suoi parametri fisici in tempi molto prossimi al Big Bang (fino a $10^{-30}\,\text{s}$).
 \end{comment}
 
-Negli esperimenti di CMB, e più in generale in qualsiasi esperimento di radioastronomia, è molto importante non solo misurare il segnale, ma anche ricostruire accuratamente la sua direzione di provenienza. La risposta di un sistema ottico si quantifica solitamente tramite il cosiddetto \textbf{diagramma di radiazione}, una funzione matematica $\gamma$ che associa a una direzione sulla sfera celeste $(\theta, \phi)$ l'efficienza nel catturare la radiazione: per un sistema ideale $\gamma(\theta, \phi) = 1$ se l'efficienza è massima, $\gamma(\theta, \phi) = 0$ se lo strumento è cieco lungo tale direzione. Il diagramma di radiazione mostra tipicamente la presenza di un \textit{main beam}, un lobo principale nella posizione del polo nord ($\theta = 0$), nel quale è contenuta la maggior parte della radiazione.
+Negli esperimenti di fondo cosmico, e più in generale in qualsiasi esperimento di radioastronomia, è molto importante non solo misurare il segnale, ma anche ricostruire accuratamente la sua direzione di provenienza. La risposta di un sistema ottico si quantifica solitamente tramite il cosiddetto \textbf{diagramma di radiazione}, una funzione matematica $\gamma$ che associa a una direzione sulla sfera celeste $(\theta, \phi)$ l'efficienza nel catturare la radiazione: per un sistema ideale $\gamma(\theta, \phi) = 1$ se l'efficienza è massima, $\gamma(\theta, \phi) = 0$ se lo strumento è cieco lungo tale direzione. Il diagramma di radiazione mostra tipicamente la presenza di un \textit{main beam}, un lobo principale nella posizione del polo nord ($\theta = 0$), nel quale è contenuta la maggior parte della radiazione.
 
 %PARAMETRI
-
-\begin{comment}
-Rivedi questo testo alla luce della nota precedente: (1) parli di «main beam» senza averlo definito, (2) parli di "x" e "y" senza aver detto cosa sono (e probabilmente non è necessario, basta dire che l'ellitticità misura il livello di simmetria intorno all'asse del main beam). Parli di "software per la simulazione di sistemi ottici" senza che sia chiaro a cosa servono («simulano la propagazione della radiazione in un sistema ottico, consentendo di stimare $\gamma(\theta, \phi)$»), (3) dici che bisogna simulare migliaia di detector senza dire perché ne servano così tanti.
-
-
-[così in generale fa pensare ad un criterio per stimare la bontà dei software di simulazione. Lo direi in seconda battuta, dopo che hai detto che hai indagato metodi alternativi per la stima dei parametri del DrR. anche la frase che viene dopo, non fa capire il passaggio logico in cui hai deciso di utilizzare un "metodo alternativo" ad un simulatore, accettando il limite di predirre alcuni parametri e non l'intera funzione gamma(theta, phi).
-Quindi specificherei meglio, dicendo poi che hai indagato l'interpolazione e la rete neurale quali metodi "alternativi al simulatore"...]
-\end{comment}
 
 A partire dal diagramma di radiazione si definiscono alcuni parametri che lo descrivono. I parametri analizzati in questo lavoro di tesi sono: la \textbf{Full Width Half Maximum} (FWHM) del main beam che è la larghezza angolare a metà della sua altezza; l'\textbf{ellitticità}, che misura il livello di simmetria intorno all'asse del main beam; la componente \textbf{co-polare massima} che quantifica la potenza ricevuta lungo la direzione di polarizzazione della sorgente; la componente \textbf{cross-polare massima} che quantifica la potenza ricevuta lungo la direzione perpendicolare a quella di polarizzazione.
 
 
 %SIMULAZIONI
 I software per la simulazione di sistemi ottici nelle microonde simulano la propagazione della radiazione in un sistema ottico, consentendo di stimare $\gamma(\theta, \phi)$.
-Ad ogni posizione sulla superficie focale corrisponde uno specifico diagramma di radiazione e ogni simulazione permette di valutare un solo diagramma di radiazione (ad una simulazione è quindi associata una particolare posizione). Per caratterizzare uno sistema ottico è necessario effettuare numerose simulazioni, pari almeno al numero di detector dello strumento studiato. 
+Ad ogni posizione sulla superficie focale corrisponde uno specifico diagramma di radiazione e ogni simulazione permette di valutare un solo diagramma di radiazione (ad una simulazione è quindi associata una particolare posizione). Per caratterizzare un sistema ottico è necessario effettuare numerose simulazioni, pari almeno al numero di detector dello strumento studiato. 
 Tuttavia, tali simulazioni sono molto dispendiose in termini di tempo e per sistemi ottici complessi, con migliaia di detector sulla superficie focale, risulta impossibile una simulazione completa dell'ottica.
-Allo stesso tempo per raggiungere sensibilità strumentali elevate che consentano di rivelare segnali molto deboli, come ad esempio la stessa CMB, è fondamentale avere a disposizione vasti piani focali che permettano di utilizzare un elevato numero di rivelatori.
+Allo stesso tempo per raggiungere sensibilità strumentali elevate che consentano di rivelare segnali molto deboli, come ad esempio la CMB\footnote{La CMB, Cosmic Microwave Background, \`e la radiazione a microonde di fondo cosmico che permea l’intero Universo, originatasi dal disaccoppiamento tra materia e radiazione, avvenuto circa 380\,000 anni dopo il Big Bang. Lo studio della CMB è estremamente importante perché consente di studiare le condizioni in cui l'Universo si è formato, andando a caratterizzare i suoi parametri fisici in tempi molto prossimi al Big Bang (fino a $10^{-30}\,\text{s}$).}, è fondamentale avere a disposizione vasti piani focali che permettano di utilizzare un elevato numero di rivelatori.
 
 \`E quindi forte la necessità di trovare una via alternativa che consenta di stimare i parametri che descrivono il beam in una qualsiasi posizione.
 
@@ -88,7 +81,7 @@ I risultati che ho ottenuto mostrano che le reti neurali hanno prestazioni migli
 Il grafico sotto riportato mostra la distribuzione degli errori relativa ad uno dei parametri elencati sopra (ellitticità), confrontata tra diversi tipi di reti neurali (in blu) e il caso migliore dell'interpolazione (in arancione).
 
 
-Questa tesi rappresentara un punto di partenza per ulteriori studi futuri che permetteranno una simulazione dei parametri del diagramma di radiazione per strumenti che includano un elevato numero di ricevitori, come per esempio LiteBIRD e CMB-S4 ($\sim10^3-10^4$ rivelatori), e per i quali è impossibile effettuare una simulazione dell'intera ottica attraverso i software di simulazione.
+Questa tesi rappresenta un punto di partenza per ulteriori studi futuri che permetteranno una simulazione dei parametri del diagramma di radiazione per strumenti che includano un elevato numero di ricevitori, come per esempio LiteBIRD ($\sim10^3$ rivelatori), e per i quali è impossibile effettuare una simulazione dell'intera ottica attraverso i software di simulazione.
 Sarà estremamente interessante rieffettuare l'analisi proposta in questa tesi utilizzando un dataset più ampio o ancora analizzare i dati relativi ad uno strumento con una superficie focale diversa da quella di STRIP.
 
 
