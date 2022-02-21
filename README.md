@@ -2,7 +2,7 @@
 
 Bachelor Thesis at the Dept. of Physics, University of Milan, January-July 2020
 
-Supervisor: Prof. Maurizio Tomasi
+Supervisor: Prof. [Maurizio Tomasi](https://github.com/ziotom78)
 
 ## Description
 
