@@ -1,4 +1,4 @@
-# Estimation of microwave optical systems' proprieties through neural networks
+# Estimation of microwave optical systems' proprieties using neural networks
 
 Bachelor Thesis at the Dept. of Physics, University of Milan, January-July 2020
 
